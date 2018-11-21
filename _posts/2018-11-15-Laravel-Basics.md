@@ -4,9 +4,8 @@ title: Learning Laravel
 ---
 <ol>
 <h3><li>Laravel App Skeleton</li></h3>
- <ul>
+<code> <ul>
   <li>app/ <br>*bulk of app(models,controllers,route definitions, commands, PHP domain code)  </li>
-   <li>bootstrap/ <br> *files for framework boot when it runs</li>
    <li>config/ <br>*config. files for db conn.,queue, mail settings etc. <br>each file returns an array,each value of array can be accessed using config key; format example: filename.key1.key2</li>
     <li>database/ <br>*db migrations and seeds</li>
     <li>public/ <br>*public facing files like img.,stylesheets,scripts,downloads.
@@ -15,14 +14,14 @@ title: Learning Laravel
     <li>resources/ 
 	<br> *non-PHP files like views, languag files, src. JS files, Sass/LESS
    </li>
-     <li>routes/ <br>*HTTP routes, console routes or Artisan commands <br> 
+   <li>routes/ <br>*HTTP routes, console routes or Artisan commands <br> 
                  -->web.php   *web routes<br>
      		 -->api.php   *API routes<br>            
-      </li>
-     <li>storage/ <br>*caches, logs and compiled system files</li>
+   </li>
+   <li>storage/ <br>*caches, logs and compiled system files</li>
    <li>tests/ <br>*unit and integration tests
              <br>To create tests, create file ending with test.php in tests dir. & run ./vendor/bin/phpunit
-	</li>
+   </li>
    <li>vendor/ <br> *composer installed dependencies for remote servers</li>
    <li>.env <br>*file to dictate the environment variables.</li>
    <li>.env.example <br>* template file that env. duplicates to create .env file</li>
@@ -33,13 +32,14 @@ title: Learning Laravel
    <li>composer.lock <br> *not-editable composer's config. file</li>
    <li>gulpfile.js <br> *optional config file for Elixir and Gulp(for compiling & processing frontend assets</li>
    <li>package.json <br>*similar to composer.json for frontend assets</li>
-    <li>phpunit.xml <br> *config. file for PHPUnit(tool for testing out of the box)</li>
-    <li>readme.md <br>*markdown file for Intro. of Laravel</li>
-    <li>server.php <br>*backup server for laravel app  to less-capable server </li>
+   <li>phpunit.xml <br> *config. file for PHPUnit(tool for testing out of the box)</li>
+   <li>readme.md <br>*markdown file for Intro. of Laravel</li>
+   <li>server.php <br>*backup server for laravel app  to light-weight server </li>
 </ul>
-
-
-  <h3><li>Understanding Routing</li></h3>
+</code>
+   
+  
+<h3><li>Understanding Routing</li></h3>
    <ul>  
     <li>Simple way:  match Path with Closure.<br>
              Example:<pre>
