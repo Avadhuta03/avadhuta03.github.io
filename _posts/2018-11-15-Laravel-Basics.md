@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Learning Laravel
+categories: Framework
 ---
 <ol>
 <h3><li>Laravel App Skeleton</li></h3>

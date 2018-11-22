@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Installing Arch Linux
+categories: Linux
 ---
 <h3>Installation of Arch Linux on hard drive from a live media. </h3>  
 <ol>

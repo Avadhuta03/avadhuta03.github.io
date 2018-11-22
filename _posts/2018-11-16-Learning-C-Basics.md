@@ -1,6 +1,7 @@
 ---
-layout: page
+layout: post 
 title:  C Basics  
+categories: Programming
 ---
 <h4><i>The only way to learn any programming languages is by writing program in it.</i></h4>
 <h3>Getting Started</h3>

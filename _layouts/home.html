@@ -1,13 +1,10 @@
 ---
 layout: default
 ---
+<!-- loop through paginated page -->
 
-<div class="home">	
-
-<!-- Loop through the paginated posts -->
-
+<div class="posts">
 {% for post in paginator.posts %}
-
 
   {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         <span class="post-meta">{{ post.date | date: date_format }}</span>
@@ -16,23 +13,8 @@ layout: default
             {{ post.title | escape }}
           </a>
         </h3>
+
 {% endfor %}
-
-<!-- Pagination Links -->
-<div class="Pagination">
-
-   {% if paginator.previous_page %}
-       <a href="{{ paginator.previous_page_path }}" class="previous">PREVIOUS</a>
-   {% endif %}
-
-<span class="page_number">
-   Page: {{ paginator.page }} of {{ paginator.total_pages }}
-</span>
-
-   {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path }}" class="next">NEXT</a>
-   {% endif %}
-
 </div>
 
-</div> 
+{%- include pagination.html -%}
