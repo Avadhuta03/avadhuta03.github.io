@@ -5,56 +5,55 @@ categories: Framework
 ---
 <ol>
 <h3><li>Laravel App Skeleton</li></h3>
-<code> <ul>
-  <li>app/ <br>*bulk of app(models,controllers,route definitions, commands, PHP domain code)  </li>
-   <li>config/ <br>*config. files for db conn.,queue, mail settings etc. <br>each file returns an array,each value of array can be accessed using config key; format example: filename.key1.key2</li>
-    <li>database/ <br>*db migrations and seeds</li>
-    <li>public/ <br>*public facing files like img.,stylesheets,scripts,downloads.
-		<br>*index.php which kicks off bootstrapping process and routes all requests. 
-    </li> 
-    <li>resources/ 
-	<br> *non-PHP files like views, languag files, src. JS files, Sass/LESS
-   </li>
-   <li>routes/ <br>*HTTP routes, console routes or Artisan commands <br> 
-                 -->web.php   *web routes<br>
-     		 -->api.php   *API routes<br>            
-   </li>
-   <li>storage/ <br>*caches, logs and compiled system files</li>
-   <li>tests/ <br>*unit and integration tests
-             <br>To create tests, create file ending with test.php in tests dir. & run ./vendor/bin/phpunit
-   </li>
-   <li>vendor/ <br> *composer installed dependencies for remote servers</li>
-   <li>.env <br>*file to dictate the environment variables.</li>
-   <li>.env.example <br>* template file that env. duplicates to create .env file</li>
-   <li>.gitattributes <br>*git config. file</li>
-   <li>.gitignore <br>*git config. file</li>
-   <li>artisan <br> *file that allows to run artisan commands</li>
-   <li>composer.json <br>*user-editable composer's config. file</li>
-   <li>composer.lock <br> *not-editable composer's config. file</li>
-   <li>gulpfile.js <br> *optional config file for Elixir and Gulp(for compiling & processing frontend assets</li>
-   <li>package.json <br>*similar to composer.json for frontend assets</li>
-   <li>phpunit.xml <br> *config. file for PHPUnit(tool for testing out of the box)</li>
-   <li>readme.md <br>*markdown file for Intro. of Laravel</li>
-   <li>server.php <br>*backup server for laravel app  to light-weight server </li>
-</ul>
-</code>
+<pre> 
+app/		*bulk of app(models,controllers,route definitions, commands, PHP domain code)  
+config/		*config. files for db conn.,queue, mail settings etc. 
+		each file returns an array,each value of array can be accessed using config key; 
+		format example: filename.key1.key2
+database/	*db migrations and seeds
+public/		*public facing files like img.,stylesheets,scripts,downloads.
+		*index.php which kicks off bootstrapping process and routes all requests. 
+resources/      *non-PHP files like views, language files, src. JS files, Sass/LESS 
+routes/		*HTTP routes, console routes or Artisan commands 
+   -->web.php   *web routes
+   -->api.php   *API routes            
+
+storage/	*caches, logs and compiled system files
+tests/		*unit and integration tests
+                For tests, create file ending with test.php in tests dir. & run ./vendor/bin/phpunit
+vendor/		*composer installed dependencies for remote servers
+   
+.env		*file to dictate the environment variables.
+.env.example    *template file that env. duplicates to create .env file
+.gitattributes  *git config. file
+.gitignore	*git config. file
+artisan/ 	*file that allows to run artisan commands
+composer.json	*user-editable composer's config. file
+composer.lock   *not-editable composer's config. file
+gulpfile.js	*optional config file for Elixir and Gulp(for compiling & processing frontend assets
+package.json	*similar to composer.json for frontend assets
+phpunit.xml	*config. file for PHPUnit(tool for testing out of the box)
+readme.md	*markdown file for Intro. of Laravel
+server.php	*backup server for laravel app  to light-weight server 
+</pre>
    
   
 <h3><li>Understanding Routing</li></h3>
    <ul>  
-    <li>Simple way:  match Path with Closure.<br>
+    Simple way:  match Path with Closure.<br>
              Example:<pre>
 //routes/web.php
 Route::get('/',function(){ return 'Hello, World!'; } );
-</pre></li>
-      <li>
+</pre>
+     
          Route verbs: <br>
-        <pre>Route::post('/',function(){});
+        <pre>
+	 Route::post('/',function(){});
          Route::put('/',function(){});
 	 Route::delete('/',function(){});
 	 Route::any('/',function(){});
          Route::match(['get','post'],'/',function(){}); 
-</pre></li>
+</pre>
 	<li>
           Route using Controller name and method as a string
 	<pre>Route::get('/','GreetingController@index');</pre>  
