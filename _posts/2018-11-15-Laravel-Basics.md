@@ -5,7 +5,7 @@ categories: Framework
 ---
 <ol>
 <h3><li>Laravel App Skeleton</li></h3>
-<pre> 
+<pre>
 app/		*bulk of app(models,controllers,route definitions, commands, PHP domain code)  
 config/		*config. files for db conn.,queue, mail settings etc. 
 		each file returns an array,each value of array can be accessed using config key; 
@@ -39,7 +39,7 @@ server.php	*backup server for laravel app  to light-weight server
    
   
 <h3><li>Understanding Routing</li></h3>
-   <ul>  
+<ul>  
     Simple way:  match Path with Closure.<br>
              Example:<pre>
 //routes/web.php
@@ -54,16 +54,17 @@ Route::get('/',function(){ return 'Hello, World!'; } );
 	 Route::any('/',function(){});
          Route::match(['get','post'],'/',function(){}); 
 </pre>
-	<li>
-          Route using Controller name and method as a string
-	<pre>Route::get('/','GreetingController@index');</pre>  
-        </li>
 
-         <li>
-          Route Parameters(variable segment of URL) can be defined in route and passed to closure. 
-		<br> Example: <br>  
-		<pre>Route::get('users/{id}/booklists', function($id){});</pre>   
-	        	<br>->Order is left to right: <pre>Route::get('users/{userId}/comments/{commentId}', function($userId,$commentId){});</pre> 
+<li>
+Route using Controller name and method as a string
+<pre>Route::get('/','GreetingController@index');</pre>  
+</li>
+
+<li>
+Route Parameters(variable segment of URL) can be defined in route and passed to closure. 
+<br> Example: <br>  
+<pre>Route::get('users/{id}/booklists', function($id){});</pre>   
+    	<br>->Order is left to right: <pre>Route::get('users/{userId}/comments/{commentId}', function($userId,$commentId){});</pre> 
                         <br>->Optional Route parameter with ?
                 		 <pre>Route::get('users/{id?}',function($id='fallbackId'){} );</pre>  
 	          	<br>->Regular expression route constraints   
@@ -92,6 +93,42 @@ Route::get('posts/{id}/{slug}',function($id,$slug){ })->where(['id'=>'[0-9]+', '
 			       <pre>route('users.comments.show',['userId'=>1, 'commentId'=>2, 'opt'=>'a'])</pre> 
         <br></li>
    </ul> 
+
+<h3><li>Using command line Companion: Artisan</li></h3>
+<pre>
+php artisan changes  
+php artisan --version
+php artisan route::list //display table with all routes
+php artisan tinker     //starts REPL(an interactive shell) to enter php commands
+			in the context of the application and seed output)
+php artisan down    //bring application into maintainence mode
+php artisan up      //exit maintainence mode
+php artisan optimize //trim & merge common classes in one file: storage/framework/compiled.php  
+        		//if app.debug is set to true, classes will not be compiled
+ 			// --force flag to override
+php artisan route:cache  //cache the routes of application
+php artisan list: gives follwoing entries under make namespace
+        make:command
+        make:console
+        make:controller
+        make:event
+        make:middleware
+        make:migration
+        make:model
+        make:provider
+        make:request
+Usage Examples:
+        php artisan make:model library --no-migration
+        //creates Eloquent Model class called library at app/library.php
+        // without makting migration tables.
+php artisan make:command --help
+</pre>
+
+
+
+
+
+
 </ol>
 
 
