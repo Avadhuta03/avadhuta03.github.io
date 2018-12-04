@@ -136,3 +136,30 @@ int main(){
 		printf(" Expression: getchar() != EOF , has value :%3d\n", b=(getchar() !=EOF );
 	} 
 </pre>
+
+<h3>Character Counting</h3>
+<pre>
+#include&lt;stdio.h>
+int main(){
+	long nc;
+	nc=0;
+	While(getchar() !=EOF)
+		++nc;      //operator ++ is increment by one
+		printf("%ld\n",nc);
+	}
+</pre>
+
+<pre>
+//using for loop
+#include&lt;stdio.h>
+int main(){
+	double nc;            //using double to cope with bigger numbers
+	for(nc=0; getchar() != EOF; ++nc)
+		;          //C requires for statemnt to have body
+	printf("%.0f\n",nc);
+}
+</pre>
+
+
+
+
