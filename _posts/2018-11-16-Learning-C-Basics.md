@@ -160,6 +160,47 @@ int main(){
 }
 </pre>
 
+<h3>Line Counting</h3>
+<pre>
+//text stream appears as a sequence of lines, each terminated by a newline
+#include&lt;stdio.h>
+int main()
+{
+	int c,nl;
+	nl = 0;
+	while( (c=getchar()) != EOF)
+		if(c=='\n')
+		   ++nl;
+           printf("%d\n",nl);
+}
+</pre> 
+
+<h3>Word Count</h3>
+<pre>
+#include&lt;stdio.h>
+
+#define IN 1 /*inside a word*/
+#define OUT 0 /*outside a word*/
+
+//count lines, words, and characters in input
+int main(){
+	int c, nl, nw, nc, state;
+	state = OUT;
+	nl = nw = nc = 0;
+		while((c=getchar()) != EOF) {
+		++nc;
+	    		if(c='\n')
+			    ++nl;
+			if(c==' ' || c=='\n' || c== '\t')
+			   state = OUT;
+			else if(state == OUT){
+				state=IN;
+				++nw;
+                               }
+        }
+        printf("%d %d %d\n",nl, nw, nc);
+}
+</pre>
 
 
-
+ 
