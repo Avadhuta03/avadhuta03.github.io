@@ -24,6 +24,7 @@ github_username: avadhuta03
 paginate: 4 
 paginate_path: "/page:num" 
 
+
 # Build settings
 markdown: kramdown
 theme: minima 

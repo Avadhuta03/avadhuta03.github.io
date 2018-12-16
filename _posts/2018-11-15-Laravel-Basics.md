@@ -4,6 +4,12 @@ title: Learning Laravel
 categories: Framework
 ---
 <ol>
+<h3><li>Installation</li></h3>
+Using Composer<br>
+<pre>composer create-project laravel/laravel <i>projectname</i> --prefer-dist</pre>
+
+
+
 <h3><li>Laravel App Skeleton</li></h3>
 <pre>
 app/		*bulk of app(models,controllers,route definitions, commands, PHP domain code)  
@@ -125,11 +131,159 @@ php artisan make:command --help
 </pre>
 
 
+<h3><li>Database and Eloquent</li></h3>
+Eloquent is a Laravel's ActiveRecord ORM(object-relational mapper).
+There is one class per table, which is responsible for retrieving, representing and persisting data in that table.<br>
+Configuration File: config/database.php<br>
+Database connections: multiple drivers are supported, multiple connections within the same application is also possible.
+Other db connections:Asking for specific connection can be done as:<pre> $users =DB::connection('secondary')->select('select * from users');</pre>
+
+<b>Migrations</b><br>
+A migration is a single files that has:<br>
+up() method to do its migration and down() method to undo whatever changes the up migration made.
+
+Creating migration<pre>php artisan make:migration create_users_table
+php artisan make:migration add_names_to_users_table --table=users
+php artisan make:migration create_users_table --create=users
+</pre> 
+
+Creating tables:<pre>//Everything we do in migration rely on the methods of Schema. Use the create() method to create new table.
+Schema::create('tablename', function(Blueprint $table){
+	// Create columns here
+});</pre>
+Creating columns:<pre>//Bluprint instances can be used for creating columns
+Schema::create('users', function(Blueprint $table){
+	$table->string('name');
+});</pre>
+<h5>Following are some of Blueprint methods:<h5><pre>integer(colName), tinyInteger(colName), smallInteger(colName), mediumInteger(colName), bigInteger(colName)
+string(colName, OPTIONAL length) // adds a varchar type column
+binary(colName)	//adds a BLOB type column
+boolean(colName)
+char(colName,length)
+datetime(colName)
+decimal(colName, precision, scale)
+double(colName, total digits, digits after decimal)
+enum(colName,[choice1, choice2])
+float(colName)
+json(colName) and jsonb(colName)
+text(colName), mediumText(colName), longText(colName)
+time(colName)
+timestamp(colName)
+uuid(colName)  //char(36) in MySQL</pre>
+<h5>Other combined blueprint methods:</h5><pre>softdeletes() //adds a deleted_at timestamp  
+morphs(colName) //eg. morphs('tag') adds integer tag_id and string tag_type   
+		// used in polymorphic relationships
+rememberToken() //adds a remember_token column(Varchar(100)) for user "remember me" tokens
+timestamps() and nullableTimestamps()</pre>
+
+<h5>Adding extra properties</h5><pre>Schema::table('user',function(Blueprint $table){
+$table->string('email')->nullable()->after('last_name');
+});</pre>
+<h5>More of the addtional properties are:</h5><pre>nullable()
+default('default content')
+unsigned()
+first() //places the column first in the column order
+after()
+unique() //adds a unique index
+primary()
+index()</pre>
+
+Dropping tables:<pre>Schema::drop('table_name');</pre>
+Modifying columns:<h5>Before,add the doctrine/dbal package in composer.json and update composer
+<pre>//changing string length to 100
+Schema::table('users', function($table){
+	$table->string('name', 100)->change();
+});
+//adjusting properties in the method name, eg. making nullable
+Schema::table('contacts', function($table){
+	$table->string('deleted_at')->nullable()->change();
+});
+//rename a column
+  $table->renameColumn('advancing', 'advanced');
+//drop a column
+  $table->dropColumn('nickname');
+</pre>
+
+Indexes and Foreign keys<br>
+<pre> Adding column indexes in migrations
+$table->primary('primary_id'); //unnecessary if present increments()
+$table->primary(['first_name','last_name']); //composite keys
+$table->unique('email');  //unique index
+$table->unique('email', 'optional_index_name');
+$table->index('amount'); //basic index
+$table->index('amount','optional_index_name');</pre>
+<h5>Removing indexes</h5><pre>$table->dropPrimary('contacts_id_primary');
+$table->dropUnique('contacts_email_unique);
+$table->dropIndex('optional_index_name');
+$table->dropIndex(['email','amount']);</pre>
+
+<h5>Adding and Removing Foreign keys</h5><pre> $table->foreign('user_id')->refernces('id')->on('users');
+//specifying foreign key contraints with onDelete() or onUpdate()
+$table->foreign('user_id')
+	->references('id')
+	->on('users')
+	->onDelete('cascade');
+//dropping an index by referencing its index name(combination of column name and table being referenced)  
+$table->dropForeign('contacts_user_id_foreign');
+//dropping an index by passing it an array of the fields that it's referencing on the local table
+$table->dropForeign(['user_id']);</pre>
+
+Running Migrations<pre>php artisan migrate
+php artisan migrate --seed //runs migration and then seeds
+php artisan migrate:install //creates table that tracks migrations status
+php artisan migrate:reset  //rolls back all the migrations made by install
+php artisan migrate:refresh  //resets and installs
+php artisan migrate:rollback --step=1 // rolls back number of migrations specified
+php artisan migrate:status</pre>
+
+<b>Seeding</b><br>
+dabatase/seeds folder comes with DatabaseSeeder class, which has run() method.
+<pre>//seeding along with migration 
+php artisan migrate --seed
+php artisan migrate:refresh --seed
+//seeding independently
+php artisan db:seed
+php artisan db:seed --class=ContactsTableSeeder</pre>
+
+<h5>Creating a Seeder</h5><pre>php artisan make:seeder ContactsTableSeeder
+//creates ContactsTableSeeder in database/seeds directory
+
+//edit database/seeds/DatabaseSeeder.php to run when we run our seeders
+	public function run(){
+		$this->call(ContactsTableSeeder::class);
+	}
+//edit the seeder itself in ContactsTableSeeder using DB facade which creates only one record manually
+     DB::table('contacts')->insert([
+			'name'=> 'abcdef'
+			'email' => 'ghi@jkl.mno',
+		]);
+</pre>
+Model Factories: define one or more patterns for creating fake entries for datbase tables<pre>
+$factory->define(User::class, function(Faker\Generator $fake){
+	return[	'name' => $faker->name, ];
+});
+$factory->define('users', function(Faker\Generator $faker){
+	return[ 'name' => $faker->name, ];
+});</pre>
+
+Creating a Model Factory<br>
+Defined in database/factories/ModelFactory.php
+<pre>//simplest factory
+$factory->define(Contact::class, function(Faker\Generator $faker){
+      return['name' => 'abc def','email'=>'ghi@jkl.mno', ];  
+});
+//with this we can use factory() global helper to create an instance of Contact in seeding & testing
+//create one
+$contact = factory(Contact::class)->create();
+//create many
+factory(Contact::class, 20)->create();
+
+//because the above instances becom repetitive, Fakeer helps randomize the creation of structured fake data
+$factory->define(Contact::class, function(Faker\Generator $faker){
+	return[  'name' => $faker->name, 'email' => $faker->email, ];  }); 
+</pre>
 
 
-
-
-</ol>
 
 
 
