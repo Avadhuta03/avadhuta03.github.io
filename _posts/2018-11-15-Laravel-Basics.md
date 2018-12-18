@@ -139,7 +139,7 @@ Database connections: multiple drivers are supported, multiple connections withi
 Other db connections:Asking for specific connection can be done as:<pre> $users =DB::connection('secondary')->select('select * from users');</pre>
 
 <b>Migrations</b><br>
-A migration is a single files that has:<br>
+A migration is a single file that has:<br>
 up() method to do its migration and down() method to undo whatever changes the up migration made.
 
 Creating migration<pre>php artisan make:migration create_users_table
@@ -183,7 +183,7 @@ $table->string('email')->nullable()->after('last_name');
 default('default content')
 unsigned()
 first() //places the column first in the column order
-after()
+$table->index('amount','optional_index_name');</pre>
 unique() //adds a unique index
 primary()
 index()</pre>
@@ -283,8 +283,113 @@ $factory->define(Contact::class, function(Faker\Generator $faker){
 	return[  'name' => $faker->name, 'email' => $faker->email, ];  }); 
 </pre>
 
+Using a Model Factory
+<br><pre>//for seeding
+//create() saves the instance into database instantly
+//make() creates the instance but doesn't yet save it to db
+factory(Post::class)->create([
+         'title' => 'This is my post'
+]);
+factory(User::class, 20)->create()->each(function($u) use($post){
+	$post->comments()->save(factory(Comment::class)->make(['user_id'=>$u->id]));
+});
+//using an array to make() or create() overrides specific keys, above sets user_id on the comment and manually set the title of post
+//second parameter in factory()helper indicates the creation of more than one instance ...above each()method is used to add a comment from each newly created user
+</pre>
+<h5>Accessing multiple model factory types</h5>
+<pre>
+$factory->define(Contact::class, function(Faker\Generator $faker){
+	return [ 'name' => $faker->name, 'email' => $faker->email, ]);
+});
 
+//defining model for vip contacts in above factory model
+ $factory->defineAs(Contact::class, 'vip', function(Faker\Generator $faker){
+   return[
+	'name' => $faker->name,
+	'email' => $faker->email,
+	'vip'  => true,
+	];
+});
+//because there is duplication of data, above can be extended by using $factory->raw()
+$factory->defineAs(Contact::class, 'vip',
+ function(Faker\Generator $faker) use ($factory) {
+	$contact = $factory->raw(Contact::class);
+	return array_merge($contact, ['vip' => true]);
+  });
+//make a specific type
+  $vip = factory(Contact::class, 'vip')->create();
+  $vip = factory(Contact::class, 'vip', 3)->create();
+</pre> 
 
+<b>Query Builder</b><br>
+Laravel's db architecture can connect to MySQL, Postgres, SQLite and SQL Server through a single interface.
+Fluent Interface is available in Laravel that uses method chaining to provides a simpler API.
+<pre> //non-fluent 
+$users = DB::select(['table' => 'users', 'where' => ['type'=> 'tall']]);
+//fluent
+$users = DB::table('users')->where('type','tall')->get();
+</pre>
+<h5>Basic DB Facade usage examples</h5>
+<pre>//basic DB facade and statement()
+DB::statement('drop table users')
+//using raw calls like select(),insert(),update(),delete(), and parameter binding
+DB::select('select * from contacts where validated=?',[true]);
+//select using fluent builder
+$users = DB::table('users')->get();
+//joins and other complex calls
+DB::table('users')
+    ->join('contacts',function($join){
+		 $join->on('users.id','=','contacts.user_id')
+			->where('contacts.type','tall');
+    })
+   ->get();
+</pre>
+<h5>RAW SQL</h5>
+<pre>
+//raw select
+$users = DB::select('select * from users');
+//parameter bindings and named bindings, allows use of PDO parameter
+$booksOfCategory = DB::select(
+	'select * from books where category = ?',
+	[$category]
+   );
+   //parameters can be named for clarity
+ $booksOfCategory = DB::select(
+	'select * from books where category = :category',
+		['category' => $bookCategory]
+	);
+//raw insert
+    DB::insert(
+	'insert into contacts(name,email) values(?,?)',['abc', 'zyx@wvu.tsr']
+	);
+//raw updates
+   $countUpdated = DB::update(
+	'update contacts set status= ? where id = ?',
+	['tall', $id]
+	);
+//raw deletes
+	$countDeleted = DB::delete(
+		'delete from contacts where archived = ?',
+		[ture]
+	);
+</pre>
+<h5>chaining with query builder</h5>
+<pre>//methods can be chained together to build a query 
+    //at the end of chain get() method to trigger execution of query
+    $usersOfType = DB::table('user')
+		->where('type', $type)
+		->get();
+//contraining methods
+select(), select() addSelect()
+where(), orWhere()
+whereBetween(colName,[low,high]) , whereNotBetween(colName,[low,high])
+whereIn(colName,[1,2,3]), whereNotIn(colname,[1,2,3])
+whereNull(colName), whereNotNull(colName)
+whereRaw()    //queries should be carefull used as they are unescaped
+	$usageOfRaw = DB::table('contacts')->whereRaw('id = 28346a')->get() 
+whereExists()
+distinct()
+</pre>
 
 
 

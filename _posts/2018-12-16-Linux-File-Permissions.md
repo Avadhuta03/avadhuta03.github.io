@@ -23,7 +23,7 @@ categories: Linux
 </pre>
 
 <h5>Using Binary Refrences</h5><pre> r=4, w=2, x=1
-chmod 640 filename //owner has read and write permissions, the group has write permissions,
+chmod 640 filename //owner has read and write permissions, the group has read permissions,
 and all other users have no rights to the file.</pre>
 
 
