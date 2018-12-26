@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Installing Arch Linux
+title: How to install Arch Linux with usb  media? 
 categories: Linux
 ---
 <h3>Installation of Arch Linux on hard drive from a live media. </h3>  

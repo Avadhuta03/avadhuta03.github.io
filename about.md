@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 <br><br>
-<h3>This site will try to include computer related contents under different categories.</h3>
+<h3>This site will try to include contents under different categories.</h3>
 
 You can help maintain the site.
 The source is maintained at: 
