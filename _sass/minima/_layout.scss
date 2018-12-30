@@ -5,10 +5,12 @@
   border-top: 1px solid $grey-color-dark;
   border-bottom: 1px solid $grey-color-light;
   min-height: $spacing-unit * 1.865;
-
+  position: fixed;
+  top: 0;
+  min-width: 100%;
   background-color: #f9f1ef;
+
   // Positioning context for the mobile navigation icon
-  position: relative;
 }
 
 .site-title {
@@ -24,10 +26,34 @@
     color: $grey-color-dark;
   }
 }
+.card{
+  -webkit-box-shadow: 0px 0px 35px 9px rgba(247,250,250,1);
+-moz-box-shadow: 0px 0px 35px 9px rgba(247,250,250,1);
+box-shadow: 0px 0px 35px 9px rgba(247,250,250,1);
+  border-radius:10px;
+  padding:15px;
+  //max-width: 800px;
+  margin:20px 85px;
+  display: inline-flex;
+}
+.card:hover{
+  background:#f9f1ef;
+}
+.card .snippet-head{
+ max-width: 500px;
+}
+.card .snippet-body{
+   max-width: 300px;
+}
+
+.posts{
+  margin-top: 28px;
+}
 
 .site-nav {
   float: right;
   line-height: $base-line-height * $base-font-size * 2.25;
+
 
   .nav-trigger {
       display: none;
@@ -219,7 +245,7 @@
 }
 
 .post-title {
-  @include relative-font-size(1.525);
+  @include relative-font-size(1.525); 
   letter-spacing: -1px;
   line-height: 1;
 

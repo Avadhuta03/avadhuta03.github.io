@@ -2,7 +2,11 @@
 layout: post
 title : Linux File Permissions
 categories: Linux
+image: file_permi.png
 ---
+<h4>"Everything is a file", which is one of the definitive features of  UNIX Operating System and its derivatives like Linux.</h4>
+
+<!--continue-->
 
 <h5>Permission Groups</h5>
 <pre>owner(u), group(g), others(o), all users(a)</pre>

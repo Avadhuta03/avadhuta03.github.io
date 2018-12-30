@@ -2,7 +2,12 @@
 layout: post
 title: Learning Laravel
 categories: Framework
+image: laravel.png
 ---
+<h4>Laravel is open-source php  web framework, based on Symfony that follows Model-View-Controller(MVC) architectural pattern and intended for development of web applications.</h4>
+
+
+<!--continue-->
 <ol>
 <h3><li>Installation</li></h3>
 Using Composer<br>

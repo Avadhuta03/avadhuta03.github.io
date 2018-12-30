@@ -2,8 +2,13 @@
 layout: post 
 title:  C Basics  
 categories: Programming
+image: c.png
 ---
 <h4><i>The only way to learn any programming languages is by writing program in it.</i></h4>
+
+
+<!--continue-->
+
 <h3>Getting Started</h3>
 <p>Get the gcc compiler, write files with .c extension, compile them & run the compiled program to get output.</p>
 

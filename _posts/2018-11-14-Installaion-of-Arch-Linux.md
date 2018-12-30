@@ -2,7 +2,11 @@
 layout: post
 title: How to install Arch Linux with usb  media? 
 categories: Linux
+image: arch.png
 ---
+<h4>Arch  linux is a linux distribution for computers based on x86-64 architectures. This distro of linux is popular for its minimalism, simplicity, code correctness and elegance. The pacakage manager, <i>pacman</i> is used to install, remove and update softeare packages.</h4>
+
+<!--continue-->
 <h3>Installation of Arch Linux on hard drive from a live media. </h3>  
 <ol>
 <li>Connect to the Internet <br>
