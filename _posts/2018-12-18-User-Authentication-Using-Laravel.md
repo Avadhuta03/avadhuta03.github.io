@@ -272,6 +272,3 @@ protected $listen = [
 #listeners for "user attempting login", "successful 
 login","logout","lockout"
 </pre>
-
-Authorization(ACL) and Roles
-
