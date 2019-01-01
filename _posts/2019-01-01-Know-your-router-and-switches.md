@@ -2,7 +2,7 @@
 layout: post
 title: Getting to Know  About  Router and Switch
 categories: [Computer Network]
-image: 
+image: com_net.png 
 ---
 <h4>A small local area Computer Network comprises of two or more different electronic devices(nodes) that are able to communicate with each other for the transimission of data or infromation, to and  from each other.</h4>
 
