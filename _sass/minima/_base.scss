@@ -264,11 +264,4 @@ table {
 	padding-top:80px;
 }
 
-@include media-query($on-palm){
-  .card{
-    margin: 0;
-    display: inline-block;
-  }
-}
-
 
