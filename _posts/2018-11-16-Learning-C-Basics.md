@@ -4,7 +4,7 @@ title:  C Basics
 categories: Programming
 image: c.png
 ---
-<h4><i>The only way to learn any programming languages is by writing program in it.</i></h4>
+<h4><i>"The only way to learn any programming languages is by writing program in it."</i></h4>
 
 
 <!--continue-->
