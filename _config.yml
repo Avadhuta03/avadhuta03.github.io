@@ -25,9 +25,14 @@ github_username: avadhuta03
 
 excerpt_separator: <!--continue-->
 
-paginate: 6 
+paginate: 10
 paginate_path: "/page:num" 
 
+
+permalink: /:title/
+
+#for multi-lingual approach, 
+languages: ['en','np']
 
 # Build settings
 markdown: kramdown

@@ -1,0 +1,1116 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-01-18T22:00:09+05:45</updated><id>http://localhost:4000/feed.xml</id><title type="html">Home</title><subtitle></subtitle><entry><title type="html">Open Short Path First (OSPF) Protocol</title><link href="http://localhost:4000/OSPF-Protocol/" rel="alternate" type="text/html" title="Open Short Path First (OSPF) Protocol" /><published>2019-01-17T00:00:00+05:45</published><updated>2019-01-17T00:00:00+05:45</updated><id>http://localhost:4000/OSPF-Protocol</id><content type="html" xml:base="http://localhost:4000/OSPF-Protocol/">&lt;p&gt;Open Short Path First (OSPF) Protocol is the standarized link state routing protocol.
+&lt;!--continue--&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Advantages of OSPF&lt;/li&gt;
+&lt;li&gt;Concept of Area in OSPF&lt;/li&gt;
+&lt;li&gt;MultiArea OSPF&lt;/li&gt;
+&lt;li&gt;Router Type&lt;/li&gt;
+  &lt;ul&gt;&lt;li&gt; Internal Router&lt;/li&gt;
+ 	&lt;li&gt;Area Border Router&lt;/li&gt;
+	&lt;li&gt;AS Boundary Router&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;li&gt;Link State Advertise(LSA) &lt;/li&gt;
+&lt;li&gt;Neighbour&lt;/li&gt;
+&lt;li&gt;Terminologies in OSPF&lt;/li&gt;
+&lt;li&gt;5 types of Packet in OSPF&lt;/li&gt;    
+&lt;ul&gt;
+  &lt;li&gt; Hello&lt;/li&gt;&lt;li&gt;DBD&lt;/li&gt;&lt;li&gt;LSR&lt;/li&gt;&lt;li&gt;LSU&lt;/li&gt;&lt;li&gt;LSAck&lt;/li&gt;
+&lt;/ul&gt; 
+
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">Open Short Path First (OSPF) Protocol is the standarized link state routing protocol.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/ospf.png" /></entry><entry><title type="html">Getting to Know About Router and Switch</title><link href="http://localhost:4000/Know-your-router-and-switches/" rel="alternate" type="text/html" title="Getting to Know  About  Router and Switch" /><published>2019-01-01T00:00:00+05:45</published><updated>2019-01-01T00:00:00+05:45</updated><id>http://localhost:4000/Know-your-router-and-switches</id><content type="html" xml:base="http://localhost:4000/Know-your-router-and-switches/">&lt;h4&gt;A small local area Computer Network comprises of two or more different electronic devices(nodes) that are able to communicate with each other for the transimission of data or infromation, to and  from each other.&lt;/h4&gt;
+
+&lt;!--continue--&gt;
+&lt;p&gt;There are devices like router and switch, that has its own operating system and protocols embedded into it, whose primary function is to facilitate the communication between the nodes in the network.&lt;/p&gt;
+
+&lt;h3&gt;Router&lt;/h3&gt;
+&lt;h4&gt;To configure router using CLI, lets know about the user modes in router settings:&lt;/h4&gt;
+&lt;table&gt;
+&lt;tr&gt;&lt;td&gt;&lt;b&gt;Modes Name&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Prompt Used&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Description&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;User Mode&lt;/td&gt;&lt;td&gt;&amp;gt;&lt;/td&gt;&lt;td&gt;only simple commands like ping can be executed&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Privilege Mode&lt;/td&gt;&lt;td&gt;#&lt;/td&gt;&lt;td&gt;router settings can be accessed, administrative mode&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Global Configuration Mode&lt;/td&gt;&lt;td&gt;(config)#&lt;/td&gt;&lt;td&gt;settings for router like hostname,password.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Interface Configuration Mode&lt;/td&gt;&lt;td&gt;(config-if)#&lt;/td&gt;&lt;td&gt;settings for router's interfaces like IP address&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Router Configuration Mode&lt;/td&gt;&lt;td&gt;(config-router)#&lt;/td&gt;&lt;td&gt;settings for routing protocols&lt;/td&gt;&lt;/tr&gt; 
+&lt;/table&gt;
+
+&lt;h4&gt;Common Router Settings&lt;/h4&gt;
+&lt;pre&gt;Router&amp;gt;enable    //user mode to privilege mode; 
+Router#disable  //privilege mode to user mode
+Router#exit     //exits the router to after-boot state
+&lt;/pre&gt;
+&lt;h4&gt;Privilege Mode Commands&lt;/h4&gt;
+&lt;pre&gt;#?      //shows exec commands that can be executed
+#show ?     //show the available commands to be used after show, some are
+#show flash    //informaion like IOS size and name, memory used, flash memory size
+#show interfaces     //information on interfaces and its state
+#show interface fastethernet 0/0     //show infromation on fastethernet 0/0
+#show ip interface       //checks the implementation of TCP/IP on interface
+#show ip interface fastethernet 0/0 
+#show version   //shows information like IOS version , DRAM size, NVRAM size etc.
+#show protocols   //informs about protocols used and their status in interfaces
+#show running-config  //shows the configuration hold by volatile RAM
+
+#copy running-config startup-config  //saves the settings to non-volatile NVRAM,
+#configure terminal      //privilege mode --&amp;gt; Global Configuration Mode 
+&lt;/pre&gt;
+&lt;h4&gt;Global Configuration Mode&lt;/h4&gt;
+&lt;pre&gt;Router(config)#hostname R1     //changes hostname to R1
+R1(config)#enable password  abc     //unencrypted password; abc for gaining access to privilege mode
+R1(config)#enable secret abc        //encrypted password; abc for access to privelege mode from user mode
+R1(config)#no ip domain-lookup    //to disable DNS function that is enabled by default
+R1(config)#service password-encryption      //encrypts all the password 
+
+R1(config)#line vty 0 4     //to configure settings for telnet connection for 0 to 4 ports
+        R1(config-line)#login
+        R1(config-line)#password abc    
+        R1(config-line)#exit
+
+R1(config)#line console 0  //to configure settings for console connection
+       R1(config-line)#login
+       R1(config-line)#password cisco
+       R1(config-line)#exec-timeout 0 0   //disables timeout for console connection
+       R1(config-line)#exit
+&lt;/pre&gt;
+
+&lt;h4&gt;Interface Configuration Mode&lt;/h4&gt;
+&lt;pre&gt;
+R1(config)#interface fastethernet 0/0   //configures interface fastethernet
+R1(config-if)#ip address 172.16.1.200   255.255.255.0
+R1(config-if)#no shutdown
+ &lt;/pre&gt;
+
+&lt;h4&gt;Few Terminologies&lt;/h4&gt;
+&lt;table&gt;
+ &lt;tr&gt;&lt;td&gt;interface is up &lt;/td&gt;&lt;td&gt;interface can function as physical layer&lt;/td&gt;&lt;/tr&gt;
+ &lt;tr&gt;&lt;td&gt;interface is down &lt;/td&gt; &lt;td&gt; interface  can't function as physical layer&lt;/td&gt;&lt;/tr&gt;
+ &lt;tr&gt;&lt;td&gt;administratively down&lt;/td&gt;&lt;td&gt;interface is in &quot;shutdown&quot; state&lt;/td&gt;&lt;/tr&gt;
+ &lt;tr&gt;&lt;td&gt;Maximum Transmission Unit  (MTU)&lt;/td&gt;&lt;td&gt;Amount of IP datagram a device can send at one time.  &lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;BandWidth(BW)&lt;/td&gt;&lt;td&gt;Unit: kbps&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Delay(DLY)&lt;/td&gt;&lt;td&gt;Unit: usec (microsec)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;relaibility&lt;/td&gt;&lt;td&gt;reliability of interface. [255/255] shows highest reliabilty while [0/255] is the lowest.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;tcload,rxload&lt;/td&gt;&lt;td&gt;state of transmission capacity, receiving capacity of interfaces&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;encapsulation&lt;/td&gt;&lt;td&gt;capsulating data link layer of interface, for example LAN interface has 4 types: EthernetII(ARPA) or (HDLC for serial interfaces), SNAP, 802.3Raw(novel-ether),802.2LLC(sap)&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</content><author><name></name></author><summary type="html">A small local area Computer Network comprises of two or more different electronic devices(nodes) that are able to communicate with each other for the transimission of data or infromation, to and from each other.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/com_net.png" /></entry><entry><title type="html">Using Laravel’s Basic User Authentication System</title><link href="http://localhost:4000/User-Authentication-Using-Laravel/" rel="alternate" type="text/html" title="Using Laravel's Basic User Authentication System" /><published>2018-12-18T00:00:00+05:45</published><updated>2018-12-18T00:00:00+05:45</updated><id>http://localhost:4000/User-Authentication-Using-Laravel</id><content type="html" xml:base="http://localhost:4000/User-Authentication-Using-Laravel/">&lt;h4&gt;User Authentication System basically includes: registration, login, sessions, password resets, and access permissions.&lt;/h4&gt;
+&lt;!--continue--&gt;
+
+&lt;h5&gt; Every install of Laravel comes with:a RegisterController, a LoginController, a ForgotPasswordController, and a ResetPasswordController &lt;/h5&gt;
+&lt;pre&gt;php artisan make:auth //This auth scaffold seeds 
+authentication-related views and routes
+ //following files are created
+  app/Http/Controllers/HomeController.php
+  resources/views/auth/login.blade.php 
+  resources/views/auth/register.blade.php
+  resources/views/auth/passwords/email.blade.php
+  resources/views/auth/passwords/reset.blade.php
+  resources/views/layouts/app.blade.php
+  resources/views/home.blade.php
+
+php artisan migrate //to run migrations that are by default
+&lt;/pre&gt;
+
+&lt;h4&gt;User Model and Migration&lt;/h4&gt;
+&lt;p&gt;Laravel fresh installation contains app/user model and, create_users_table and create_password_resets_table , migrations&lt;/p&gt;
+&lt;pre&gt;
+//default user migration contains
+ Schema::create('users', function (Blueprint $table) {
+            $table-&amp;gt;increments('id');
+            $table-&amp;gt;string('name');
+            $table-&amp;gt;string('email')-&amp;gt;unique();
+            $table-&amp;gt;timestamp('email_verified_at')-&amp;gt;nullable();
+            $table-&amp;gt;string('password');
+            $table-&amp;gt;rememberToken();
+            $table-&amp;gt;timestamps();
+//default password reset migration contains
+Schema::create('password_resets', function (Blueprint $table) {
+            $table-&amp;gt;string('email')-&amp;gt;index();
+            $table-&amp;gt;string('token');
+            $table-&amp;gt;timestamp('created_at')-&amp;gt;nullable();
+        });
+&lt;/pre&gt;
+&lt;pre&gt;
+/*defalut user model app/User.php which extends
+Illuminate\Foundation\Auth\User class*/
+
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+
+class User extends Authenticatable
+{
+    use Notifiable;
+    protected $fillable = [
+        'name', 'email', 'password',
+    ];
+    protected $hidden = [
+        'password', 'remember_token',
+    ];
+  }
+
+//Illuminate\Foundation\Auth\User look like
+namespace Illuminate\Foundation\Auth;
+
+use Illuminate\Auth\Authenticatable;
+use Illuminate\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Auth\Passwords\CanResetPassword;
+use Illuminate\Foundation\Auth\Access\Authorizable;
+use Illuminate\Contracts\Auth\Authenticatable as 
+AuthenticatableContract;
+use Illuminate\Contracts\Auth\Access\Authorizable as 
+AuthorizableContract;
+use Illuminate\Contracts\Auth\CanResetPassword as 
+CanResetPasswordContract;
+
+class User extends Model implements
+    AuthenticatableContract,
+    AuthorizableContract,
+    CanResetPasswordContract
+{
+    use Authenticatable, Authorizable, CanResetPassword, 
+MustVerifyEmail;
+}
+&lt;/pre&gt;
+&lt;h5&gt; Authenticatable Contracts requires methods like 
+getAuthIdentifier()&lt;br /&gt;
+Authorizable Contract requires methods like can()&lt;br /&gt;
+CanResetPassword Contract requires method 
+getEmailForPasswordReset()&lt;/h5&gt;
+
+&lt;p&gt;Using auth() global helper and the auth Facade&lt;br /&gt;&lt;/p&gt;
+&lt;pre&gt;
+public function dashboard(){
+	if(auth()-&amp;gt;guest()){ return redirect('sign-up'); }
+        return view('dashboard')-&amp;gt;with('user',auth()-&amp;gt;user());
+}
+//other ways to check user is: auth()-&amp;gt;check(), auth()-&amp;gt;user(), 
+//auth()-&amp;gt;id() return false or null when user is not logged in
+&lt;/pre&gt;
+&lt;p&gt;The Auth Controllers&lt;/p&gt;
+&lt;pre&gt;//RegisterController //
+  --&amp;gt;$redirectTo property //where to redirect user after registration
+  --&amp;gt;validator() method //how to validate registrations
+  --&amp;gt;create() method //how to create a new user
+  --&amp;gt;RegisterUsers trait 
+	-&amp;gt;shows user form with showRegistrationForm() mehtod
+        -&amp;gt;handles POST of the form with register() method which passes
+           the input to validator()method, and then on to the create() method.
+
+//LoginController//
+--&amp;gt;AuthentiateUsers trait
+   -&amp;gt;shows user login form, validating their logins, throttling failed 
+login, handling logouts, and redirecting users after a successful login
+  -&amp;gt;showLoginForm() method, login(), validateLogin(), authenticated(), 
+username() methods are used
+--&amp;gt;ThrottlesLogins trait
+   -&amp;gt;an interface to Laravel's Illuminate\Cache\RateLimiter class
+
+//ResetPasswordController//
+--&amp;gt;ResetsPasswords trait
+	-&amp;gt;showResetForm(),reset(), resetPassword(),broker(),guard()
+
+//ForgotPasswordController
+--&amp;gt;SendsPasswordResetEmails trait
+   -&amp;gt;shows auth.passwords.email form with showLinkRequestForm() method
+   -&amp;gt;handles the POST with sendResetLinkEmail() method
+&lt;/pre&gt;
+
+&lt;p&gt;Auth::routes()&lt;/p&gt;
+&lt;pre&gt;//   routes/web.php
+	Auth::routes(); //brings in a bundle of predefined routes
+&lt;/pre&gt;
+
+&lt;p&gt;Remember Me&lt;/p&gt;
+&lt;pre&gt;//The users table in the default migration has a remember_token 
+column
+//without remember me implementation
+if(auth()-&amp;gt;attempt([
+	'email'=&amp;gt;request()-&amp;gt;input('email'),
+	'password'=&amp;gt;request()-&amp;gt;input('password')
+	])){
+	//successfull login
+}
+
+//with remember me checkbox
+if(auth()-&amp;gt;attempt([
+	'email'=&amp;gt;request()-&amp;gt;input('email'),
+	'password'=&amp;gt;request()-&amp;gt;input('password')
+	]),request()-&amp;gt;has('remember')){
+	//the successful login handler
+}
+
+//method auth()-&amp;gt;viaRemember() can be used to check if a remember token 
+was used.
+&lt;/pre&gt;
+
+&lt;p&gt;Manual Authentication&lt;/p&gt;
+&lt;pre&gt;
+#auth()-&amp;gt;attempt() is used to check the credentials from the user.
+#However, in cases like switching users by admin,following methods are used:
+#1.passing user ID
+auth()-&amp;gt;loginUsingId(5);
+#2.passing user or other objects that implements Authenticatable contract
+auth()-&amp;gt;login($user);
+&lt;/pre&gt;
+
+&lt;p&gt;Auth Middleware&lt;/p&gt;
+&lt;pre&gt;#Route middleware are used to restrict certain routes to guests or to authenticated users.
+#Route Middleware is defined in app\Http\Kernel as following:
+protected $routeMiddleware = [
+        'auth' =&amp;gt; \Http\Middleware\Authenticate::class,
+        'auth.basic' =&amp;gt; \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
+        'bindings' =&amp;gt; \Illuminate\Routing\Middleware\SubstituteBindings::class,
+        'cache.headers' =&amp;gt; \Illuminate\Http\Middleware\SetCacheHeaders::class,
+        'can' =&amp;gt; \Illuminate\Auth\Middleware\Authorize::class,
+        'guest' =&amp;gt; \Vidhyalaya\Http\Middleware\RedirectIfAuthenticated::class,
+        'signed' =&amp;gt; \Illuminate\Routing\Middleware\ValidateSignature::class,
+        'throttle' =&amp;gt; \Illuminate\Routing\Middleware\ThrottleRequests::class,
+        'verified' =&amp;gt; \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+    ];
+#example of routes protected by auth middleware
+Route::group(['middleware' =&amp;gt; 'auth'], function () {
+	Route::get('account', 'AccountController@dashboard');
+});
+Route::get('login','Auth\LoginController@getLogin')-&amp;gt;middleware('guest');
+&lt;/pre&gt;
+
+&lt;p&gt;Understanding Guards&lt;/p&gt;
+&lt;pre&gt;# Authentication system is routed through guard, which is 
+combination of, a driver that defines how it persists and retrieves the 
+auth state like session, and a provider that allows to get a certain 
+area like users.
+#Laravel has two guards: web and api
+#web is basic auth. sytle, uses session driver and the basic user 
+provider
+#api uses the same basic user provider but the token driver
+&lt;/pre&gt;
+
+&lt;p&gt;Changing the Default Guard&lt;/p&gt;
+&lt;pre&gt;#guards are defined in config/auth.php
+#default guard is used any time auth featueres are used.
+#to change the default guard change auth.defaults.guard in 
+config/auth.php to 
+'defaults' =&amp;gt; [
+	'guard' =&amp;gt; 'web', // Change the default here
+	'passwords' =&amp;gt; 'users',
+],
+&lt;/pre&gt;
+
+&lt;p&gt;Using Other guards without changing the default&lt;/p&gt;
+&lt;pre&gt;#start auth calls with guard():
+$apiUser = auth()-&amp;gt;guard('api')-&amp;gt;user();
+&lt;/pre&gt;
+
+&lt;p&gt;Adding a new Guard&lt;/p&gt;
+&lt;pre&gt;#add a new guard auth.guard settings in config/auth.php
+ 'guards'=&amp;gt;[
+	'students'=&amp;gt;[
+		'registered' =&amp;gt; 'session',
+		'provider' =&amp;gt; 'students',
+	],
+  ],
+#in an app where  users are students, they have their own users, 
+students who can log in to their subdomains.So a separate guard.
+&lt;/pre&gt;
+
+&lt;p&gt;Creating a Custom User Provider&lt;/p&gt;
+&lt;pre&gt;#auth.providers section in config/auth.php defines availabe 
+providers.
+#creating a new provider look like:
+'providers' =&amp;gt; [
+	'users' =&amp;gt; [
+	'driver' =&amp;gt; 'eloquent',
+	'model' =&amp;gt; App\User::class,
+        ],
+ 'students' =&amp;gt; [
+	'driver' =&amp;gt; 'eloquent',
+	'model' =&amp;gt; App\Students::class,
+	],
+ ],
+#in the app, there are users and students, &amp;amp; theny need to be 
+authenticated separately as
+#auth()-&amp;gt;guard(users) and auth()-&amp;gt;guard(students)
+#auth route middleware can take a guard name as a parameter as:
+Route::group(['middleware'=&amp;gt;'auth:students'],function(){
+	//students only route here
+});
+&lt;/pre&gt;
+
+&lt;p&gt;Custom User Provider for non-relational Databases&lt;/p&gt;
+&lt;pre&gt;# a new class needs to be created that implements 
+Illuminate\Contracts\Auth\UserProvider interface
+#bind it in AuthServiceProvider@boot
+auth()-&amp;gt;provider('mongo',function($app, array $config){
+     //return an instance of UserProvider
+	return new MongoUserProvider($app['mongo.connection']);
+});
+&lt;/pre&gt;
+
+&lt;p&gt;Auth Events&lt;/p&gt;
+&lt;pre&gt;#Laravel's event system has: system and user generated events.
+#auth. events generated by framework look like:
+protected $listen = [
+	'Illuminate\Auth\Events\Attempting' =&amp;gt; [],
+	'Illuminate\Auth\Events\Login' =&amp;gt; [],
+	'Illuminate\Auth\Events\Logout' =&amp;gt; [],
+	'Illuminate\Auth\Events\Lockout' =&amp;gt; [],
+];
+#listeners for &quot;user attempting login&quot;, &quot;successful 
+login&quot;,&quot;logout&quot;,&quot;lockout&quot;
+&lt;/pre&gt;</content><author><name></name></author><summary type="html">User Authentication System basically includes: registration, login, sessions, password resets, and access permissions.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/login.png" /></entry><entry><title type="html">Linux File Permissions</title><link href="http://localhost:4000/Linux-File-Permissions/" rel="alternate" type="text/html" title="Linux File Permissions" /><published>2018-12-16T00:00:00+05:45</published><updated>2018-12-16T00:00:00+05:45</updated><id>http://localhost:4000/Linux-File-Permissions</id><content type="html" xml:base="http://localhost:4000/Linux-File-Permissions/">&lt;h4&gt;&quot;Everything is a file&quot;, which is one of the definitive features of  UNIX Operating System and its derivatives like Linux.&lt;/h4&gt;
+
+&lt;!--continue--&gt;
+
+&lt;h5&gt;Permission Groups&lt;/h5&gt;
+&lt;pre&gt;owner(u), group(g), others(o), all users(a)&lt;/pre&gt;
+
+&lt;h5&gt;Permission Types&lt;/h5&gt;
+&lt;pre&gt;read(r), write(w), execute(x)&lt;/pre&gt;
+
+&lt;h5&gt;Command line format example&lt;/h5&gt;
+&lt;pre&gt; _rwxrwxrwx1owner:group
+-&amp;gt; first character _ is special permission flag which can vary
+-&amp;gt; following set of 3 characters(rwx) is for owner permissions 
+-&amp;gt; following second set of 3 characters(rwx)is for group permissions.
+-&amp;gt; third set of 3 characters(rwx)is for all users permissions
+-&amp;gt; following integer/number displays the number of hard links to the file.
+-&amp;gt; the last part is the owner and group assignment as Owner:Group
+&lt;/pre&gt;
+&lt;h5&gt;Modifying permissions using &lt;b&gt;chmod&lt;/b&gt;&lt;pre&gt;chmod a+rw filename 
+//adds read and write permissions from the all users group.
+&lt;/pre&gt;
+
+&lt;h5&gt;Using Binary Refrences&lt;/h5&gt;&lt;pre&gt; r=4, w=2, x=1
+chmod 640 filename //owner has read and write permissions, the group has read permissions,
+and all other users have no rights to the file.&lt;/pre&gt;
+
+
+&lt;h5&gt;Owners and Groups&lt;/h5&gt;&lt;pre&gt;chown owner:group filename 
+example: chown user1:kali filename
+//changes the owner of filename to user1 and the group to kali&lt;/pre&gt;
+
+&lt;h5&gt; Advanced Permissions&lt;/h5&gt;
+Special permission flag can be marked with following:
+&lt;pre&gt; _ -&amp;gt; no special permission
+d -&amp;gt;directory
+l -&amp;gt;file or directory is a symbolic link
+s -&amp;gt; setuid/setgid permissions, represented in the read portion of the owner or group permissions. 
+t -&amp;gt; sticky bit sermissions, represented in the executable portion of the all users permissions.  
+&lt;/pre&gt;
+
+
+
+&lt;/h5&gt;</content><author><name></name></author><summary type="html">&quot;Everything is a file&quot;, which is one of the definitive features of UNIX Operating System and its derivatives like Linux.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/file_permi.png" /></entry><entry><title type="html">Using Vi Editor</title><link href="http://localhost:4000/Using-Vi/" rel="alternate" type="text/html" title="Using Vi Editor" /><published>2018-11-18T00:00:00+05:45</published><updated>2018-11-18T00:00:00+05:45</updated><id>http://localhost:4000/Using-Vi</id><content type="html" xml:base="http://localhost:4000/Using-Vi/">&lt;p&gt;Vi(Visual Editor) is a screen oriented text editor originally created for Unix Operating System. Almost all Llinux distributions includes vi by default.&lt;br /&gt;
+Vi has three different  modes: &lt;i&gt;Command Mode, Insert Mode &amp;amp; Ex Mode&lt;/i&gt;&lt;/p&gt;
+
+&lt;!--continue--&gt;
+
+&lt;h3&gt;Command Mode: Esc &lt;/h3&gt;
+&lt;pre&gt;Movement Commands:[count] motion
+h --&amp;gt; left
+j --&amp;gt;Down
+k --&amp;gt;Up
+l --&amp;gt;Right
+w --&amp;gt;One word forward
+b --&amp;gt;One word Back
+^ --&amp;gt; Beginning of line
+$ --&amp;gt; End of line
+Move to a specific line number: LineNo. followed by G, Ex. 5G 
+gg or 1G --&amp;gt;moves to first line
+G --&amp;gt; move to last line
+CTRL-G  --&amp;gt; to find out line the curso is currently on.
+&lt;/pre&gt;
+
+&lt;p&gt;Command Mode  Actions&lt;/p&gt;
+&lt;pre&gt;   cut --&amp;gt; d(delete)
+	copy --&amp;gt; y(yank)  
+	paste --&amp;gt; p | P (put)
+
+ Format:  
+	action [count] motion 
+	[count] action motion 
+      
+ Delete: removes indicated text and saves to buffer. 
+	dd --&amp;gt; Delete current line
+	3dd --&amp;gt; Delete next 3 lines 
+	dw --&amp;gt; Delet the current word 
+	d3w --&amp;gt; Delete next 3 words 
+	d4h --&amp;gt; Delete 4 chars. to left 
+Change: removes indicated text, save to buffer and switch to insert mode 
+         cc --&amp;gt; Change current line
+	cw --&amp;gt; Change current word 
+	c3w --&amp;gt; Change the next 3 words 
+	c5h --&amp;gt; Change 5 chars. to the left
+
+Yank : Place content into buffer without deleting it. 
+		yy --&amp;gt; Yank Current line
+  		3yy --&amp;gt; Yank the next 3 lines
+		yw --&amp;gt; Yank the current word
+		y$ --&amp;gt; Yank to the end of the line
+	 
+Put: Place the saved text in buffer before or after the cursor
+		p : before the cursor
+		P : after
+
+Searching in Vi    
+		/ --&amp;gt; start search forward from the cursor position.
+                n --&amp;gt; to proceed to next match 
+		N --&amp;gt; to go back to previous match
+                ? --&amp;gt; start search backwards from cursor position 
+&lt;/pre&gt;
+
+&lt;h3&gt; Ex Mode: Command Mode + :(char) &lt;/h3&gt;
+&lt;pre&gt;     :w --&amp;gt; write the current file to fs.
+	:w filename --&amp;gt; save copy of the current file as filename
+	:w! --&amp;gt; Force writing to the file 
+	:1 --&amp;gt; Go to line number 1(example)
+	:e filename --&amp;gt; open filename
+	:q --&amp;gt; quit if no change is made
+	:q! --&amp;gt; quit without saving changes
+&lt;/pre&gt;
+
+&lt;h3&gt; Insert Mode: used to add text to file.&lt;/h3&gt;
+&lt;pre&gt;     a --&amp;gt; after the cursor
+     A --&amp;gt; at the end of the line
+     i --&amp;gt; right before the cursor
+     I --&amp;gt; at the beginning of the line
+     o --&amp;gt; on a blank line after the cursor
+     O --&amp;gt; on a blank line before the cursor
+&lt;/pre&gt;</content><author><name></name></author><summary type="html">Vi(Visual Editor) is a screen oriented text editor originally created for Unix Operating System. Almost all Llinux distributions includes vi by default. Vi has three different modes: Command Mode, Insert Mode &amp;amp; Ex Mode</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/vi.png" /></entry><entry><title type="html">C Basics</title><link href="http://localhost:4000/Learning-C-Basics/" rel="alternate" type="text/html" title="C Basics" /><published>2018-11-16T00:00:00+05:45</published><updated>2018-11-16T00:00:00+05:45</updated><id>http://localhost:4000/Learning-C-Basics</id><content type="html" xml:base="http://localhost:4000/Learning-C-Basics/">&lt;h4&gt;&lt;i&gt;&quot;The only way to learn any programming languages is by writing program in it.&quot;&lt;/i&gt;&lt;/h4&gt;
+
+&lt;!--continue--&gt;
+
+&lt;h3&gt;Getting Started&lt;/h3&gt;
+&lt;p&gt;Get the gcc compiler, write files with .c extension, compile them &amp;amp; run the compiled program to get output.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;
+#include&amp;lt;stdio.h&amp;gt;  //compiler gets information form standard input/output lib. 
+int main()		//define main function with no argument values  
+{
+ printf(&quot;Hello, World!\n&quot;);   //main calls lib. function printf, 
+		              //	\n is newline character
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;Variables and Arithmetic Expressions&lt;/h3&gt;
+&lt;li&gt;Program displaying Fahrenheit-Celsius table&lt;/li&gt;
+&lt;pre&gt;&lt;code&gt;
+#include&amp;lt;stdio.h&amp;gt;     
+int main(){
+
+      /*variables usually declared before executable statements */ 
+     	int fahr, celsius;		//int variable types
+	int lower, upper, step; 
+
+      /* assignment statements to assign initial values to variables */
+	lower=0; upper=300; step=20; fahr=lower;
+
+      /* while loop that repeats loop once per output line,
+        each line of table is computed the same way*/
+
+	while(fahr&amp;lt;=upper){
+		celsius = 5*(fahr-32)/9;
+
+		//%d specifies the integer argument
+		printf(&quot;%d\t%d\n&quot;,fahr,celsius);
+
+		fahr = fahr + step;
+        }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;li&gt;More precise and clear version of above program can be:&lt;/li&gt;
+&lt;pre&gt;
+#include&amp;lt;stdio.h&amp;gt;     
+int main(){
+     	float fahr, celsius;		//float variable types
+	int lower, upper, step;        //int variable types 
+
+	lower=0; upper=300; step=20; fahr=lower;
+
+      /* while loop that repeats loop once per output line,
+       because each line of table is computed the same way*/
+
+	while(fahr&amp;lt;=upper){
+	//number after decimal is not truncated.
+		celsius = (5.0/9.0)*(fahr-32.0)/9;
+ 
+	//3.0f prints fahr 3 chars. wide and no decimal or fraction digits
+		printf(&quot;%3.0f %6.1f \n&quot;,fahr,celsius);
+
+		fahr = fahr + step;
+	}
+}
+&lt;/pre&gt;
+&lt;li&gt; Temperature conversion in reverse order  using for statement:&lt;/li&gt;
+&lt;pre&gt;
+    #include&amp;lt;stdio.h&amp;gt;
+   /* Fahrenheit ---&amp;gt; Ceslius Table */
+
+ int main(){
+       int fahr;
+
+       for(fahr=300; fahr &amp;gt;= 0; fahr=fahr-20)
+
+           printf(&quot;%3d %6.1f\n&quot;, fahr,(5.0/9.0) * (fahr-32)); 
+}    
+&lt;/pre&gt;
+
+&lt;h3&gt;Using Symbolic Constants to deal with magic numbers that appears in program.&lt;/h3&gt;
+&lt;pre&gt;
+#define LOWER 0		 //lowerlimit
+#define UPPER 300	 //upperlimit
+#define STEP 20		//step size
+
+int main(){
+  int fahr;
+  printf(&quot;Fahrenheit-Celsius table\n&quot;);
+
+  for(fahr=LOWER; fahr&amp;lt;=UPPER; fahr=fahr+STEP)
+	printf(&quot;%3d %6.1f\n&quot;,fahr,(5.0/9.0)*(fahr-32));
+}
+&lt;/pre&gt;
+
+&lt;h3&gt;Character Input and Output&lt;/h3&gt;
+&lt;li&gt;Text Stream:Sequence of characters divided into lines [0 or more characters followed by newline character]&amp;lt;/i&amp;gt;&lt;br /&gt;
+   Functions:&lt;br /&gt;
+		getchar() : reads the next input character from a text stream and return that as its value. &lt;br /&gt; 
+		putchar() : prints a character each time it is called&lt;br /&gt;
+&lt;/li&gt;
+&lt;pre&gt;
+ /* File Copying first version */
+  	#include&amp;lt;stdio.h&amp;gt;
+	int main(){
+		int c;      // int data type because of its size
+		c=getchar();
+		while(c != EOF)      //EOF is special char whose value is distinct from that of real chars
+		{                    // != is &quot;not equal to&quot;
+		  putchar(c);
+		  c=getchar(); 
+		}
+	}
+&lt;/pre&gt;
+
+&lt;pre&gt;
+ /* File Copying--second  version */
+  	#include&amp;lt;stdio.h&amp;gt;
+	int main(){
+		int c;      
+		while((c=getchar()) != EOF) //an assignment can be a part of larger expression 
+		 { putchar(c);}
+	}
+&lt;/pre&gt;
+
+&lt;li&gt;Value of EOF = ?&lt;/li&gt;
+&lt;li&gt;Verify getchar() != EOF expression has value 0 or 1&lt;/li&gt;
+&lt;pre&gt;
+    #include&amp;lt;stdio.h&amp;gt;
+	int main(){
+		int a,b;
+		printf(&quot;Value of EOF : %3d\n&quot;,a=EOF);  
+		printf(&quot; Expression: getchar() != EOF , has value :%3d\n&quot;, b=(getchar() !=EOF );
+	} 
+&lt;/pre&gt;
+
+&lt;h3&gt;Character Counting&lt;/h3&gt;
+&lt;pre&gt;
+#include&amp;lt;stdio.h&amp;gt;
+int main(){
+	long nc;
+	nc=0;
+	While(getchar() !=EOF)
+		++nc;      //operator ++ is increment by one
+		printf(&quot;%ld\n&quot;,nc);
+	}
+&lt;/pre&gt;
+
+&lt;pre&gt;
+//using for loop
+#include&amp;lt;stdio.h&amp;gt;
+int main(){
+	double nc;            //using double to cope with bigger numbers
+	for(nc=0; getchar() != EOF; ++nc)
+		;          //C requires for statemnt to have body
+	printf(&quot;%.0f\n&quot;,nc);
+}
+&lt;/pre&gt;
+
+&lt;h3&gt;Line Counting&lt;/h3&gt;
+&lt;pre&gt;
+//text stream appears as a sequence of lines, each terminated by a newline
+#include&amp;lt;stdio.h&amp;gt;
+int main()
+{
+	int c,nl;
+	nl = 0;
+	while( (c=getchar()) != EOF)
+		if(c=='\n')
+		   ++nl;
+           printf(&quot;%d\n&quot;,nl);
+}
+&lt;/pre&gt;
+
+&lt;h3&gt;Word Count&lt;/h3&gt;
+&lt;pre&gt;
+#include&amp;lt;stdio.h&amp;gt;
+
+#define IN 1 /*inside a word*/
+#define OUT 0 /*outside a word*/
+
+//count lines, words, and characters in input
+int main(){
+	int c, nl, nw, nc, state;
+	state = OUT;
+	nl = nw = nc = 0;
+		while((c=getchar()) != EOF) {
+		++nc;
+	    		if(c='\n')
+			    ++nl;
+			if(c==' ' || c=='\n' || c== '\t')
+			   state = OUT;
+			else if(state == OUT){
+				state=IN;
+				++nw;
+                               }
+        }
+        printf(&quot;%d %d %d\n&quot;,nl, nw, nc);
+}
+&lt;/pre&gt;</content><author><name></name></author><summary type="html">&quot;The only way to learn any programming languages is by writing program in it.&quot;</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/c.png" /></entry><entry><title type="html">Learning Laravel</title><link href="http://localhost:4000/Laravel-Basics/" rel="alternate" type="text/html" title="Learning Laravel" /><published>2018-11-15T00:00:00+05:45</published><updated>2018-11-15T00:00:00+05:45</updated><id>http://localhost:4000/Laravel-Basics</id><content type="html" xml:base="http://localhost:4000/Laravel-Basics/">&lt;h4&gt;Laravel is open-source php  web framework, based on Symfony that follows Model-View-Controller(MVC) architectural pattern and intended for development of web applications.&lt;/h4&gt;
+
+&lt;!--continue--&gt;
+&lt;ol&gt;
+&lt;h3&gt;&lt;li&gt;Installation&lt;/li&gt;&lt;/h3&gt;
+Using Composer&lt;br /&gt;
+&lt;pre&gt;composer create-project laravel/laravel &lt;i&gt;projectname&lt;/i&gt; --prefer-dist&lt;/pre&gt;
+
+
+
+&lt;h3&gt;&lt;li&gt;Laravel App Skeleton&lt;/li&gt;&lt;/h3&gt;
+&lt;pre&gt;
+app/		*bulk of app(models,controllers,route definitions, commands, PHP domain code)  
+config/		*config. files for db conn.,queue, mail settings etc. 
+		each file returns an array,each value of array can be accessed using config key; 
+		format example: filename.key1.key2
+database/	*db migrations and seeds
+public/		*public facing files like img.,stylesheets,scripts,downloads.
+		*index.php which kicks off bootstrapping process and routes all requests. 
+resources/      *non-PHP files like views, language files, src. JS files, Sass/LESS 
+routes/		*HTTP routes, console routes or Artisan commands 
+   --&amp;gt;web.php   *web routes
+   --&amp;gt;api.php   *API routes            
+
+storage/	*caches, logs and compiled system files
+tests/		*unit and integration tests
+                For tests, create file ending with test.php in tests dir. &amp;amp; run ./vendor/bin/phpunit
+vendor/		*composer installed dependencies for remote servers
+   
+.env		*file to dictate the environment variables.
+.env.example    *template file that env. duplicates to create .env file
+.gitattributes  *git config. file
+.gitignore	*git config. file
+artisan/ 	*file that allows to run artisan commands
+composer.json	*user-editable composer's config. file
+composer.lock   *not-editable composer's config. file
+gulpfile.js	*optional config file for Elixir and Gulp(for compiling &amp;amp; processing frontend assets
+package.json	*similar to composer.json for frontend assets
+phpunit.xml	*config. file for PHPUnit(tool for testing out of the box)
+readme.md	*markdown file for Intro. of Laravel
+server.php	*backup server for laravel app  to light-weight server 
+&lt;/pre&gt;
+   
+  
+&lt;h3&gt;&lt;li&gt;Understanding Routing&lt;/li&gt;&lt;/h3&gt;
+&lt;ul&gt;  
+    Simple way:  match Path with Closure.&lt;br /&gt;
+             Example:&lt;pre&gt;
+//routes/web.php
+Route::get('/',function(){ return 'Hello, World!'; } );
+&lt;/pre&gt;
+     
+         Route verbs: &lt;br /&gt;
+        &lt;pre&gt;
+	 Route::post('/',function(){});
+         Route::put('/',function(){});
+	 Route::delete('/',function(){});
+	 Route::any('/',function(){});
+         Route::match(['get','post'],'/',function(){}); 
+&lt;/pre&gt;
+
+&lt;li&gt;
+Route using Controller name and method as a string
+&lt;pre&gt;Route::get('/','GreetingController@index');&lt;/pre&gt;  
+&lt;/li&gt;
+
+&lt;li&gt;
+Route Parameters(variable segment of URL) can be defined in route and passed to closure. 
+&lt;br /&gt; Example: &lt;br /&gt;  
+&lt;pre&gt;Route::get('users/{id}/booklists', function($id){});&lt;/pre&gt;   
+    	&lt;br /&gt;-&amp;gt;Order is left to right: &lt;pre&gt;Route::get('users/{userId}/comments/{commentId}', function($userId,$commentId){});&lt;/pre&gt; 
+                        &lt;br /&gt;-&amp;gt;Optional Route parameter with ?
+                		 &lt;pre&gt;Route::get('users/{id?}',function($id='fallbackId'){} );&lt;/pre&gt;  
+	          	&lt;br /&gt;-&amp;gt;Regular expression route constraints   
+			  &lt;pre&gt;Route::get('users/{id}',function($id){ })-&amp;gt;where('id','[0-9]+');
+Route::get('users/{username}',function($username) { })-&amp;gt;where('username','[A-Za-z]+');
+Route::get('posts/{id}/{slug}',function($id,$slug){ })-&amp;gt;where(['id'=&amp;gt;'[0-9]+', 'slug'=&amp;gt;'[A-Za-z]+']);&lt;/pre&gt; 
+&lt;/li&gt; 
+
+	&lt;li&gt; Route Names &lt;br /&gt; 
+            &lt;br /&gt;Using URL helper to refer routes:&lt;br /&gt;
+		Example:&lt;pre&gt; &amp;lt; a href=&quot;&amp;lt;?php echo url('/'); ?&amp;gt;&quot;&amp;gt; &lt;/pre&gt; 
+		&lt;br /&gt;
+			//defining route with name in routes/web.php   &lt;br /&gt;
+		       &lt;pre&gt;Route::get('members/{id}', 'MembersController@show')-&amp;gt;name('members.show');&lt;/pre&gt;    
+  			
+			//link the route in a view using route() helper
+			&lt;br /&gt;&lt;pre&gt; &amp;lt;a href=&quot;&amp;lt;?php echo route('members.show',['id'=&amp;gt;13]); ?&amp;gt;&quot;&amp;gt; &lt;/pre&gt;
+                &lt;br /&gt; To Pass Route Parameters to the route() helper, 
+			define the route parameters while using route() helper.&lt;br /&gt;&lt;br /&gt;
+				Examples:&lt;br /&gt;
+					//http://himaliworld.com/users/1/comments/2 
+				&lt;pre&gt;route('users.comments.show',[1,2])
+ route('users.comments.show',['userId'=&amp;gt;1,'commentId'=&amp;gt;2]
+&lt;/pre&gt; 
+				//http://himaliworld.com/users/1/comments/2?opt=a
+			       &lt;pre&gt;route('users.comments.show',['userId'=&amp;gt;1, 'commentId'=&amp;gt;2, 'opt'=&amp;gt;'a'])&lt;/pre&gt; 
+        &lt;br /&gt;&lt;/li&gt;
+   &lt;/ul&gt; 
+
+&lt;h3&gt;&lt;li&gt;Using command line Companion: Artisan&lt;/li&gt;&lt;/h3&gt;
+&lt;pre&gt;
+php artisan changes  
+php artisan --version
+php artisan route::list //display table with all routes
+php artisan tinker     //starts REPL(an interactive shell) to enter php commands
+			in the context of the application and seed output)
+php artisan down    //bring application into maintainence mode
+php artisan up      //exit maintainence mode
+php artisan optimize //trim &amp;amp; merge common classes in one file: storage/framework/compiled.php  
+        		//if app.debug is set to true, classes will not be compiled
+ 			// --force flag to override
+php artisan route:cache  //cache the routes of application
+php artisan list: gives follwoing entries under make namespace
+        make:command
+        make:console
+        make:controller
+        make:event
+        make:middleware
+        make:migration
+        make:model
+        make:provider
+        make:request
+Usage Examples:
+        php artisan make:model library --no-migration
+        //creates Eloquent Model class called library at app/library.php
+        // without makting migration tables.
+php artisan make:command --help
+&lt;/pre&gt;
+
+
+&lt;h3&gt;&lt;li&gt;Database and Eloquent&lt;/li&gt;&lt;/h3&gt;
+Eloquent is a Laravel's ActiveRecord ORM(object-relational mapper).
+There is one class per table, which is responsible for retrieving, representing and persisting data in that table.&lt;br /&gt;
+Configuration File: config/database.php&lt;br /&gt;
+Database connections: multiple drivers are supported, multiple connections within the same application is also possible.
+Other db connections:Asking for specific connection can be done as:&lt;pre&gt; $users =DB::connection('secondary')-&amp;gt;select('select * from users');&lt;/pre&gt;
+
+&lt;b&gt;Migrations&lt;/b&gt;&lt;br /&gt;
+A migration is a single file that has:&lt;br /&gt;
+up() method to do its migration and down() method to undo whatever changes the up migration made.
+
+Creating migration&lt;pre&gt;php artisan make:migration create_users_table
+php artisan make:migration add_names_to_users_table --table=users
+php artisan make:migration create_users_table --create=users
+&lt;/pre&gt; 
+
+Creating tables:&lt;pre&gt;//Everything we do in migration rely on the methods of Schema. Use the create() method to create new table.
+Schema::create('tablename', function(Blueprint $table){
+	// Create columns here
+});&lt;/pre&gt;
+Creating columns:&lt;pre&gt;//Bluprint instances can be used for creating columns
+Schema::create('users', function(Blueprint $table){
+	$table-&amp;gt;string('name');
+});&lt;/pre&gt;
+&lt;h5&gt;Following are some of Blueprint methods:&lt;h5&gt;&lt;pre&gt;integer(colName), tinyInteger(colName), smallInteger(colName), mediumInteger(colName), bigInteger(colName)
+string(colName, OPTIONAL length) // adds a varchar type column
+binary(colName)	//adds a BLOB type column
+boolean(colName)
+char(colName,length)
+datetime(colName)
+decimal(colName, precision, scale)
+double(colName, total digits, digits after decimal)
+enum(colName,[choice1, choice2])
+float(colName)
+json(colName) and jsonb(colName)
+text(colName), mediumText(colName), longText(colName)
+time(colName)
+timestamp(colName)
+uuid(colName)  //char(36) in MySQL&lt;/pre&gt;
+&lt;h5&gt;Other combined blueprint methods:&lt;/h5&gt;&lt;pre&gt;softdeletes() //adds a deleted_at timestamp  
+morphs(colName) //eg. morphs('tag') adds integer tag_id and string tag_type   
+		// used in polymorphic relationships
+rememberToken() //adds a remember_token column(Varchar(100)) for user &quot;remember me&quot; tokens
+timestamps() and nullableTimestamps()&lt;/pre&gt;
+
+&lt;h5&gt;Adding extra properties&lt;/h5&gt;&lt;pre&gt;Schema::table('user',function(Blueprint $table){
+$table-&amp;gt;string('email')-&amp;gt;nullable()-&amp;gt;after('last_name');
+});&lt;/pre&gt;
+&lt;h5&gt;More of the addtional properties are:&lt;/h5&gt;&lt;pre&gt;nullable()
+default('default content')
+unsigned()
+first() //places the column first in the column order
+$table-&amp;gt;index('amount','optional_index_name');&lt;/pre&gt;
+unique() //adds a unique index
+primary()
+index()&amp;lt;/pre&amp;gt;
+
+Dropping tables:&lt;pre&gt;Schema::drop('table_name');&lt;/pre&gt;
+Modifying columns:&lt;h5&gt;Before,add the doctrine/dbal package in composer.json and update composer
+&lt;pre&gt;//changing string length to 100
+Schema::table('users', function($table){
+	$table-&amp;gt;string('name', 100)-&amp;gt;change();
+});
+//adjusting properties in the method name, eg. making nullable
+Schema::table('contacts', function($table){
+	$table-&amp;gt;string('deleted_at')-&amp;gt;nullable()-&amp;gt;change();
+});
+//rename a column
+  $table-&amp;gt;renameColumn('advancing', 'advanced');
+//drop a column
+  $table-&amp;gt;dropColumn('nickname');
+&lt;/pre&gt;
+
+Indexes and Foreign keys&lt;br /&gt;
+&lt;pre&gt; Adding column indexes in migrations
+$table-&amp;gt;primary('primary_id'); //unnecessary if present increments()
+$table-&amp;gt;primary(['first_name','last_name']); //composite keys
+$table-&amp;gt;unique('email');  //unique index
+$table-&amp;gt;unique('email', 'optional_index_name');
+$table-&amp;gt;index('amount'); //basic index
+$table-&amp;gt;index('amount','optional_index_name');&lt;/pre&gt;
+&lt;h5&gt;Removing indexes&lt;/h5&gt;&lt;pre&gt;$table-&amp;gt;dropPrimary('contacts_id_primary');
+$table-&amp;gt;dropUnique('contacts_email_unique);
+$table-&amp;gt;dropIndex('optional_index_name');
+$table-&amp;gt;dropIndex(['email','amount']);&lt;/pre&gt;
+
+&lt;h5&gt;Adding and Removing Foreign keys&lt;/h5&gt;&lt;pre&gt; $table-&amp;gt;foreign('user_id')-&amp;gt;refernces('id')-&amp;gt;on('users');
+//specifying foreign key contraints with onDelete() or onUpdate()
+$table-&amp;gt;foreign('user_id')
+	-&amp;gt;references('id')
+	-&amp;gt;on('users')
+	-&amp;gt;onDelete('cascade');
+//dropping an index by referencing its index name(combination of column name and table being referenced)  
+$table-&amp;gt;dropForeign('contacts_user_id_foreign');
+//dropping an index by passing it an array of the fields that it's referencing on the local table
+$table-&amp;gt;dropForeign(['user_id']);&lt;/pre&gt;
+
+Running Migrations&lt;pre&gt;php artisan migrate
+php artisan migrate --seed //runs migration and then seeds
+php artisan migrate:install //creates table that tracks migrations status
+php artisan migrate:reset  //rolls back all the migrations made by install
+php artisan migrate:refresh  //resets and installs
+php artisan migrate:rollback --step=1 // rolls back number of migrations specified
+php artisan migrate:status&lt;/pre&gt;
+
+&lt;b&gt;Seeding&lt;/b&gt;&lt;br /&gt;
+dabatase/seeds folder comes with DatabaseSeeder class, which has run() method.
+&lt;pre&gt;//seeding along with migration 
+php artisan migrate --seed
+php artisan migrate:refresh --seed
+//seeding independently
+php artisan db:seed
+php artisan db:seed --class=ContactsTableSeeder&lt;/pre&gt;
+
+&lt;h5&gt;Creating a Seeder&lt;/h5&gt;&lt;pre&gt;php artisan make:seeder ContactsTableSeeder
+//creates ContactsTableSeeder in database/seeds directory
+
+//edit database/seeds/DatabaseSeeder.php to run when we run our seeders
+	public function run(){
+		$this-&amp;gt;call(ContactsTableSeeder::class);
+	}
+//edit the seeder itself in ContactsTableSeeder using DB facade which creates only one record manually
+     DB::table('contacts')-&amp;gt;insert([
+			'name'=&amp;gt; 'abcdef'
+			'email' =&amp;gt; 'ghi@jkl.mno',
+		]);
+&lt;/pre&gt;
+Model Factories: define one or more patterns for creating fake entries for datbase tables&lt;pre&gt;
+$factory-&amp;gt;define(User::class, function(Faker\Generator $fake){
+	return[	'name' =&amp;gt; $faker-&amp;gt;name, ];
+});
+$factory-&amp;gt;define('users', function(Faker\Generator $faker){
+	return[ 'name' =&amp;gt; $faker-&amp;gt;name, ];
+});&lt;/pre&gt;
+
+Creating a Model Factory&lt;br /&gt;
+Defined in database/factories/ModelFactory.php
+&lt;pre&gt;//simplest factory
+$factory-&amp;gt;define(Contact::class, function(Faker\Generator $faker){
+      return['name' =&amp;gt; 'abc def','email'=&amp;gt;'ghi@jkl.mno', ];  
+});
+//with this we can use factory() global helper to create an instance of Contact in seeding &amp;amp; testing
+//create one
+$contact = factory(Contact::class)-&amp;gt;create();
+//create many
+factory(Contact::class, 20)-&amp;gt;create();
+
+//because the above instances becom repetitive, Fakeer helps randomize the creation of structured fake data
+$factory-&amp;gt;define(Contact::class, function(Faker\Generator $faker){
+	return[  'name' =&amp;gt; $faker-&amp;gt;name, 'email' =&amp;gt; $faker-&amp;gt;email, ];  }); 
+&lt;/pre&gt;
+
+Using a Model Factory
+&lt;br /&gt;&lt;pre&gt;//for seeding
+//create() saves the instance into database instantly
+//make() creates the instance but doesn't yet save it to db
+factory(Post::class)-&amp;gt;create([
+         'title' =&amp;gt; 'This is my post'
+]);
+factory(User::class, 20)-&amp;gt;create()-&amp;gt;each(function($u) use($post){
+	$post-&amp;gt;comments()-&amp;gt;save(factory(Comment::class)-&amp;gt;make(['user_id'=&amp;gt;$u-&amp;gt;id]));
+});
+//using an array to make() or create() overrides specific keys, above sets user_id on the comment and manually set the title of post
+//second parameter in factory()helper indicates the creation of more than one instance ...above each()method is used to add a comment from each newly created user
+&lt;/pre&gt;
+&lt;h5&gt;Accessing multiple model factory types&lt;/h5&gt;
+&lt;pre&gt;
+$factory-&amp;gt;define(Contact::class, function(Faker\Generator $faker){
+	return [ 'name' =&amp;gt; $faker-&amp;gt;name, 'email' =&amp;gt; $faker-&amp;gt;email, ]);
+});
+
+//defining model for vip contacts in above factory model
+ $factory-&amp;gt;defineAs(Contact::class, 'vip', function(Faker\Generator $faker){
+   return[
+	'name' =&amp;gt; $faker-&amp;gt;name,
+	'email' =&amp;gt; $faker-&amp;gt;email,
+	'vip'  =&amp;gt; true,
+	];
+});
+//because there is duplication of data, above can be extended by using $factory-&amp;gt;raw()
+$factory-&amp;gt;defineAs(Contact::class, 'vip',
+ function(Faker\Generator $faker) use ($factory) {
+	$contact = $factory-&amp;gt;raw(Contact::class);
+	return array_merge($contact, ['vip' =&amp;gt; true]);
+  });
+//make a specific type
+  $vip = factory(Contact::class, 'vip')-&amp;gt;create();
+  $vip = factory(Contact::class, 'vip', 3)-&amp;gt;create();
+&lt;/pre&gt; 
+
+&lt;b&gt;Query Builder&lt;/b&gt;&lt;br /&gt;
+Laravel's db architecture can connect to MySQL, Postgres, SQLite and SQL Server through a single interface.
+Fluent Interface is available in Laravel that uses method chaining to provides a simpler API.
+&lt;pre&gt; //non-fluent 
+$users = DB::select(['table' =&amp;gt; 'users', 'where' =&amp;gt; ['type'=&amp;gt; 'tall']]);
+//fluent
+$users = DB::table('users')-&amp;gt;where('type','tall')-&amp;gt;get();
+&lt;/pre&gt;
+&lt;h5&gt;Basic DB Facade usage examples&lt;/h5&gt;
+&lt;pre&gt;//basic DB facade and statement()
+DB::statement('drop table users')
+//using raw calls like select(),insert(),update(),delete(), and parameter binding
+DB::select('select * from contacts where validated=?',[true]);
+//select using fluent builder
+$users = DB::table('users')-&amp;gt;get();
+//joins and other complex calls
+DB::table('users')
+    -&amp;gt;join('contacts',function($join){
+		 $join-&amp;gt;on('users.id','=','contacts.user_id')
+			-&amp;gt;where('contacts.type','tall');
+    })
+   -&amp;gt;get();
+&lt;/pre&gt;
+&lt;h5&gt;RAW SQL&lt;/h5&gt;
+&lt;pre&gt;
+//raw select
+$users = DB::select('select * from users');
+//parameter bindings and named bindings, allows use of PDO parameter
+$booksOfCategory = DB::select(
+	'select * from books where category = ?',
+	[$category]
+   );
+   //parameters can be named for clarity
+ $booksOfCategory = DB::select(
+	'select * from books where category = :category',
+		['category' =&amp;gt; $bookCategory]
+	);
+//raw insert
+    DB::insert(
+	'insert into contacts(name,email) values(?,?)',['abc', 'zyx@wvu.tsr']
+	);
+//raw updates
+   $countUpdated = DB::update(
+	'update contacts set status= ? where id = ?',
+	['tall', $id]
+	);
+//raw deletes
+	$countDeleted = DB::delete(
+		'delete from contacts where archived = ?',
+		[ture]
+	);
+&lt;/pre&gt;
+&lt;h5&gt;chaining with query builder&lt;/h5&gt;
+&lt;pre&gt;//methods can be chained together to build a query 
+    //at the end of chain get() method to trigger execution of query
+    $usersOfType = DB::table('user')
+		-&amp;gt;where('type', $type)
+		-&amp;gt;get();
+//contraining methods
+select(), select() addSelect()
+where(), orWhere()
+whereBetween(colName,[low,high]) , whereNotBetween(colName,[low,high])
+whereIn(colName,[1,2,3]), whereNotIn(colname,[1,2,3])
+whereNull(colName), whereNotNull(colName)
+whereRaw()    //queries should be carefull used as they are unescaped
+	$usageOfRaw = DB::table('contacts')-&amp;gt;whereRaw('id = 28346a')-&amp;gt;get() 
+whereExists()
+distinct()
+&lt;/pre&gt;
+
+
+
+&lt;/h5&gt;&lt;/h5&gt;&lt;/h5&gt;&lt;/ol&gt;</content><author><name></name></author><summary type="html">Laravel is open-source php web framework, based on Symfony that follows Model-View-Controller(MVC) architectural pattern and intended for development of web applications.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/laravel.png" /></entry><entry><title type="html">How to install Arch Linux with usb media?</title><link href="http://localhost:4000/Installaion-of-Arch-Linux/" rel="alternate" type="text/html" title="How to install Arch Linux with usb  media?" /><published>2018-11-14T00:00:00+05:45</published><updated>2018-11-14T00:00:00+05:45</updated><id>http://localhost:4000/Installaion-of-Arch-Linux</id><content type="html" xml:base="http://localhost:4000/Installaion-of-Arch-Linux/">&lt;p&gt;Arch  linux is a linux distribution for computers based on x86-64 architectures. This distro of linux is popular for its minimalism, simplicity, code correctness and elegance. The pacakage manager, &lt;i&gt;pacman&lt;/i&gt; is used to install, remove and update software packages.&lt;/p&gt;
+
+&lt;!--continue--&gt;
+&lt;h3&gt;Installation of Arch Linux on hard drive from a live media. &lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Connect to the Internet&lt;pre&gt;wireless: wifi-menu
+ethernet: systemctl start dhcpcd&lt;/pre&gt;   
+&lt;/li&gt;
+
+&lt;li&gt;
+Partition the disk in suitable file system and create swap space
+&lt;pre&gt;cfdisk
+mkfs.ext4 /dev/sda? /*? number varies */
+mkswap /dev/sda? &amp;amp;&amp;amp; swapon /dev/sda?&lt;/pre&gt;
+&lt;/li&gt; 
+
+&lt;li&gt;Mount the partition for root to /mnt directory&lt;pre&gt; mount /dev/sda? /mnt&lt;/pre&gt;
+ &lt;/li&gt; 
+
+&lt;li&gt;Install the base package and the required packages like for packages for wifi connection &lt;pre&gt;pacstrap /mnt base 
+pacstrap /mnt wpa-supplicant dialog&lt;/pre&gt;
+&lt;/li&gt;
+
+&lt;li&gt;Generate filesystem table(fstab)&lt;pre&gt;fstab -U /mnt &amp;gt;&amp;gt; /mnt/etc/fstab&lt;/pre&gt;&lt;/li&gt; 
+
+&lt;li&gt;chroot&lt;pre&gt;arch-chroot /mnt &lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;set password for root&lt;pre&gt;passwd&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;create initial ramdisk environment&lt;pre&gt;mkinitcpio -p linux&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;install boot loader and install grub on hard-drive(sda)
+&lt;pre&gt;pacman -S grub 
+grub-install /dev/sda&lt;/pre&gt;
+&lt;/li&gt;
+
+&lt;li&gt;if other OS are available in different partitions, mount the partition containing os, download os-prober package and run it to scan.
+&lt;pre&gt;os-prober&lt;/pre&gt;
+&lt;/li&gt;
+
+&lt;li&gt;generate grub configuration file to load OS during boot.
+&lt;pre&gt;grub-mkconfig -o /boot/grub/grub.cfg&lt;/pre&gt;&lt;/li&gt; 
+
+&lt;li&gt;Check for official offline manual on the file &lt;b&gt;install.txt&lt;/b&gt; located in the &lt;b&gt;/root&lt;/b&gt; directory. 
+ Also available on the internet at &lt;a href=&quot;https://wiki.archlinux.org/index.php/installation_guide&quot;&gt;arch wiki&lt;/a&gt;&lt;/li&gt;     
+
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">Arch linux is a linux distribution for computers based on x86-64 architectures. This distro of linux is popular for its minimalism, simplicity, code correctness and elegance. The pacakage manager, pacman is used to install, remove and update software packages.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/arch.png" /></entry></feed>

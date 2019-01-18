@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+                Using Laravel's Basic User Authentication System
+        
+  </title>
+  <meta itemprop="description" name="description" content="" >
+
+  <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Home" /></head>
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Using Laravel’s Basic User Authentication System | Home</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Using Laravel’s Basic User Authentication System" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="User Authentication System basically includes: registration, login, sessions, password resets, and access permissions." />
+<meta property="og:description" content="User Authentication System basically includes: registration, login, sessions, password resets, and access permissions." />
+<link rel="canonical" href="http://localhost:4000/User-Authentication-Using-Laravel/" />
+<meta property="og:url" content="http://localhost:4000/User-Authentication-Using-Laravel/" />
+<meta property="og:site_name" content="Home" />
+<meta property="og:image" content="http://localhost:4000/login.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-12-18T00:00:00+05:45" />
+<script type="application/ld+json">
+{"description":"User Authentication System basically includes: registration, login, sessions, password resets, and access permissions.","@type":"BlogPosting","url":"http://localhost:4000/User-Authentication-Using-Laravel/","image":"http://localhost:4000/login.png","headline":"Using Laravel’s Basic User Authentication System","dateModified":"2018-12-18T00:00:00+05:45","datePublished":"2018-12-18T00:00:00+05:45","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/User-Authentication-Using-Laravel/"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <body><header class="site-header" role="banner">
+
+  <div class="wrapper">
+    <a class="site-title" href="/">Home</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/categories/">Categories</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <header class="post-header">
+
+    <h5 class="post-title p-name" itemprop="name headline">Using Laravel&#39;s Basic User Authentication System</h5>
+
+    <p class="post-meta">
+      <time class="dt-published" datetime="2018-12-18T00:00:00+05:45" itemprop="datePublished">Dec 18, 2018
+      </time>
+
+   <!-- page category -->
+<div class="post-categories">
+        
+
+        
+         Category: <a href="/categories/#Framework">Framework</a>
+            
+        
+</div>
+
+</header>
+
+
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h4>User Authentication System basically includes: registration, login, sessions, password resets, and access permissions.</h4>
+<!--continue-->
+
+<h5> Every install of Laravel comes with:a RegisterController, a LoginController, a ForgotPasswordController, and a ResetPasswordController </h5>
+<pre>php artisan make:auth //This auth scaffold seeds 
+authentication-related views and routes
+ //following files are created
+  app/Http/Controllers/HomeController.php
+  resources/views/auth/login.blade.php 
+  resources/views/auth/register.blade.php
+  resources/views/auth/passwords/email.blade.php
+  resources/views/auth/passwords/reset.blade.php
+  resources/views/layouts/app.blade.php
+  resources/views/home.blade.php
+
+php artisan migrate //to run migrations that are by default
+</pre>
+
+<h4>User Model and Migration</h4>
+<p>Laravel fresh installation contains app/user model and, create_users_table and create_password_resets_table , migrations</p>
+<pre>
+//default user migration contains
+ Schema::create('users', function (Blueprint $table) {
+            $table-&gt;increments('id');
+            $table-&gt;string('name');
+            $table-&gt;string('email')-&gt;unique();
+            $table-&gt;timestamp('email_verified_at')-&gt;nullable();
+            $table-&gt;string('password');
+            $table-&gt;rememberToken();
+            $table-&gt;timestamps();
+//default password reset migration contains
+Schema::create('password_resets', function (Blueprint $table) {
+            $table-&gt;string('email')-&gt;index();
+            $table-&gt;string('token');
+            $table-&gt;timestamp('created_at')-&gt;nullable();
+        });
+</pre>
+<pre>
+/*defalut user model app/User.php which extends
+Illuminate\Foundation\Auth\User class*/
+
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+
+class User extends Authenticatable
+{
+    use Notifiable;
+    protected $fillable = [
+        'name', 'email', 'password',
+    ];
+    protected $hidden = [
+        'password', 'remember_token',
+    ];
+  }
+
+//Illuminate\Foundation\Auth\User look like
+namespace Illuminate\Foundation\Auth;
+
+use Illuminate\Auth\Authenticatable;
+use Illuminate\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Auth\Passwords\CanResetPassword;
+use Illuminate\Foundation\Auth\Access\Authorizable;
+use Illuminate\Contracts\Auth\Authenticatable as 
+AuthenticatableContract;
+use Illuminate\Contracts\Auth\Access\Authorizable as 
+AuthorizableContract;
+use Illuminate\Contracts\Auth\CanResetPassword as 
+CanResetPasswordContract;
+
+class User extends Model implements
+    AuthenticatableContract,
+    AuthorizableContract,
+    CanResetPasswordContract
+{
+    use Authenticatable, Authorizable, CanResetPassword, 
+MustVerifyEmail;
+}
+</pre>
+<h5> Authenticatable Contracts requires methods like 
+getAuthIdentifier()<br />
+Authorizable Contract requires methods like can()<br />
+CanResetPassword Contract requires method 
+getEmailForPasswordReset()</h5>
+
+<p>Using auth() global helper and the auth Facade<br /></p>
+<pre>
+public function dashboard(){
+	if(auth()-&gt;guest()){ return redirect('sign-up'); }
+        return view('dashboard')-&gt;with('user',auth()-&gt;user());
+}
+//other ways to check user is: auth()-&gt;check(), auth()-&gt;user(), 
+//auth()-&gt;id() return false or null when user is not logged in
+</pre>
+<p>The Auth Controllers</p>
+<pre>//RegisterController //
+  --&gt;$redirectTo property //where to redirect user after registration
+  --&gt;validator() method //how to validate registrations
+  --&gt;create() method //how to create a new user
+  --&gt;RegisterUsers trait 
+	-&gt;shows user form with showRegistrationForm() mehtod
+        -&gt;handles POST of the form with register() method which passes
+           the input to validator()method, and then on to the create() method.
+
+//LoginController//
+--&gt;AuthentiateUsers trait
+   -&gt;shows user login form, validating their logins, throttling failed 
+login, handling logouts, and redirecting users after a successful login
+  -&gt;showLoginForm() method, login(), validateLogin(), authenticated(), 
+username() methods are used
+--&gt;ThrottlesLogins trait
+   -&gt;an interface to Laravel's Illuminate\Cache\RateLimiter class
+
+//ResetPasswordController//
+--&gt;ResetsPasswords trait
+	-&gt;showResetForm(),reset(), resetPassword(),broker(),guard()
+
+//ForgotPasswordController
+--&gt;SendsPasswordResetEmails trait
+   -&gt;shows auth.passwords.email form with showLinkRequestForm() method
+   -&gt;handles the POST with sendResetLinkEmail() method
+</pre>
+
+<p>Auth::routes()</p>
+<pre>//   routes/web.php
+	Auth::routes(); //brings in a bundle of predefined routes
+</pre>
+
+<p>Remember Me</p>
+<pre>//The users table in the default migration has a remember_token 
+column
+//without remember me implementation
+if(auth()-&gt;attempt([
+	'email'=&gt;request()-&gt;input('email'),
+	'password'=&gt;request()-&gt;input('password')
+	])){
+	//successfull login
+}
+
+//with remember me checkbox
+if(auth()-&gt;attempt([
+	'email'=&gt;request()-&gt;input('email'),
+	'password'=&gt;request()-&gt;input('password')
+	]),request()-&gt;has('remember')){
+	//the successful login handler
+}
+
+//method auth()-&gt;viaRemember() can be used to check if a remember token 
+was used.
+</pre>
+
+<p>Manual Authentication</p>
+<pre>
+#auth()-&gt;attempt() is used to check the credentials from the user.
+#However, in cases like switching users by admin,following methods are used:
+#1.passing user ID
+auth()-&gt;loginUsingId(5);
+#2.passing user or other objects that implements Authenticatable contract
+auth()-&gt;login($user);
+</pre>
+
+<p>Auth Middleware</p>
+<pre>#Route middleware are used to restrict certain routes to guests or to authenticated users.
+#Route Middleware is defined in app\Http\Kernel as following:
+protected $routeMiddleware = [
+        'auth' =&gt; \Http\Middleware\Authenticate::class,
+        'auth.basic' =&gt; \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
+        'bindings' =&gt; \Illuminate\Routing\Middleware\SubstituteBindings::class,
+        'cache.headers' =&gt; \Illuminate\Http\Middleware\SetCacheHeaders::class,
+        'can' =&gt; \Illuminate\Auth\Middleware\Authorize::class,
+        'guest' =&gt; \Vidhyalaya\Http\Middleware\RedirectIfAuthenticated::class,
+        'signed' =&gt; \Illuminate\Routing\Middleware\ValidateSignature::class,
+        'throttle' =&gt; \Illuminate\Routing\Middleware\ThrottleRequests::class,
+        'verified' =&gt; \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+    ];
+#example of routes protected by auth middleware
+Route::group(['middleware' =&gt; 'auth'], function () {
+	Route::get('account', 'AccountController@dashboard');
+});
+Route::get('login','Auth\LoginController@getLogin')-&gt;middleware('guest');
+</pre>
+
+<p>Understanding Guards</p>
+<pre># Authentication system is routed through guard, which is 
+combination of, a driver that defines how it persists and retrieves the 
+auth state like session, and a provider that allows to get a certain 
+area like users.
+#Laravel has two guards: web and api
+#web is basic auth. sytle, uses session driver and the basic user 
+provider
+#api uses the same basic user provider but the token driver
+</pre>
+
+<p>Changing the Default Guard</p>
+<pre>#guards are defined in config/auth.php
+#default guard is used any time auth featueres are used.
+#to change the default guard change auth.defaults.guard in 
+config/auth.php to 
+'defaults' =&gt; [
+	'guard' =&gt; 'web', // Change the default here
+	'passwords' =&gt; 'users',
+],
+</pre>
+
+<p>Using Other guards without changing the default</p>
+<pre>#start auth calls with guard():
+$apiUser = auth()-&gt;guard('api')-&gt;user();
+</pre>
+
+<p>Adding a new Guard</p>
+<pre>#add a new guard auth.guard settings in config/auth.php
+ 'guards'=&gt;[
+	'students'=&gt;[
+		'registered' =&gt; 'session',
+		'provider' =&gt; 'students',
+	],
+  ],
+#in an app where  users are students, they have their own users, 
+students who can log in to their subdomains.So a separate guard.
+</pre>
+
+<p>Creating a Custom User Provider</p>
+<pre>#auth.providers section in config/auth.php defines availabe 
+providers.
+#creating a new provider look like:
+'providers' =&gt; [
+	'users' =&gt; [
+	'driver' =&gt; 'eloquent',
+	'model' =&gt; App\User::class,
+        ],
+ 'students' =&gt; [
+	'driver' =&gt; 'eloquent',
+	'model' =&gt; App\Students::class,
+	],
+ ],
+#in the app, there are users and students, &amp; theny need to be 
+authenticated separately as
+#auth()-&gt;guard(users) and auth()-&gt;guard(students)
+#auth route middleware can take a guard name as a parameter as:
+Route::group(['middleware'=&gt;'auth:students'],function(){
+	//students only route here
+});
+</pre>
+
+<p>Custom User Provider for non-relational Databases</p>
+<pre># a new class needs to be created that implements 
+Illuminate\Contracts\Auth\UserProvider interface
+#bind it in AuthServiceProvider@boot
+auth()-&gt;provider('mongo',function($app, array $config){
+     //return an instance of UserProvider
+	return new MongoUserProvider($app['mongo.connection']);
+});
+</pre>
+
+<p>Auth Events</p>
+<pre>#Laravel's event system has: system and user generated events.
+#auth. events generated by framework look like:
+protected $listen = [
+	'Illuminate\Auth\Events\Attempting' =&gt; [],
+	'Illuminate\Auth\Events\Login' =&gt; [],
+	'Illuminate\Auth\Events\Logout' =&gt; [],
+	'Illuminate\Auth\Events\Lockout' =&gt; [],
+];
+#listeners for "user attempting login", "successful 
+login","logout","lockout"
+</pre>
+
+  </div><a class="u-url" href="/User-Authentication-Using-Laravel/" hidden></a>
+</article>   
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </main>
+
+<footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name"></li><li>e-mail : <a class="u-email" href="mailto:namaste@himaliworld.com">namaste@himaliworld.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/avadhuta03"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">avadhuta03</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
+
+

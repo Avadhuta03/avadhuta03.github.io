@@ -8,7 +8,7 @@
   position: fixed;
   top: 0;
   min-width: 100%;
-  background-color: #f9f1ef;
+  background-color: #414244;
 
   // Positioning context for the mobile navigation icon
 }
@@ -20,13 +20,14 @@
   letter-spacing: -1px;
   margin-bottom: 0;
   float: left;
-
+  
   &,
   &:visited {
-    color: $grey-color-dark;
+    color: $link-color;
   }
 }
 
+.site-title:hover {text-decoration:none;}
 
 
 .card{
@@ -41,7 +42,7 @@ box-shadow: 0px 0px 35px 9px rgba(247,250,250,1);
 
 }
 .card:hover{
-  background:#f9f1ef;
+  background:#fff;
 }
 .card .snippet-head{
  max-width: 500px;
@@ -62,6 +63,7 @@ box-shadow: 0px 0px 35px 9px rgba(247,250,250,1);
 #categories{
   margin-top: 45px;
 }
+
 .site-nav {
   float: right;
   line-height: $base-line-height * $base-font-size * 2.25;
@@ -76,7 +78,7 @@ box-shadow: 0px 0px 35px 9px rgba(247,250,250,1);
   }
 
   .page-link {
-    color: $text-color;
+    color: $link-color;
     line-height: $base-line-height;
 
     // Gaps between nav items, but not on the last one
@@ -84,6 +86,7 @@ box-shadow: 0px 0px 35px 9px rgba(247,250,250,1);
       margin-right: 20px;
     }
   }
+  .page-link:hover{text-decoration: none;}
 
   .wrapper .categories{
     margin-top: 40px;
@@ -153,7 +156,7 @@ box-shadow: 0px 0px 35px 9px rgba(247,250,250,1);
 .site-footer {
   border-top: 1px solid $grey-color-light;
   padding: $spacing-unit 0;
-  background-color: #eeffe6;
+  background-color: #414244;
 }
 
 .footer-heading {
