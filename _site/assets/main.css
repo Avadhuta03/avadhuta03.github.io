@@ -225,7 +225,7 @@ table {
   display: inline-flex; }
 
 .card:hover {
-  background: #fff; }
+  background: #eee; }
 
 .card .snippet-head {
   max-width: 500px; }

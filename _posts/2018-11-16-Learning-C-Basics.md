@@ -5,9 +5,10 @@ categories: Programming
 image: c.png
 ---
 <h4><i>"The only way to learn any programming languages is by writing program in it."</i></h4>
-
+C is a low-level language closer to the assembly language and powerful for doing heavy lifting jobs.
 
 <!--continue-->
+This post derives codes and other works available on second edition of the book "The C Programming Language". Check out the codes available in <a href="https://github.com/avadhuta03/C-Basics">github</a>
 
 <h3>Getting Started</h3>
 <p>Get the gcc compiler, write files with .c extension, compile them & run the compiled program to get output.</p>

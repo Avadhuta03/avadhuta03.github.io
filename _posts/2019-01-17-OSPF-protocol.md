@@ -13,8 +13,8 @@ Open Short Path First (OSPF) Protocol is the standarized link state routing prot
 <li>MultiArea OSPF</li>
 <li>Router Type</li>
   <ul><li> Internal Router</li>
- 	<li>Area Border Router</li>
-	<LI>AS Boundary Router</li>
+ 	<li>Area Border Router(ABR)</li>
+	<LI>Autonomous System Boundary Router(ASBR)</li>
   </ul>
 <li>Link State Advertise(LSA) </li>
 <li>Neighbour</li>

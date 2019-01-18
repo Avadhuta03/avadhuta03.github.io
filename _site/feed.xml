@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-01-18T22:00:09+05:45</updated><id>http://localhost:4000/feed.xml</id><title type="html">Home</title><subtitle></subtitle><entry><title type="html">Open Short Path First (OSPF) Protocol</title><link href="http://localhost:4000/OSPF-Protocol/" rel="alternate" type="text/html" title="Open Short Path First (OSPF) Protocol" /><published>2019-01-17T00:00:00+05:45</published><updated>2019-01-17T00:00:00+05:45</updated><id>http://localhost:4000/OSPF-Protocol</id><content type="html" xml:base="http://localhost:4000/OSPF-Protocol/">&lt;p&gt;Open Short Path First (OSPF) Protocol is the standarized link state routing protocol.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-01-18T22:47:34+05:45</updated><id>http://localhost:4000/feed.xml</id><title type="html">Home</title><subtitle></subtitle><entry><title type="html">Open Short Path First (OSPF) Protocol</title><link href="http://localhost:4000/OSPF-protocol/" rel="alternate" type="text/html" title="Open Short Path First (OSPF) Protocol" /><published>2019-01-17T00:00:00+05:45</published><updated>2019-01-17T00:00:00+05:45</updated><id>http://localhost:4000/OSPF-protocol</id><content type="html" xml:base="http://localhost:4000/OSPF-protocol/">&lt;p&gt;Open Short Path First (OSPF) Protocol is the standarized link state routing protocol.
 &lt;!--continue--&gt;&lt;/p&gt;
 
 &lt;ol&gt;
@@ -7,8 +7,8 @@
 &lt;li&gt;MultiArea OSPF&lt;/li&gt;
 &lt;li&gt;Router Type&lt;/li&gt;
   &lt;ul&gt;&lt;li&gt; Internal Router&lt;/li&gt;
- 	&lt;li&gt;Area Border Router&lt;/li&gt;
-	&lt;li&gt;AS Boundary Router&lt;/li&gt;
+ 	&lt;li&gt;Area Border Router(ABR)&lt;/li&gt;
+	&lt;li&gt;Autonomous System Boundary Router(ASBR)&lt;/li&gt;
   &lt;/ul&gt;
 &lt;li&gt;Link State Advertise(LSA) &lt;/li&gt;
 &lt;li&gt;Neighbour&lt;/li&gt;
@@ -91,7 +91,7 @@ R1(config-if)#no shutdown
 &lt;tr&gt;&lt;td&gt;relaibility&lt;/td&gt;&lt;td&gt;reliability of interface. [255/255] shows highest reliabilty while [0/255] is the lowest.&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;tcload,rxload&lt;/td&gt;&lt;td&gt;state of transmission capacity, receiving capacity of interfaces&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;encapsulation&lt;/td&gt;&lt;td&gt;capsulating data link layer of interface, for example LAN interface has 4 types: EthernetII(ARPA) or (HDLC for serial interfaces), SNAP, 802.3Raw(novel-ether),802.2LLC(sap)&lt;/td&gt;&lt;/tr&gt;
-&lt;/table&gt;</content><author><name></name></author><summary type="html">A small local area Computer Network comprises of two or more different electronic devices(nodes) that are able to communicate with each other for the transimission of data or infromation, to and from each other.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/com_net.png" /></entry><entry><title type="html">Using Laravel’s Basic User Authentication System</title><link href="http://localhost:4000/User-Authentication-Using-Laravel/" rel="alternate" type="text/html" title="Using Laravel's Basic User Authentication System" /><published>2018-12-18T00:00:00+05:45</published><updated>2018-12-18T00:00:00+05:45</updated><id>http://localhost:4000/User-Authentication-Using-Laravel</id><content type="html" xml:base="http://localhost:4000/User-Authentication-Using-Laravel/">&lt;h4&gt;User Authentication System basically includes: registration, login, sessions, password resets, and access permissions.&lt;/h4&gt;
+&lt;/table&gt;</content><author><name></name></author><summary type="html">A small local area Computer Network comprises of two or more different electronic devices(nodes) that are able to communicate with each other for the transimission of data or infromation, to and from each other.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/com_net.png" /></entry><entry><title type="html">Laravel’s Basic User Authentication System</title><link href="http://localhost:4000/User-Authentication-Using-Laravel/" rel="alternate" type="text/html" title="Laravel's Basic User Authentication System" /><published>2018-12-18T00:00:00+05:45</published><updated>2018-12-18T00:00:00+05:45</updated><id>http://localhost:4000/User-Authentication-Using-Laravel</id><content type="html" xml:base="http://localhost:4000/User-Authentication-Using-Laravel/">&lt;h4&gt;User Authentication System basically includes: registration, login, sessions, password resets, and access permissions.&lt;/h4&gt;
 &lt;!--continue--&gt;
 
 &lt;h5&gt; Every install of Laravel comes with:a RegisterController, a LoginController, a ForgotPasswordController, and a ResetPasswordController &lt;/h5&gt;
@@ -477,8 +477,10 @@ Searching in Vi
      o --&amp;gt; on a blank line after the cursor
      O --&amp;gt; on a blank line before the cursor
 &lt;/pre&gt;</content><author><name></name></author><summary type="html">Vi(Visual Editor) is a screen oriented text editor originally created for Unix Operating System. Almost all Llinux distributions includes vi by default. Vi has three different modes: Command Mode, Insert Mode &amp;amp; Ex Mode</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/vi.png" /></entry><entry><title type="html">C Basics</title><link href="http://localhost:4000/Learning-C-Basics/" rel="alternate" type="text/html" title="C Basics" /><published>2018-11-16T00:00:00+05:45</published><updated>2018-11-16T00:00:00+05:45</updated><id>http://localhost:4000/Learning-C-Basics</id><content type="html" xml:base="http://localhost:4000/Learning-C-Basics/">&lt;h4&gt;&lt;i&gt;&quot;The only way to learn any programming languages is by writing program in it.&quot;&lt;/i&gt;&lt;/h4&gt;
+&lt;p&gt;C is a low-level language closer to the assembly language and powerful for doing heavy lifting jobs.&lt;/p&gt;
 
 &lt;!--continue--&gt;
+&lt;p&gt;This post derives codes and other works available on second edition of the book “The C Programming Language”. Check out the codes available in &lt;a href=&quot;https://github.com/avadhuta03/C-Basics&quot;&gt;github&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3&gt;Getting Started&lt;/h3&gt;
 &lt;p&gt;Get the gcc compiler, write files with .c extension, compile them &amp;amp; run the compiled program to get output.&lt;/p&gt;
@@ -674,7 +676,7 @@ int main(){
         }
         printf(&quot;%d %d %d\n&quot;,nl, nw, nc);
 }
-&lt;/pre&gt;</content><author><name></name></author><summary type="html">&quot;The only way to learn any programming languages is by writing program in it.&quot;</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/c.png" /></entry><entry><title type="html">Learning Laravel</title><link href="http://localhost:4000/Laravel-Basics/" rel="alternate" type="text/html" title="Learning Laravel" /><published>2018-11-15T00:00:00+05:45</published><updated>2018-11-15T00:00:00+05:45</updated><id>http://localhost:4000/Laravel-Basics</id><content type="html" xml:base="http://localhost:4000/Laravel-Basics/">&lt;h4&gt;Laravel is open-source php  web framework, based on Symfony that follows Model-View-Controller(MVC) architectural pattern and intended for development of web applications.&lt;/h4&gt;
+&lt;/pre&gt;</content><author><name></name></author><summary type="html">&quot;The only way to learn any programming languages is by writing program in it.&quot; C is a low-level language closer to the assembly language and powerful for doing heavy lifting jobs.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/c.png" /></entry><entry><title type="html">Learning Laravel</title><link href="http://localhost:4000/Laravel-Basics/" rel="alternate" type="text/html" title="Learning Laravel" /><published>2018-11-15T00:00:00+05:45</published><updated>2018-11-15T00:00:00+05:45</updated><id>http://localhost:4000/Laravel-Basics</id><content type="html" xml:base="http://localhost:4000/Laravel-Basics/">&lt;h4&gt;Laravel is open-source php  web framework, based on Symfony that follows Model-View-Controller(MVC) architectural pattern and intended for development of web applications.&lt;/h4&gt;
 
 &lt;!--continue--&gt;
 &lt;ol&gt;

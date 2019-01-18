@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Using Laravel's Basic User Authentication System 
+title: Laravel's Basic User Authentication System 
 categories: Framework
 image: login.png
 ---
