@@ -278,6 +278,8 @@ table {
         height: 36px;
         z-index: 2;
         cursor: pointer; }
+      .site-nav .page-link {
+        color: #111; }
       .site-nav .menu-icon {
         display: block;
         float: right;

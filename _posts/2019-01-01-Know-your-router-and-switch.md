@@ -4,12 +4,15 @@ title: Getting to Know  About  Router and Switch
 categories: [Computer Network]
 image: com_net.png 
 ---
-<h4>A small local area Computer Network comprises of two or more different electronic devices(nodes) that are able to communicate with each other for the transimission of data or infromation, to and  from each other.</h4>
+A small local area Computer Network comprises of two or more different electronic devices(nodes) that are able to communicate with each other for the transimission of data or infromation, to and  from each other.
 
 <!--continue-->
 There are devices like router and switch, that has its own operating system and protocols embedded into it, whose primary function is to facilitate the communication between the nodes in the network.
 
 <h3>Router</h3>
+Router is a Layer 3(Network Layer) networking device which uses logical addressing(IPv4 or IPv6),connects two or more networks to form internetwork and provides capacities like packet switching, packet filtering using access lists, path selection.<br>
+Router don't forward broadcasts by default and they filter the network based on layer 3 information like IP address. <br>
+Routers provide a separate broadcast domain for each interface.<br>
 <h4>To configure router using CLI, lets know about the user modes in router settings:</h4>
 <table>
 <tr><td><b>Modes Name</b></td><td><b>Prompt Used</b></td><td><b>Description</b></td></tr>
@@ -78,3 +81,26 @@ R1(config-if)#no shutdown
 <tr><td>tcload,rxload</td><td>state of transmission capacity, receiving capacity of interfaces</td></tr>
 <tr><td>encapsulation</td><td>capsulating data link layer of interface, for example LAN interface has 4 types: EthernetII(ARPA) or (HDLC for serial interfaces), SNAP, 802.3Raw(novel-ether),802.2LLC(sap)</td></tr>
 </table>
+
+<br>
+<h3>Switch<hr></h3>
+Switch is a layer 2 (data link layer) networking device. It basically functions as a bridge which is more software oriented while, switch contains ASIC(Application Specific Integrated Circuit) hardware with high performance. Also switch has high port density(number of ports per device) allowing ease of control of network traffic.<br><br>
+Switch basically performs 2 functions:
+<li><b>Forwarding</b> : When frames arrives in a receiving port, it copies and forwards frames to the available ports except the receiving port.</li>
+<li><b>Filtering</b> : Discards frames as per the rule specified</li>
+<br>
+Frame is data unit formed by adding ethernet header to the packet provided by IP layer.<br>
+Forwarding happens in following steps:<br>
+<ol>
+	<li>Copy receiving port and destination MAC address from receiving frame.</li>
+	<li>Send frame from port related to destination MAC address in received frame.</li>
+	<li>If the receiving port is the port related to destination MAC address in received frame, discard the frame</li>
+	<li>If the receiving port is not the port of destination MAC address, send frames to all the ports except the receiving one(flooding).</li>
+</ol>
+<br>
+Collision Domain: It is an ethernet term used for network segment in which all the devices response to the packet out in the segment, usually leading to collisions.
+<br> 
+Switches create separate collision domains on a single broadcast domain.<br>
+Transmission Modes of Frames
+<br>
+   

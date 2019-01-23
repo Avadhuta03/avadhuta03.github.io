@@ -7,7 +7,7 @@
                 Getting to Know  About  Router and Switch
         
   </title>
-  <meta itemprop="description" name="description" content="" >
+  <meta itemprop="description" name="description" content="This site will include contents under different categories." >
 
   <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Home" /></head>
 <!-- Begin Jekyll SEO tag v2.5.0 -->
@@ -17,14 +17,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="A small local area Computer Network comprises of two or more different electronic devices(nodes) that are able to communicate with each other for the transimission of data or infromation, to and from each other." />
 <meta property="og:description" content="A small local area Computer Network comprises of two or more different electronic devices(nodes) that are able to communicate with each other for the transimission of data or infromation, to and from each other." />
-<link rel="canonical" href="http://localhost:4000/Know-your-router-and-switches/" />
-<meta property="og:url" content="http://localhost:4000/Know-your-router-and-switches/" />
+<link rel="canonical" href="http://localhost:4000/Know-your-router-and-switch/" />
+<meta property="og:url" content="http://localhost:4000/Know-your-router-and-switch/" />
 <meta property="og:site_name" content="Home" />
 <meta property="og:image" content="http://localhost:4000/com_net.png" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-01-01T00:00:00+05:45" />
 <script type="application/ld+json">
-{"description":"A small local area Computer Network comprises of two or more different electronic devices(nodes) that are able to communicate with each other for the transimission of data or infromation, to and from each other.","@type":"BlogPosting","url":"http://localhost:4000/Know-your-router-and-switches/","image":"http://localhost:4000/com_net.png","headline":"Getting to Know About Router and Switch","dateModified":"2019-01-01T00:00:00+05:45","datePublished":"2019-01-01T00:00:00+05:45","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/Know-your-router-and-switches/"},"@context":"http://schema.org"}</script>
+{"description":"A small local area Computer Network comprises of two or more different electronic devices(nodes) that are able to communicate with each other for the transimission of data or infromation, to and from each other.","@type":"BlogPosting","url":"http://localhost:4000/Know-your-router-and-switch/","image":"http://localhost:4000/com_net.png","headline":"Getting to Know About Router and Switch","dateModified":"2019-01-01T00:00:00+05:45","datePublished":"2019-01-01T00:00:00+05:45","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/Know-your-router-and-switch/"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -41,7 +41,7 @@
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/categories/">Categories</a></div>
+        <div class="trigger"><a class="page-link" href="/categories/">Categories</a><a class="page-link" href="/tutorial/">Tutorial</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
@@ -69,12 +69,15 @@
 
 
   <div class="post-content e-content" itemprop="articleBody">
-    <h4>A small local area Computer Network comprises of two or more different electronic devices(nodes) that are able to communicate with each other for the transimission of data or infromation, to and  from each other.</h4>
+    <p>A small local area Computer Network comprises of two or more different electronic devices(nodes) that are able to communicate with each other for the transimission of data or infromation, to and  from each other.</p>
 
 <!--continue-->
 <p>There are devices like router and switch, that has its own operating system and protocols embedded into it, whose primary function is to facilitate the communication between the nodes in the network.</p>
 
 <h3>Router</h3>
+<p>Router is a Layer 3(Network Layer) networking device which uses logical addressing(IPv4 or IPv6),connects two or more networks to form internetwork and provides capacities like packet switching, packet filtering using access lists, path selection.<br />
+Router don’t forward broadcasts by default and they filter the network based on layer 3 information like IP address. <br />
+Routers provide a separate broadcast domain for each interface.<br /></p>
 <h4>To configure router using CLI, lets know about the user modes in router settings:</h4>
 <table>
 <tr><td><b>Modes Name</b></td><td><b>Prompt Used</b></td><td><b>Description</b></td></tr>
@@ -144,7 +147,30 @@ R1(config-if)#no shutdown
 <tr><td>encapsulation</td><td>capsulating data link layer of interface, for example LAN interface has 4 types: EthernetII(ARPA) or (HDLC for serial interfaces), SNAP, 802.3Raw(novel-ether),802.2LLC(sap)</td></tr>
 </table>
 
-  </div><a class="u-url" href="/Know-your-router-and-switches/" hidden></a>
+<p><br /></p>
+<h3>Switch<hr /></h3>
+<p>Switch is a layer 2 (data link layer) networking device. It basically functions as a bridge which is more software oriented while, switch contains ASIC(Application Specific Integrated Circuit) hardware with high performance. Also switch has high port density(number of ports per device) allowing ease of control of network traffic.<br /><br />
+Switch basically performs 2 functions:</p>
+<li><b>Forwarding</b> : When frames arrives in a receiving port, it copies and forwards frames to the available ports except the receiving port.</li>
+<li><b>Filtering</b> : Discards frames as per the rule specified</li>
+<p><br />
+Frame is data unit formed by adding ethernet header to the packet provided by IP layer.<br />
+Forwarding happens in following steps:<br /></p>
+<ol>
+	<li>Copy receiving port and destination MAC address from receiving frame.</li>
+	<li>Send frame from port related to destination MAC address in received frame.</li>
+	<li>If the receiving port is the port related to destination MAC address in received frame, discard the frame</li>
+	<li>If the receiving port is not the port of destination MAC address, send frames to all the ports except the receiving one(flooding).</li>
+</ol>
+<p><br />
+Collision Domain: It is an ethernet term used for network segment in which all the devices response to the packet out in the segment, usually leading to collisions.
+<br /> 
+Switches create separate collision domains on a single broadcast domain.<br />
+Transmission Modes of Frames
+<br /></p>
+
+
+  </div><a class="u-url" href="/Know-your-router-and-switch/" hidden></a>
 </article>   
 
 
@@ -176,8 +202,9 @@ R1(config-if)#no shutdown
 </div>
 
       <div class="footer-col footer-col-3">
-        <p></p>
+        This site will include contents under different categories.
       </div>
+      
     </div>
 
   </div>

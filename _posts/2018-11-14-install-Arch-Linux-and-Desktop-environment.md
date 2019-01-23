@@ -49,9 +49,44 @@ grub-install /dev/sda</pre>
 
 <li>Check for official offline manual on the file <b>install.txt</b> located in the <b>/root</b> directory. 
  Also available on the internet at <a href="https://wiki.archlinux.org/index.php/installation_guide">arch wiki</a></li>     
-
 </ol>
 
+<br>
+<h3>Installing Desktop Environment</h3>
+<br>
 
+<ol>
+<li>Create user to login other than root with admin privileges
+<pre>useradd -m -g users -s /bin/bash user_name
+passwd user_name   //set password for the user_name
+
+/*giving admin priveleges requires to update sudoers file in /etc direcory 
+if absent, install sudo package with pacman */
+
+pacman -S sudo
+vi /etc/sudoers
+/*edit sudoers, add the following line; usually under the line,
+root ALL=(ALL) ALL 
+*/
+user_name ALL=(ALL) ALL
+</pre>
+</li>
+
+<li> Install Display server<pre>pacman -S xorg-server xorg-xinit</pre></li>
+<li>Install Graphics driver<pre>pacman -S xf86-video-intel 
+	/* install the driver as per your graphics card,
+	   amd ---> xf86-xvideo-amdgpu
+	   intel --> xf86-video-intel
+	   nividea -->xf86-video-nouveau
+	*/</pre>
+</li>
+<li>Install Display Manager<pre>//to install gnome diplay manager
+	pacman -S gdm</pre>
+</li>
+
+<li>Finally install Desktop Environment and enable it on boot<pre>pacman -S gnome
+systemctl enable gdm</pre>
+</li>
+</ol> 
 
 

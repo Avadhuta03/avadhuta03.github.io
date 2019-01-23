@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-01-18T22:47:34+05:45</updated><id>http://localhost:4000/feed.xml</id><title type="html">Home</title><subtitle></subtitle><entry><title type="html">Open Short Path First (OSPF) Protocol</title><link href="http://localhost:4000/OSPF-protocol/" rel="alternate" type="text/html" title="Open Short Path First (OSPF) Protocol" /><published>2019-01-17T00:00:00+05:45</published><updated>2019-01-17T00:00:00+05:45</updated><id>http://localhost:4000/OSPF-protocol</id><content type="html" xml:base="http://localhost:4000/OSPF-protocol/">&lt;p&gt;Open Short Path First (OSPF) Protocol is the standarized link state routing protocol.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-01-23T19:52:40+05:45</updated><id>http://localhost:4000/feed.xml</id><title type="html">Home</title><subtitle>This site will include contents under different categories.</subtitle><entry><title type="html">Open Short Path First (OSPF) Protocol</title><link href="http://localhost:4000/OSPF-protocol/" rel="alternate" type="text/html" title="Open Short Path First (OSPF) Protocol" /><published>2019-01-17T00:00:00+05:45</published><updated>2019-01-17T00:00:00+05:45</updated><id>http://localhost:4000/OSPF-protocol</id><content type="html" xml:base="http://localhost:4000/OSPF-protocol/">&lt;p&gt;Open Short Path First (OSPF) Protocol is the standarized link state routing protocol.
 &lt;!--continue--&gt;&lt;/p&gt;
 
 &lt;ol&gt;
@@ -18,12 +18,15 @@
   &lt;li&gt; Hello&lt;/li&gt;&lt;li&gt;DBD&lt;/li&gt;&lt;li&gt;LSR&lt;/li&gt;&lt;li&gt;LSU&lt;/li&gt;&lt;li&gt;LSAck&lt;/li&gt;
 &lt;/ul&gt; 
 
-&lt;/ol&gt;</content><author><name></name></author><summary type="html">Open Short Path First (OSPF) Protocol is the standarized link state routing protocol.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/ospf.png" /></entry><entry><title type="html">Getting to Know About Router and Switch</title><link href="http://localhost:4000/Know-your-router-and-switches/" rel="alternate" type="text/html" title="Getting to Know  About  Router and Switch" /><published>2019-01-01T00:00:00+05:45</published><updated>2019-01-01T00:00:00+05:45</updated><id>http://localhost:4000/Know-your-router-and-switches</id><content type="html" xml:base="http://localhost:4000/Know-your-router-and-switches/">&lt;h4&gt;A small local area Computer Network comprises of two or more different electronic devices(nodes) that are able to communicate with each other for the transimission of data or infromation, to and  from each other.&lt;/h4&gt;
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">Open Short Path First (OSPF) Protocol is the standarized link state routing protocol.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/ospf.png" /></entry><entry><title type="html">Getting to Know About Router and Switch</title><link href="http://localhost:4000/Know-your-router-and-switch/" rel="alternate" type="text/html" title="Getting to Know  About  Router and Switch" /><published>2019-01-01T00:00:00+05:45</published><updated>2019-01-01T00:00:00+05:45</updated><id>http://localhost:4000/Know-your-router-and-switch</id><content type="html" xml:base="http://localhost:4000/Know-your-router-and-switch/">&lt;p&gt;A small local area Computer Network comprises of two or more different electronic devices(nodes) that are able to communicate with each other for the transimission of data or infromation, to and  from each other.&lt;/p&gt;
 
 &lt;!--continue--&gt;
 &lt;p&gt;There are devices like router and switch, that has its own operating system and protocols embedded into it, whose primary function is to facilitate the communication between the nodes in the network.&lt;/p&gt;
 
 &lt;h3&gt;Router&lt;/h3&gt;
+&lt;p&gt;Router is a Layer 3(Network Layer) networking device which uses logical addressing(IPv4 or IPv6),connects two or more networks to form internetwork and provides capacities like packet switching, packet filtering using access lists, path selection.&lt;br /&gt;
+Router don’t forward broadcasts by default and they filter the network based on layer 3 information like IP address. &lt;br /&gt;
+Routers provide a separate broadcast domain for each interface.&lt;br /&gt;&lt;/p&gt;
 &lt;h4&gt;To configure router using CLI, lets know about the user modes in router settings:&lt;/h4&gt;
 &lt;table&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Modes Name&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Prompt Used&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Description&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;
@@ -91,7 +94,29 @@ R1(config-if)#no shutdown
 &lt;tr&gt;&lt;td&gt;relaibility&lt;/td&gt;&lt;td&gt;reliability of interface. [255/255] shows highest reliabilty while [0/255] is the lowest.&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;tcload,rxload&lt;/td&gt;&lt;td&gt;state of transmission capacity, receiving capacity of interfaces&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;encapsulation&lt;/td&gt;&lt;td&gt;capsulating data link layer of interface, for example LAN interface has 4 types: EthernetII(ARPA) or (HDLC for serial interfaces), SNAP, 802.3Raw(novel-ether),802.2LLC(sap)&lt;/td&gt;&lt;/tr&gt;
-&lt;/table&gt;</content><author><name></name></author><summary type="html">A small local area Computer Network comprises of two or more different electronic devices(nodes) that are able to communicate with each other for the transimission of data or infromation, to and from each other.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/com_net.png" /></entry><entry><title type="html">Laravel’s Basic User Authentication System</title><link href="http://localhost:4000/User-Authentication-Using-Laravel/" rel="alternate" type="text/html" title="Laravel's Basic User Authentication System" /><published>2018-12-18T00:00:00+05:45</published><updated>2018-12-18T00:00:00+05:45</updated><id>http://localhost:4000/User-Authentication-Using-Laravel</id><content type="html" xml:base="http://localhost:4000/User-Authentication-Using-Laravel/">&lt;h4&gt;User Authentication System basically includes: registration, login, sessions, password resets, and access permissions.&lt;/h4&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h3&gt;Switch&lt;hr /&gt;&lt;/h3&gt;
+&lt;p&gt;Switch is a layer 2 (data link layer) networking device. It basically functions as a bridge which is more software oriented while, switch contains ASIC(Application Specific Integrated Circuit) hardware with high performance. Also switch has high port density(number of ports per device) allowing ease of control of network traffic.&lt;br /&gt;&lt;br /&gt;
+Switch basically performs 2 functions:&lt;/p&gt;
+&lt;li&gt;&lt;b&gt;Forwarding&lt;/b&gt; : When frames arrives in a receiving port, it copies and forwards frames to the available ports except the receiving port.&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Filtering&lt;/b&gt; : Discards frames as per the rule specified&lt;/li&gt;
+&lt;p&gt;&lt;br /&gt;
+Frame is data unit formed by adding ethernet header to the packet provided by IP layer.&lt;br /&gt;
+Forwarding happens in following steps:&lt;br /&gt;&lt;/p&gt;
+&lt;ol&gt;
+	&lt;li&gt;Copy receiving port and destination MAC address from receiving frame.&lt;/li&gt;
+	&lt;li&gt;Send frame from port related to destination MAC address in received frame.&lt;/li&gt;
+	&lt;li&gt;If the receiving port is the port related to destination MAC address in received frame, discard the frame&lt;/li&gt;
+	&lt;li&gt;If the receiving port is not the port of destination MAC address, send frames to all the ports except the receiving one(flooding).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;br /&gt;
+Collision Domain: It is an ethernet term used for network segment in which all the devices response to the packet out in the segment, usually leading to collisions.
+&lt;br /&gt; 
+Switches create separate collision domains on a single broadcast domain.&lt;br /&gt;
+Transmission Modes of Frames
+&lt;br /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">A small local area Computer Network comprises of two or more different electronic devices(nodes) that are able to communicate with each other for the transimission of data or infromation, to and from each other.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/com_net.png" /></entry><entry><title type="html">Laravel’s Basic User Authentication System</title><link href="http://localhost:4000/User-Authentication-Using-Laravel/" rel="alternate" type="text/html" title="Laravel's Basic User Authentication System" /><published>2018-12-18T00:00:00+05:45</published><updated>2018-12-18T00:00:00+05:45</updated><id>http://localhost:4000/User-Authentication-Using-Laravel</id><content type="html" xml:base="http://localhost:4000/User-Authentication-Using-Laravel/">&lt;h4&gt;User Authentication System basically includes: registration, login, sessions, password resets, and access permissions.&lt;/h4&gt;
 &lt;!--continue--&gt;
 
 &lt;h5&gt; Every install of Laravel comes with:a RegisterController, a LoginController, a ForgotPasswordController, and a ResetPasswordController &lt;/h5&gt;
@@ -1069,7 +1094,7 @@ distinct()
 
 
 
-&lt;/h5&gt;&lt;/h5&gt;&lt;/h5&gt;&lt;/ol&gt;</content><author><name></name></author><summary type="html">Laravel is open-source php web framework, based on Symfony that follows Model-View-Controller(MVC) architectural pattern and intended for development of web applications.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/laravel.png" /></entry><entry><title type="html">How to install Arch Linux with usb media?</title><link href="http://localhost:4000/Installaion-of-Arch-Linux/" rel="alternate" type="text/html" title="How to install Arch Linux with usb  media?" /><published>2018-11-14T00:00:00+05:45</published><updated>2018-11-14T00:00:00+05:45</updated><id>http://localhost:4000/Installaion-of-Arch-Linux</id><content type="html" xml:base="http://localhost:4000/Installaion-of-Arch-Linux/">&lt;p&gt;Arch  linux is a linux distribution for computers based on x86-64 architectures. This distro of linux is popular for its minimalism, simplicity, code correctness and elegance. The pacakage manager, &lt;i&gt;pacman&lt;/i&gt; is used to install, remove and update software packages.&lt;/p&gt;
+&lt;/h5&gt;&lt;/h5&gt;&lt;/h5&gt;&lt;/ol&gt;</content><author><name></name></author><summary type="html">Laravel is open-source php web framework, based on Symfony that follows Model-View-Controller(MVC) architectural pattern and intended for development of web applications.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/laravel.png" /></entry><entry><title type="html">How to install Arch Linux with usb media?</title><link href="http://localhost:4000/install-Arch-Linux-and-Desktop-environment/" rel="alternate" type="text/html" title="How to install Arch Linux with usb  media?" /><published>2018-11-14T00:00:00+05:45</published><updated>2018-11-14T00:00:00+05:45</updated><id>http://localhost:4000/install-Arch-Linux-and-Desktop-environment</id><content type="html" xml:base="http://localhost:4000/install-Arch-Linux-and-Desktop-environment/">&lt;p&gt;Arch  linux is a linux distribution for computers based on x86-64 architectures. This distro of linux is popular for its minimalism, simplicity, code correctness and elegance. The pacakage manager, &lt;i&gt;pacman&lt;/i&gt; is used to install, remove and update software packages.&lt;/p&gt;
 
 &lt;!--continue--&gt;
 &lt;h3&gt;Installation of Arch Linux on hard drive from a live media. &lt;/h3&gt;
@@ -1114,5 +1139,42 @@ grub-install /dev/sda&lt;/pre&gt;
 
 &lt;li&gt;Check for official offline manual on the file &lt;b&gt;install.txt&lt;/b&gt; located in the &lt;b&gt;/root&lt;/b&gt; directory. 
  Also available on the internet at &lt;a href=&quot;https://wiki.archlinux.org/index.php/installation_guide&quot;&gt;arch wiki&lt;/a&gt;&lt;/li&gt;     
+&lt;/ol&gt;
 
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h3&gt;Installing Desktop Environment&lt;/h3&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Create user to login other than root with admin privileges
+&lt;pre&gt;useradd -m -g users -s /bin/bash user_name
+passwd user_name   //set password for the user_name
+
+/*giving admin priveleges requires to update sudoers file in /etc direcory 
+if absent, install sudo package with pacman */
+
+pacman -S sudo
+vi /etc/sudoers
+/*edit sudoers, add the following line; usually under the line,
+root ALL=(ALL) ALL 
+*/
+user_name ALL=(ALL) ALL
+&lt;/pre&gt;
+&lt;/li&gt;
+
+&lt;li&gt; Install Display server&lt;pre&gt;pacman -S xorg-server xorg-xinit&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;Install Graphics driver&lt;pre&gt;pacman -S xf86-video-intel 
+	/* install the driver as per your graphics card,
+	   amd ---&amp;gt; xf86-xvideo-amdgpu
+	   intel --&amp;gt; xf86-video-intel
+	   nividea --&amp;gt;xf86-video-nouveau
+	*/&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;Install Display Manager&lt;pre&gt;//to install gnome diplay manager
+	pacman -S gdm&lt;/pre&gt;
+&lt;/li&gt;
+
+&lt;li&gt;Finally install Desktop Environment and enable it on boot&lt;pre&gt;pacman -S gnome
+systemctl enable gdm&lt;/pre&gt;
+&lt;/li&gt;
 &lt;/ol&gt;</content><author><name></name></author><summary type="html">Arch linux is a linux distribution for computers based on x86-64 architectures. This distro of linux is popular for its minimalism, simplicity, code correctness and elegance. The pacakage manager, pacman is used to install, remove and update software packages.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/arch.png" /></entry></feed>
