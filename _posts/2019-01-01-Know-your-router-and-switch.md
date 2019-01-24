@@ -98,9 +98,8 @@ Forwarding happens in following steps:<br>
 	<li>If the receiving port is not the port of destination MAC address, send frames to all the ports except the receiving one(flooding).</li>
 </ol>
 <br>
-Collision Domain: It is an ethernet term used for network segment in which all the devices response to the packet out in the segment, usually leading to collisions.
+<b>Collision Domain</b>: It is an ethernet term used for network segment in which all the devices response to the packet out in the segment, usually leading to collisions.
 <br> 
 Switches create separate collision domains on a single broadcast domain.<br>
-Transmission Modes of Frames
 <br>
    

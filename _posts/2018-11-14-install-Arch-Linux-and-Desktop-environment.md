@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to install Arch Linux with usb  media? 
+title: Arch Linux Installation Guide 
 categories: Linux
 image: arch.png
 ---
