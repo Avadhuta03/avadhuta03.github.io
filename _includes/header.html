@@ -1,7 +1,7 @@
 <header class="site-header" role="banner">
 
   <div class="wrapper">
-    <a class="site-title" href="{{ "/" | relative_url }}">Home</a>
+    <a class="site-title" href="{{ "/" | relative_url }}"><img src="/assets/images/home.png"></a>
     {%- assign default_paths = site.pages | map: "path"  -%}
     {%- assign page_paths = site.header_pages | default: default_paths -%}
     {%- if page_paths -%}
