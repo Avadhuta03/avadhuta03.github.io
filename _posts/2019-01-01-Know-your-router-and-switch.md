@@ -9,7 +9,7 @@ A small local area Computer Network comprises of two or more different electroni
 <!--continue-->
 There are devices like router and switch, that has its own operating system and protocols embedded into it, whose primary function is to facilitate the communication between the nodes in the network.
 
-<h3>Router</h3>
+<h3>Router<hr></h3>
 Router is a Layer 3(Network Layer) networking device which uses logical addressing(IPv4 or IPv6),connects two or more networks to form internetwork and provides capacities like packet switching, packet filtering using access lists, path selection.<br>
 Router don't forward broadcasts by default and they filter the network based on layer 3 information like IP address. <br>
 Routers provide a separate broadcast domain for each interface.<br>
