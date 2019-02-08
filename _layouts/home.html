@@ -6,9 +6,38 @@ layout: default
 {% assign posts=site.posts | where:"lang", page.lang %}
 
 
+<!-- creating categories-->
+
+<div class="categories">
+  <div class="categories-heading">CATEGORIES
+  </div>
+  {% for category in site.categories %}
+
+     <div class="categories-group">
+         {% capture category_name %}{{ category | first }}{% endcapture %}  
+           <div id="#{{ category_name | slugize }}"></div>
+
+		<i><h3 class="category-name">{{ category_name }}</h3></i>
+		 <a name="{{ category_name | slugize }}"></a>
+
+	    {% for post in site.categories[category_name] %}
+            <article class="categories-item">
+			<h4><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>	
+	           </article>
+	    {% endfor %}
+     </div>
+
+	{% endfor %}
+</div>
+
+
+
+
+
 
 <!-- loop through paginated page -->
 <div class="posts">
+  <div class="posts-heading">TUTORIALS</div>
 {% for post in paginator.posts %}
 
   {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
@@ -32,6 +61,10 @@ layout: default
 
 </div>
 
-{%- include pagination.html -%}
+
+
+<div class="pagination">
+    {%- include pagination.html -%}
+    </div>
 
 

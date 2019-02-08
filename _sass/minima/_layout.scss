@@ -20,6 +20,7 @@
   letter-spacing: -1px;
   margin-bottom: 0;
   float: left;
+
   
   &,
   &:visited {
@@ -37,7 +38,7 @@ box-shadow: 0px 0px 35px 9px rgba(247,250,250,1);
   border-radius:10px;
   padding:15px;
   //max-width: 800px;
-  margin:20px 85px;
+  margin:20px 15px;
   display: inline-flex;
 
 }
@@ -51,18 +52,32 @@ box-shadow: 0px 0px 35px 9px rgba(247,250,250,1);
    max-width: 300px;
 }
 
-@include media-query($on-palm){
-  .card{display:inline-block;margin:0;}
-  .posts{margin-top:50px!important;}
 
+.categories{
+  margin-top: 55px;
+  max-width: 25%;
+  float: left;
+  border-right: 1px solid;  
 }
+.categories-heading{ text-align: center; font-size: 15px; margin-bottom: 15px;}
+
+.categories-item{ padding-right: 4px;}
 
 .posts{
-  margin-top: 28px;
+  margin-top: 55px;
+  max-width: 74%;
+  float: left;
 }
-#categories{
-  margin-top: 45px;
+.posts-heading{ text-align: center; font-size: 15px; margin-bottom: 15px;}
+
+@include media-query($on-palm){
+  .card{display:inline-block;margin:0;}
+  .posts{margin-top:50px!important; max-width: 100%; float:none;}
+
+  .categories {max-width: 100%; float: none; border-right: none; border-bottom: 1px solid;}
+
 }
+
 
 .site-nav {
   float: right;
@@ -88,9 +103,6 @@ box-shadow: 0px 0px 35px 9px rgba(247,250,250,1);
   }
   .page-link:hover{text-decoration: none;}
 
-  .wrapper .categories{
-    margin-top: 40px;
-  }
 
 
   @include media-query($on-palm) {
@@ -150,7 +162,89 @@ box-shadow: 0px 0px 35px 9px rgba(247,250,250,1);
   }
 }
 
+/**
+ * Page content
+ */
+ .page-content {
+  padding: $spacing-unit 0;
+  flex: 1;
+}
 
+.page-heading {
+  @include relative-font-size(2);
+}
+
+.post-list-heading {
+  @include relative-font-size(1.75);
+}
+
+.post-list {
+  margin-left: 0;
+  list-style: none;
+
+  > li {
+    margin-bottom: $spacing-unit;
+  }
+}
+
+.post-meta {
+  font-size: $small-font-size;
+  color: $grey-color;
+}
+
+.post-link {
+  display: block;
+  @include relative-font-size(1.5);
+}
+
+
+
+
+/**
+ * Posts
+ */
+ .post-header {
+  margin-top: 50px;
+  margin-bottom: $spacing-unit;
+}
+
+.post-title {
+  @include relative-font-size(1.525); 
+  letter-spacing: -1px;
+  line-height: 1;
+
+  @include media-query($on-laptop) {
+    @include relative-font-size(2.25);
+  }
+}
+
+.post-content {
+  margin-bottom: $spacing-unit;
+
+  h2 {
+    @include relative-font-size(2);
+
+    @include media-query($on-laptop) {
+      @include relative-font-size(1.75);
+    }
+  }
+
+  h3 {
+    @include relative-font-size(1.625);
+
+    @include media-query($on-laptop) {
+      @include relative-font-size(1.375);
+    }
+  }
+
+  h4 {
+    @include relative-font-size(1.25);
+
+    @include media-query($on-laptop) {
+      @include relative-font-size(1.125);
+    }
+  }
+}
 
 /**
  * Site footer
@@ -223,85 +317,8 @@ box-shadow: 0px 0px 35px 9px rgba(247,250,250,1);
 
 
 
-/**
- * Page content
- */
-.page-content {
-  padding: $spacing-unit 0;
-  flex: 1;
-}
-
-.page-heading {
-  @include relative-font-size(2);
-}
-
-.post-list-heading {
-  @include relative-font-size(1.75);
-}
-
-.post-list {
-  margin-left: 0;
-  list-style: none;
-
-  > li {
-    margin-bottom: $spacing-unit;
-  }
-}
-
-.post-meta {
-  font-size: $small-font-size;
-  color: $grey-color;
-}
-
-.post-link {
-  display: block;
-  @include relative-font-size(1.5);
-}
 
 
 
-/**
- * Posts
- */
-.post-header {
-  margin-top: 50px;
-  margin-bottom: $spacing-unit;
-}
 
-.post-title {
-  @include relative-font-size(1.525); 
-  letter-spacing: -1px;
-  line-height: 1;
 
-  @include media-query($on-laptop) {
-    @include relative-font-size(2.25);
-  }
-}
-
-.post-content {
-  margin-bottom: $spacing-unit;
-
-  h2 {
-    @include relative-font-size(2);
-
-    @include media-query($on-laptop) {
-      @include relative-font-size(1.75);
-    }
-  }
-
-  h3 {
-    @include relative-font-size(1.625);
-
-    @include media-query($on-laptop) {
-      @include relative-font-size(1.375);
-    }
-  }
-
-  h4 {
-    @include relative-font-size(1.25);
-
-    @include media-query($on-laptop) {
-      @include relative-font-size(1.125);
-    }
-  }
-}
