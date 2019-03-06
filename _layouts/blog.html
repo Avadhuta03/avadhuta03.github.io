@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+   
+     {%- assign date_format = site.minima.date_format | default: "%b %-d %Y" -%}
+                                                                           
+    <main class="page-content" aria-label="Content">      
+        {% for blog in site.blogs %}
+           
+     <div class="card">
+       <div class="snippet-head">
+        <a href="{{ site.baseurl }}{{ blog.url | relative_url}}">{{ blog.title | escape }}</a>
+        <br>
+        <span class="post-meta">{{ blog.date | date: date_format }}</span>
+        <br>
+        {{ blog.excerpt }}
+        </div>
+      </div>
+
+      {% endfor %}
+    </main>
+
+  
+
+
+
+
+

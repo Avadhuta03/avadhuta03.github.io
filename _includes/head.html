@@ -1,5 +1,5 @@
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" lang="en">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if page.title %}
@@ -12,12 +12,15 @@
   {% else %}{{ site.description | truncate: 150 }}{% endif %}" >
 
   <link rel="stylesheet" href="{{ '/assets/main.css'| relative_url }}">
+  <link rel="shortcut icon" href="/assets/images/favicon.png"/>
   
+  {% seo %}
+
   {%- feed_meta -%}
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
     {%- include google-analytics.html -%}
   {%- endif -%}
   
-  {% seo %}
-  <link rel="shortcut icon" href="/assets/images/favicon.png"/>
+  
+  
 </head>

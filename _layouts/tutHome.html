@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+<!-- creating categories-->
+<div class="categories">
+  
+</div>
+
+
+
+
+<!-- creating tutorials posts -->
+<div class="tutorPost">
+  {% for tutorial in site.tutorials %}
+  {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+  <div class= "card">
+    <div class="snippet-head">
+          <h3>
+          <a class="post-link" href="{{ tutorial.url | relative_url }}">
+            {{ tutorial.title | escape }}
+          </a>
+           <span class="post-meta">{{ tutorial.date | date: date_format }}</span>
+          </h3>
+            
+          {{ tutorial.excerpt }}
+    </div>
+          
+          <div class="snippet-body">
+           <img src="{{ site.base }}/assets/images/{{ tutorial.image }}">
+          </div>     
+  </div>
+  {% endfor %}
+</div>
+
+

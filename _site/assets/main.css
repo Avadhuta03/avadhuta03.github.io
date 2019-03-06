@@ -188,9 +188,18 @@ table {
 
 /*for Pagination */
 .pagination {
+  float: none;
   max-width: 100%;
   text-align: center;
   margin-bottom: 30px; }
+
+/*blog*/
+.blog-card {
+  margin-top: 80px;
+  margin-left: 180px;
+  border: 1px solid;
+  max-width: 60%;
+  padding: 15px; }
 
 /**
  * Site header
@@ -211,7 +220,8 @@ table {
   letter-spacing: -1px;
   margin-bottom: 0;
   float: left; }
-  .site-title, .site-title:visited {
+  .site-title,
+  .site-title :visited {
     color: #fff; }
 
 .site-title:hover {
@@ -230,7 +240,7 @@ table {
   background: #eee; }
 
 .card .snippet-head {
-  max-width: 500px; }
+  max-width: 100%; }
 
 .card .snippet-body {
   max-width: 300px; }
@@ -246,12 +256,16 @@ table {
   font-size: 15px;
   margin-bottom: 15px; }
 
+.category-name {
+  font-size: 14px; }
+
 .categories-item {
-  padding-right: 4px; }
+  padding-right: 8px;
+  font-size: 14px; }
 
 .posts {
   margin-top: 55px;
-  max-width: 74%;
+  max-width: 75%;
   float: left; }
 
 .posts-heading {

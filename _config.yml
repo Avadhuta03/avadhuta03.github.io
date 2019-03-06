@@ -17,10 +17,9 @@ href: true
 
 title:  Home    
 email: namaste@himaliworld.com 
-description:  This site is powered by Jekyll and hosted on Github.
-
+description:  This site includes tutorials and blogs under different categories.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://www.blog.himaliworld.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://himaliworld.com" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: avadhuta03 
 
 
@@ -34,7 +33,7 @@ paginate_path: "/page:num"
 permalink: /:title/
 
 
-#for multi-lingual approach, 
+#for multi-lingual purpose
 languages: ['en','np']
 
 # Build settings
@@ -46,6 +45,16 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
+#collections
+collections:
+   blogs:
+    output: true
+    excerpt_separator: <!--continue-->
+    permalink: /:title/
+   tutorials:
+     output: true
+     excerpt_separator: <!--continue-->
+     permalink: /:title/
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

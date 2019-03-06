@@ -1,7 +1,7 @@
 ---
-layout: post
+layout: blog
 title: Open Short Path First (OSPF) Protocol
-categories: [Computer Network]
+category: blog
 image: ospf.png
 ---
 Open Short Path First (OSPF) Protocol is the standarized link state routing protocol.
