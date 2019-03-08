@@ -1,0 +1,20 @@
+---
+layout: 
+title: Categories
+permalink: /tutorials/categories/
+---
+
+{% for category in site.tutorials %}
+    <div class="archive-group">
+        {% capture category_name %}{{ category | first }}{% endcapture %}
+        <div id="#{{ category_name | slugize }}"></div>
+        
+        <h4 class="category-head">{{ category_name }}</h4>
+        <a name="{{ category_name | slugize }}"></a>
+           {% for tutor in site.tutorials %}
+           <article class = "archive-list">
+               <h5><a href="{{ tutor.url }}">{{ tutor.title }}</a></h5>
+           </article>
+           {% endfor %}
+    </div>
+{% endfor %}

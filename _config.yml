@@ -18,18 +18,15 @@ href: true
 title:  Home    
 email: namaste@himaliworld.com 
 description:  This site includes tutorials and blogs under different categories.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl:  # the subpath of your site, e.g. /blog
 url: "https://himaliworld.com" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: avadhuta03 
 
 
 
 excerpt_separator: <!--continue-->
-
 paginate: 10
 paginate_path: "/page:num" 
-
-
 permalink: /:title/
 
 
@@ -50,11 +47,12 @@ collections:
    blogs:
     output: true
     excerpt_separator: <!--continue-->
-    permalink: /:title/
+    permalink: /blog/:title/
+
    tutorials:
      output: true
      excerpt_separator: <!--continue-->
-     permalink: /:title/
+     permalink: /tutorials/:title/
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
