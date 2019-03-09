@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Learning Laravel
-categories: Framework
+description: Learning frameworks built on specific programming language can be an effective way to learn any PLs. With the basics of php, I hope learning Laravel; a php framework, can help me understand the language along with real web development works.  
+categories: [Laravel Framework ]
 image: laravel.png
 ---
 <h4>Laravel is open-source php  web framework, based on Symfony that follows Model-View-Controller(MVC) architectural pattern and intended for development of web applications.</h4>

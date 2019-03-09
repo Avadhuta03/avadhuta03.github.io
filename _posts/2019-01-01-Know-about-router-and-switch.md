@@ -1,6 +1,7 @@
 ---
 layout: post
-title: Getting to Know  About  Router and Switch
+title: Know About Router and Switch
+description: 
 categories: [Computer Network]
 image: com_net.png 
 ---
@@ -13,7 +14,7 @@ There are devices like router and switch, that has its own operating system and 
 Router is a Layer 3(Network Layer) networking device which uses logical addressing(IPv4 or IPv6),connects two or more networks to form internetwork and provides capacities like packet switching, packet filtering using access lists, path selection.<br>
 Router don't forward broadcasts by default and they filter the network based on layer 3 information like IP address. <br>
 Routers provide a separate broadcast domain for each interface.<br>
-<h4>To configure router using CLI, lets know about the user modes in router settings:</h4>
+<h4>To configure <i>CISCO</i> router using CLI, lets know about the user modes in the router settings:</h4>
 <table>
 <tr><td><b>Modes Name</b></td><td><b>Prompt Used</b></td><td><b>Description</b></td></tr>
 <tr><td>User Mode</td><td>></td><td>only simple commands like ping can be executed</td></tr>
@@ -100,6 +101,9 @@ Forwarding happens in following steps:<br>
 <br>
 <b>Collision Domain</b>: It is an ethernet term used for network segment in which all the devices response to the packet out in the segment, usually leading to collisions.
 <br> 
-Switches create separate collision domains on a single broadcast domain.<br>
+Each port on Switch creates separate collision domains on a single broadcast domain.<br>
 <br>
+
+<b>Broadcast Domain</b>: 
+
    

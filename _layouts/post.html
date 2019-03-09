@@ -11,7 +11,7 @@ layout: default
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         {{ page.date | date: date_format }}
       </time>
-     </p>
+
    <!-- page category -->
 <div class="post-categories">
         {% if post %}
@@ -21,7 +21,7 @@ layout: default
         {% endif %}
 
         {% for category in categories %}
-         Category: <a href="#">{{ category }}</a>
+         Category: <a href="{{ site.baseurl }}/categories/#{{ category|slugize}}">{{ category }}</a>
             {% unless forloop.last %}&nbsp;{% endunless %}
         {% endfor %}
 </div>

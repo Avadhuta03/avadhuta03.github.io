@@ -10,7 +10,7 @@ Arch  linux is a linux distribution for computers based on x86-64 architectures.
 <h3>Installation of Arch Linux on hard drive from a live media. </h3>  
 <ol>
 <li>Connect to the Internet<pre>wireless: wifi-menu
-ethernet: systemctl start dhcpcd</pre>   
+ethernet: systemctl start dhcpd</pre>   
 </li>
 
 <li>

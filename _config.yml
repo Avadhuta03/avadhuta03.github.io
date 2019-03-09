@@ -13,13 +13,13 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
+
 href: true
 
 title:  Home
 email: namaste@himaliworld.com 
 description:  Tutorials on Computer, Network, Programming, PL's Framework 
-
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl:  # the subpath of your site, e.g. /blog
 url: "https://himaliworld.com" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: avadhuta03 
 
@@ -28,12 +28,10 @@ github_username: avadhuta03
 excerpt_separator: <!--continue-->
 paginate: 8
 paginate_path: "/page:num" 
-
-
 permalink: /:title/
 
 
-#for multi-lingual approach, 
+#for multi-lingual purpose
 languages: ['en','np']
 
 # Build settings
@@ -44,6 +42,7 @@ plugins:
   - jekyll-paginate
   - jekyll-seo-tag
   - jekyll-sitemap
+
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

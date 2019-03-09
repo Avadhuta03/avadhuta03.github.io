@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-03-09T15:54:20+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Home</title><subtitle>Tutorials on Computer, Network, Programming, PL's Framework</subtitle><entry><title type="html">Getting to Know About Router and Switch</title><link href="http://localhost:4000/Know-your-router-and-switch/" rel="alternate" type="text/html" title="Getting to Know  About  Router and Switch" /><published>2019-01-01T00:00:00+00:00</published><updated>2019-01-01T00:00:00+00:00</updated><id>http://localhost:4000/Know-your-router-and-switch</id><content type="html" xml:base="http://localhost:4000/Know-your-router-and-switch/">&lt;p&gt;A small local area Computer Network comprises of two or more different electronic devices(nodes) that are able to communicate with each other for the transimission of data or infromation, to and  from each other.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-03-09T16:47:33+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Home</title><subtitle>Tutorials on Computer, Network, Programming, PL's Framework</subtitle><entry><title type="html">Know About Router and Switch</title><link href="http://localhost:4000/Know-about-router-and-switch/" rel="alternate" type="text/html" title="Know About Router and Switch" /><published>2019-01-01T00:00:00+00:00</published><updated>2019-01-01T00:00:00+00:00</updated><id>http://localhost:4000/Know-about-router-and-switch</id><content type="html" xml:base="http://localhost:4000/Know-about-router-and-switch/">&lt;p&gt;A small local area Computer Network comprises of two or more different electronic devices(nodes) that are able to communicate with each other for the transimission of data or infromation, to and  from each other.&lt;/p&gt;
 
 &lt;!--continue--&gt;
 &lt;p&gt;There are devices like router and switch, that has its own operating system and protocols embedded into it, whose primary function is to facilitate the communication between the nodes in the network.&lt;/p&gt;
@@ -7,7 +7,7 @@
 &lt;p&gt;Router is a Layer 3(Network Layer) networking device which uses logical addressing(IPv4 or IPv6),connects two or more networks to form internetwork and provides capacities like packet switching, packet filtering using access lists, path selection.&lt;br /&gt;
 Router don’t forward broadcasts by default and they filter the network based on layer 3 information like IP address. &lt;br /&gt;
 Routers provide a separate broadcast domain for each interface.&lt;br /&gt;&lt;/p&gt;
-&lt;h4&gt;To configure router using CLI, lets know about the user modes in router settings:&lt;/h4&gt;
+&lt;h4&gt;To configure &lt;i&gt;CISCO&lt;/i&gt; router using CLI, lets know about the user modes in the router settings:&lt;/h4&gt;
 &lt;table&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Modes Name&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Prompt Used&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Description&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;User Mode&lt;/td&gt;&lt;td&gt;&amp;gt;&lt;/td&gt;&lt;td&gt;only simple commands like ping can be executed&lt;/td&gt;&lt;/tr&gt;
@@ -94,8 +94,10 @@ Forwarding happens in following steps:&lt;br /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;br /&gt;
 &lt;b&gt;Collision Domain&lt;/b&gt;: It is an ethernet term used for network segment in which all the devices response to the packet out in the segment, usually leading to collisions.
 &lt;br /&gt; 
-Switches create separate collision domains on a single broadcast domain.&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">A small local area Computer Network comprises of two or more different electronic devices(nodes) that are able to communicate with each other for the transimission of data or infromation, to and from each other.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/com_net.png" /></entry><entry><title type="html">Laravel’s Authentication System</title><link href="http://localhost:4000/User-Authentication-Using-Laravel/" rel="alternate" type="text/html" title="Laravel's Authentication System" /><published>2018-12-18T00:00:00+00:00</published><updated>2018-12-18T00:00:00+00:00</updated><id>http://localhost:4000/User-Authentication-Using-Laravel</id><content type="html" xml:base="http://localhost:4000/User-Authentication-Using-Laravel/">&lt;h4&gt;User Authentication System basically includes: registration, login, sessions, password resets, and access permissions.&lt;/h4&gt;
+Each port on Switch creates separate collision domains on a single broadcast domain.&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Broadcast Domain&lt;/b&gt;:&lt;/p&gt;</content><author><name></name></author><summary type="html">A small local area Computer Network comprises of two or more different electronic devices(nodes) that are able to communicate with each other for the transimission of data or infromation, to and from each other.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/com_net.png" /></entry><entry><title type="html">Laravel’s Authentication System</title><link href="http://localhost:4000/User-Authentication-Using-Laravel/" rel="alternate" type="text/html" title="Laravel's Authentication System" /><published>2018-12-18T00:00:00+00:00</published><updated>2018-12-18T00:00:00+00:00</updated><id>http://localhost:4000/User-Authentication-Using-Laravel</id><content type="html" xml:base="http://localhost:4000/User-Authentication-Using-Laravel/">&lt;h4&gt;User Authentication System basically includes: registration, login, sessions, password resets, and access permissions.&lt;/h4&gt;
 &lt;!--continue--&gt;
 
 &lt;h5&gt; Every install of Laravel comes with:a RegisterController, a LoginController, a ForgotPasswordController, and a ResetPasswordController &lt;/h5&gt;
@@ -1079,7 +1081,7 @@ distinct()
 &lt;h3&gt;Installation of Arch Linux on hard drive from a live media. &lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;Connect to the Internet&lt;pre&gt;wireless: wifi-menu
-ethernet: systemctl start dhcpcd&lt;/pre&gt;   
+ethernet: systemctl start dhcpd&lt;/pre&gt;   
 &lt;/li&gt;
 
 &lt;li&gt;
