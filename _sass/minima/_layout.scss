@@ -54,17 +54,17 @@ box-shadow: 0px 0px 35px 9px rgba(247,250,250,1);
 
 
 .categories{
-  margin-top: 55px;
+  margin-top: 65px;
   max-width: 25%;
   float: left;
   border-right: 1px solid;  
 }
-.categories-heading{ text-align: center; font-size: 15px; margin-bottom: 15px;}
+.categories-heading{ text-align: center; font-size: 13px; margin-bottom: 15px;}
 
-.categories-item{ padding-right: 4px;}
+.categories-item{ padding-right: 4px; font-size: 13px;}
 
 .posts{
-  margin-top: 55px;
+  margin-top: 45px;
   max-width: 74%;
   float: left;
 }
@@ -74,7 +74,7 @@ box-shadow: 0px 0px 35px 9px rgba(247,250,250,1);
   .card{display:inline-block;margin:0;}
   .posts{margin-top:50px!important; max-width: 100%; float:none;}
 
-  .categories {max-width: 100%; float: none; border-right: none; border-bottom: 1px solid;}
+  .categories {max-width: 100%; float: none;  border-right: none; border-bottom: 1px solid;}
 
 }
 

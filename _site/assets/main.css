@@ -236,21 +236,22 @@ table {
   max-width: 300px; }
 
 .categories {
-  margin-top: 55px;
+  margin-top: 65px;
   max-width: 25%;
   float: left;
   border-right: 1px solid; }
 
 .categories-heading {
   text-align: center;
-  font-size: 15px;
+  font-size: 13px;
   margin-bottom: 15px; }
 
 .categories-item {
-  padding-right: 4px; }
+  padding-right: 4px;
+  font-size: 13px; }
 
 .posts {
-  margin-top: 55px;
+  margin-top: 45px;
   max-width: 74%;
   float: left; }
 

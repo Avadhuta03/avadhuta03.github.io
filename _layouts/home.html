@@ -17,7 +17,7 @@ layout: default
          {% capture category_name %}{{ category | first }}{% endcapture %}  
            <div id="#{{ category_name | slugize }}"></div>
 
-		<i><h3 class="category-name">{{ category_name }}</h3></i>
+		<i><h4 class="category-name">{{ category_name }}</h4></i>
 		 <a name="{{ category_name | slugize }}"></a>
 
 	    {% for post in site.categories[category_name] %}
@@ -35,26 +35,37 @@ layout: default
 
 
 
-<!-- loop through paginated page -->
+<!-- loop through paginated pages -->
 <div class="posts">
-  <div class="posts-heading">TUTORIALS</div>
 {% for post in paginator.posts %}
 
   {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
   <div class= "card">
     <div class="snippet-head">
-          <h3>
+          
           <a class="post-link" href="{{ post.url | relative_url }}">
             {{ post.title | escape }}
           </a>
+      
            <span class="post-meta">{{ post.date | date: date_format }}</span>
-          </h3>
-            
+           &nbsp;&nbsp;
+  <!-- page category -->
+    {% if post %}
+            {% assign categories = post.categories %}
+    {% else %}
+            {% assign categories = page.categories %}
+    {% endif %}
+
+    {% for category in categories %}
+     <a href="#">{{ category }}</a>
+        {% unless forloop.last %}&nbsp;{% endunless %}
+    {% endfor %}
+<br><br>
           {{ post.excerpt }}
     </div>
           
           <div class="snippet-body">
-           <img src="{{ site.base }}/assets/images/{{ post.image }}">
+           <img src="{{ site.url }}/assets/images/{{ post.image }}">
           </div>     
   </div>
 {% endfor %}
