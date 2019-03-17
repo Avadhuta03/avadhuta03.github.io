@@ -246,7 +246,7 @@ table {
   max-width: 300px; }
 
 .categories {
-  margin-top: 45px;
+  margin-top: 65px;
   max-width: 28%;
   float: left;
   border-right: 1px solid; }
@@ -262,7 +262,7 @@ table {
 
 .posts {
   margin-top: 35px;
-  max-width: 78%;
+  max-width: 70%;
   float: left; }
 
 .posts-heading {
@@ -273,12 +273,12 @@ table {
 @media screen and (max-width: 600px) {
   .card {
     display: inline-block;
-    margin: 0; }
+    margin: 0;
+    max-width: 100%; }
 
   .posts {
     margin-top: 50px !important;
-    max-width: 100%;
-    float: none; }
+    max-width: 100%; }
 
   .categories {
     max-width: 100%;

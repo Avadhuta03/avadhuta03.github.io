@@ -18,7 +18,7 @@ href: true
 
 title:  Home
 email: namaste@himaliworld.com 
-description:  Tutorials on Computer, Network, Programming, PL's Framework 
+description:  Tutorials on Computer Network, Programming, PL's Framework 
 baseurl:  # the subpath of your site, e.g. /blog
 url: "https://himaliworld.com" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: avadhuta03 
@@ -30,9 +30,6 @@ paginate: 8
 paginate_path: "/page:num" 
 permalink: /:title/
 
-
-#for multi-lingual purpose
-languages: ['en','np']
 
 # Build settings
 markdown: kramdown
