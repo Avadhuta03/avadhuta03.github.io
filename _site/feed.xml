@@ -1,9 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-03-17T22:00:03+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Home</title><subtitle>Tutorials on Computer Network, Programming, PL's Framework</subtitle><entry><title type="html">Basics of TCP/IP</title><link href="http://localhost:4000/TCP-and-IP-Basics/" rel="alternate" type="text/html" title="Basics of  TCP/IP" /><published>2019-03-04T00:00:00+00:00</published><updated>2019-03-04T00:00:00+00:00</updated><id>http://localhost:4000/TCP-and-IP-Basics</id><content type="html" xml:base="http://localhost:4000/TCP-and-IP-Basics/">&lt;p&gt;TCP/IP is at the core of computer netwoking as we know today. TCP/IP standards are checked against certain criteria to maintain its integrity and ensure that any dramatic changes are not made and proprietary features are not added. This open apporach makes it most reliable and thus, popular.&lt;br /&gt;
-&lt;!--continue--&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-03-24T14:45:53+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Home</title><subtitle>Tutorials on Computer Network, Programming, PL's Framework</subtitle><entry><title type="html">Basics of TCP/IP</title><link href="http://localhost:4000/TCP-and-IP-Basics/" rel="alternate" type="text/html" title="Basics of  TCP/IP" /><published>2019-03-04T00:00:00+00:00</published><updated>2019-03-04T00:00:00+00:00</updated><id>http://localhost:4000/TCP-and-IP-Basics</id><content type="html" xml:base="http://localhost:4000/TCP-and-IP-Basics/">&lt;p&gt;TCP/IP is at the core of computer netwoking as we know today. TCP/IP standards are checked against certain criteria to maintain its integrity and ensure that any dramatic changes are not made and proprietary features are not added. This open apporach makes it most reliable and thus, popular.&lt;br /&gt;
+&lt;!--continue--&gt;&lt;/p&gt;
+&lt;p&gt;
 Open System Interconnection(OSI) Model was developed to logically address the characteristics and standarize the communication functions in telecommunication.
-There are 4 logical layers [ Process/Application, Transport, Internet, Link ] in original DoD(Department of Defence) Model which is extended to 7 layers in OSI reference model.&lt;/p&gt;
-&lt;table&gt;
+There are 4 logical layers [ Process/Application, Transport, Internet, Link ] in original DoD(Department of Defence) Model which is extended to 7 layers in OSI reference model. 
 
+
+&lt;table&gt;
 &lt;tr&gt;&lt;th&gt;Name of Logical Layers&lt;/th&gt;&lt;th&gt;Protocols Implemented&lt;/th&gt;&lt;th&gt;Functions&lt;/th&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;1.  Application&lt;br /&gt;
 2. Presentation&lt;br /&gt;
@@ -30,7 +32,34 @@ There are 4 logical layers [ Process/Application, Transport, Internet, Link ] in
  Ethernet, FDDI, ...&lt;/td&gt;
  &lt;td&gt;oversees hardware addressing and &lt;br /&gt;defines protocols for the physical transmission of data&lt;/td&gt;
  &lt;/tr&gt;
- &lt;/table&gt;</content><author><name></name></author><summary type="html">TCP/IP is at the core of computer netwoking as we know today. TCP/IP standards are checked against certain criteria to maintain its integrity and ensure that any dramatic changes are not made and proprietary features are not added. This open apporach makes it most reliable and thus, popular.</summary></entry><entry><title type="html">Know About Router and Switch</title><link href="http://localhost:4000/Know-about-router-and-switch/" rel="alternate" type="text/html" title="Know About Router and Switch" /><published>2019-01-01T00:00:00+00:00</published><updated>2019-01-01T00:00:00+00:00</updated><id>http://localhost:4000/Know-about-router-and-switch</id><content type="html" xml:base="http://localhost:4000/Know-about-router-and-switch/">&lt;p&gt;A small local area Computer Network comprises of two or more different electronic devices(nodes) that are able to communicate with each other for the transimission of data or infromation, to and  from each other.&lt;/p&gt;
+ &lt;/table&gt;
+&lt;/p&gt;
+&lt;h3&gt;IP addressing &lt;/h3&gt;
+&lt;p&gt;IP address is software address designed to facilitate communication between hosts in different networks. &lt;br /&gt;
+ Hardware address is hard-coded into NIC card and used for finding hosts on a local network.
+ &lt;br /&gt;&lt;br /&gt;
+  An IP address contains 32 bits divided into 4 sections; 1 byte in each section. It can be represented in Dotted decimal, Binary or Hexadecimal. &lt;br /&gt;
+ With 32 bits, approximately 4.3 billions (2^32) of unique IP addresses can be formed. 
+ &lt;br /&gt;
+ To address every unique IP address, all routers would need to store address of each and every machine on the internet. This would make efficient routing impossible even if only a fraction of the possible addresses were to be used.&lt;br /&gt;
+ Thus the solution lies on 2 or 3 level of hierarchical addressing scheme; network and host, or network, subnet, and host. 
+ 
+
+ &lt;h5&gt;Network Addressing&lt;/h5&gt;
+ Network address or network number, uniquely identifies each network. Each machine on same network shares same network address.&lt;br /&gt;
+ Node address uniquely identifies a particular machine on a network, as opposed to the network address, which is a group.&lt;br /&gt; &lt;br /&gt;
+ Based on the network size, classes are created.&lt;br /&gt;&lt;br /&gt;
+ 
+ &lt;table&gt;
+ &lt;th&gt;Class &lt;/th&gt;&lt;th&gt;Fist bits &lt;/th&gt;&lt;th&gt;Network Address Range&lt;/th&gt;&lt;th&gt;Total Hosts&lt;/th&gt;
+&lt;tr&gt;&lt;td&gt;Class A &lt;/td&gt;&lt;td&gt; 0 &lt;/td&gt;&lt;td&gt; 0 - 127 &lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Class B &lt;/td&gt;&lt;td&gt; 10 &lt;/td&gt;&lt;td&gt; 128 - 191 &lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Class C &lt;/td&gt;&lt;td&gt; 110 &lt;/td&gt;&lt;td&gt; 192 - 223 &lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Class D &lt;/td&gt;&lt;td&gt; 1110 &lt;/td&gt;&lt;td&gt; 224 - 239&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Class E &lt;/td&gt;&lt;td&gt; 11110 &lt;/td&gt;&lt;td&gt; 240 - 255 &lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;/p&gt;</content><author><name></name></author><summary type="html">TCP/IP is at the core of computer netwoking as we know today. TCP/IP standards are checked against certain criteria to maintain its integrity and ensure that any dramatic changes are not made and proprietary features are not added. This open apporach makes it most reliable and thus, popular.</summary></entry><entry><title type="html">Know About Router and Switch</title><link href="http://localhost:4000/Know-about-router-and-switch/" rel="alternate" type="text/html" title="Know About Router and Switch" /><published>2019-01-01T00:00:00+00:00</published><updated>2019-01-01T00:00:00+00:00</updated><id>http://localhost:4000/Know-about-router-and-switch</id><content type="html" xml:base="http://localhost:4000/Know-about-router-and-switch/">&lt;p&gt;A small local area Computer Network comprises of two or more different electronic devices(nodes) that are able to communicate with each other for the transimission of data or infromation, to and  from each other.&lt;/p&gt;
 
 &lt;!--continue--&gt;
 &lt;p&gt;There are devices like router and switch, that has its own operating system and protocols embedded into it, whose primary function is to facilitate the communication between the nodes in the network.&lt;/p&gt;

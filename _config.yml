@@ -17,10 +17,10 @@
 href: true
 
 title:  Home
-email: namaste@himaliworld.com 
+email: tutorials@himaliworld.com 
 description:  Tutorials on Computer Network, Programming, PL's Framework 
 baseurl:  # the subpath of your site, e.g. /blog
-url: "https://himaliworld.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.tutorials.himaliworld.com" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: avadhuta03 
 
 
