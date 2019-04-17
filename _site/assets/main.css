@@ -249,7 +249,8 @@ table {
   margin-top: 65px;
   max-width: 28%;
   float: left;
-  border-right: 1px solid; }
+  border-right: 1px solid;
+  position: fixed; }
 
 .categories-heading {
   text-align: center;
@@ -262,8 +263,8 @@ table {
 
 .posts {
   margin-top: 35px;
-  max-width: 70%;
-  float: left; }
+  max-width: 76%;
+  float: right; }
 
 .posts-heading {
   text-align: center;
@@ -282,6 +283,7 @@ table {
 
   .categories {
     max-width: 100%;
+    position: relative;
     float: none;
     border-right: none;
     border-bottom: 1px solid; } }
