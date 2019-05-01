@@ -15,7 +15,7 @@ layout: default
          {% capture category_name %}{{ category | first }}{% endcapture %}  
            <div id="#{{ category_name | slugize }}"></div>
 
-		<i><h4 class="category-name">{{ category_name }}</h4></i>
+		<i><h5 class="category-name">{{ category_name }}</h5></i>
 		 <a name="{{ category_name | slugize }}"></a>
 
 	    {% for post in site.categories[category_name] %}
@@ -73,8 +73,5 @@ layout: default
 
 
 
-<div class="pagination">
-    {%- include pagination.html -%}
-    </div>
 
 

@@ -10,9 +10,8 @@
   </title>
   <meta itemprop="description" name="description" content="{% if page.description %}{{ page.description | truncate: 140 }}
   {% else %}{{ site.description | truncate: 150 }}{% endif %}" >
-
-  <link rel="stylesheet" href="{{ '/assets/main.css'| relative_url }}">
-  <link rel="shortcut icon" href="/assets/images/favicon.png"/>
+  <link rel="icon" type="image/png" href="/assets/images/icon.png"/>
+  <link rel="stylesheet" href="{{ '/assets/main.css'| relative_url }}"/>
   
   {% seo %}
 
@@ -22,6 +21,6 @@
   {%- endif -%}
   
   {% seo %}
-  <link rel="shortcut icon" href=" {{ '/assets/images/favicon.png' | prepend:site.baseurl }} "/>
+
   
 </head>

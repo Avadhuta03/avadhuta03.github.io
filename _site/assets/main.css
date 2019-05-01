@@ -31,7 +31,7 @@ h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 .highlight {
-  margin-bottom: 15px; }
+  margin-bottom: 10px; }
 
 /**
  * `main` element
@@ -263,7 +263,7 @@ table {
 
 .posts {
   margin-top: 35px;
-  max-width: 76%;
+  max-width: 79%;
   float: right; }
 
 .posts-heading {
