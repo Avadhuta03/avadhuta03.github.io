@@ -58,10 +58,10 @@ There are 4 logical layers [ Process/Application, Transport, Internet, Link ] in
  Based on the network size, classes are created.<br><br>
  
  <table>
- <th>Class </th><th>Fist bits </th><th>Network Address Range</th><th>Total Hosts</th>
-<tr><td>Class A </td><td> 0 </td><td> 0 - 127 </td></tr>
-<tr><td>Class B </td><td> 10 </td><td> 128 - 191 </td></tr>
-<tr><td>Class C </td><td> 110 </td><td> 192 - 223 </td></tr>
+ <th>Class </th><th>Fist bits </th><th>Network Address Range</th><th>Total Unique Hosts per Network</th>
+<tr><td>Class A </td><td> 0 </td><td> 0 - 127 </td><td>2^(24) - 2 = 16,777,214</td></tr>
+<tr><td>Class B </td><td> 10 </td><td> 128 - 191 </td><td>2^(16) - 2 = 65534</td></tr>
+<tr><td>Class C </td><td> 110 </td><td> 192 - 223 </td><td>2^(8) - 2 = 254</td></tr>
 <tr><td>Class D </td><td> 1110 </td><td> 224 - 239</td></tr>
 <tr><td>Class E </td><td> 11110 </td><td> 240 - 255 </td></tr>
 </table>

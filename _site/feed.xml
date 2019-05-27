@@ -1,4 +1,52 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-04-30T19:40:29+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Tutorials | HimaliWorld</title><subtitle>Tutorials on Computer Network, Programming, PL's Framework</subtitle><entry><title type="html">Hack the Wifi Password?</title><link href="http://localhost:4000/How-to-decryt-wifi-password/" rel="alternate" type="text/html" title="Hack the Wifi Password?" /><published>2019-04-29T00:00:00+00:00</published><updated>2019-04-29T00:00:00+00:00</updated><id>http://localhost:4000/How-to-decryt-wifi-password</id><content type="html" xml:base="http://localhost:4000/How-to-decryt-wifi-password/">&lt;p&gt;There are various algorithms implemented to encrypt passwords. 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-05-27T17:43:39+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Tutorials | HimaliWorld</title><subtitle>Tutorials on Computer Network, Programming, PL's Framework</subtitle><entry><title type="html">SQLite Basics</title><link href="http://localhost:4000/Sqlite-Basics/" rel="alternate" type="text/html" title="SQLite Basics" /><published>2019-05-08T00:00:00+00:00</published><updated>2019-05-08T00:00:00+00:00</updated><id>http://localhost:4000/Sqlite-Basics</id><content type="html" xml:base="http://localhost:4000/Sqlite-Basics/">&lt;p&gt;SQlite is a software library providing Relational Database Management System.&lt;br /&gt;
+It is Serverless (Is integrated with application and doesn’t require a server), &lt;br /&gt;
+Self-Contained (Is developed using ANSI-C, and requires minimal support from OS or external library),&lt;br /&gt;
+&lt;!--continue--&gt;
+Zero-Configuration (No configuration files are used),&lt;br /&gt;
+Transactional (All transactions are ACID-compliant)&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+Other Distinctive features include:&lt;br /&gt;&lt;/p&gt;
+&lt;li&gt;Uses dynamic types of tables&lt;/li&gt;
+&lt;li&gt;Allows single database connection to access multiple database files simultaneously.&lt;/li&gt;
+&lt;li&gt;Creates in-memory databases&lt;/li&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3&gt;SQlite Commands&lt;/h3&gt;
+&lt;pre&gt;
+  $sqlite3  //start the sqlite3 connection
+  $sqlite3 FILENAME   //creates db file during connection if not exists 
+  sqlite&amp;gt;.open PATH_TO/FILENAME   //open a database file
+  sqlite&amp;gt;.help  //lists all available commands
+  sqlite&amp;gt;.database      //shows databases in current connection
+  sqlite&amp;gt;attach database &quot;PATH_TO/FILENAME&quot; as FILENAME  //adds additional db to current connection
+  sqlite&amp;gt;.tables    //lists all the tables
+  sqlite&amp;gt;.table '%ab'   //shows tables with ab string
+  sqlite&amp;gt;.schema    //shows structure of all tables
+  sqlite&amp;gt;.schema TABLENAME  //shows structure of specified table
+  sqlite&amp;gt;.fullschema    
+  sqlite&amp;gt;.indexes   //shows all indexes of current database
+  sqlite&amp;gt;.indexes TABLENAME
+  sqlite&amp;gt;.indexes '%ab'
+  sqlite&amp;gt;.output FILENAME   //saves result of subsequent queries into FILENAME
+  sqlite&amp;gt;.once FILENAME     //saves result of  next query only
+  sqlite&amp;gt;.mode MODENAME     
+  sqlite&amp;gt;.read PATH_TO_FILE/FILENAME    //execute query from external FILEclea
+  sqlite&amp;gt;.quit     //quits the sqlite3 program
+&lt;/pre&gt;
+
+&lt;p&gt;SQLite SELECT statement&lt;/p&gt;
+&lt;pre&gt;SELECT DISTINCT column_name FROM table_name
+JOIN table ON join_condition
+WHERE row_filter
+ORDER BY column
+LIMIT count 
+GROUP BY column
+HAVING group_filter;
+
+SELECT column1, column2 FROM table_name;
+SELECT * from table_name;
+&lt;/pre&gt;</content><author><name></name></author><summary type="html">SQlite is a software library providing Relational Database Management System. It is Serverless (Is integrated with application and doesn’t require a server), Self-Contained (Is developed using ANSI-C, and requires minimal support from OS or external library),</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/sqlite.png" /></entry><entry><title type="html">Decrypt Wifi Password?</title><link href="http://localhost:4000/How-to-decryt-wifi-password/" rel="alternate" type="text/html" title="Decrypt Wifi Password?" /><published>2019-04-29T00:00:00+00:00</published><updated>2019-04-29T00:00:00+00:00</updated><id>http://localhost:4000/How-to-decryt-wifi-password</id><content type="html" xml:base="http://localhost:4000/How-to-decryt-wifi-password/">&lt;p&gt;There are various algorithms implemented to encrypt passwords. 
 It’s not ethical to steal passwords of any kind, without owner’s consent. However
 we can setup our own environment to do some ethical practises and there are tools available for the purpose.&lt;br /&gt;&lt;/p&gt;
 
@@ -42,7 +90,7 @@ aireplay-ng --deauth[number of deauth packets] -a [AP] -c[target] [interface]
 aircrack-ng [handshake filename] --w [wordlist] [interface]&lt;/pre&gt;
 &lt;/li&gt;
 
-&lt;p&gt; Some common wireless encryptions today are WEP, WPA, WPA2. WPA/WPA2 is considered as secure one. With WPS feautre enabled, it might be easier to crack the wifi. And if not, the only way is the dictionary  attack which involves comparing the dictionay(list of passwords) with handshake file.&lt;/p&gt;</content><author><name></name></author><summary type="html">There are various algorithms implemented to encrypt passwords. It’s not ethical to steal passwords of any kind, without owner’s consent. However we can setup our own environment to do some ethical practises and there are tools available for the purpose.</summary></entry><entry><title type="html">Basics of TCP/IP</title><link href="http://localhost:4000/TCP-and-IP-Basics/" rel="alternate" type="text/html" title="Basics of  TCP/IP" /><published>2019-03-04T00:00:00+00:00</published><updated>2019-03-04T00:00:00+00:00</updated><id>http://localhost:4000/TCP-and-IP-Basics</id><content type="html" xml:base="http://localhost:4000/TCP-and-IP-Basics/">&lt;p&gt;TCP/IP is at the core of computer netwoking as we know today. TCP/IP standards are checked against certain criteria to maintain its integrity and ensure that any dramatic changes are not made and proprietary features are not added. This open apporach makes it most reliable and thus, popular.&lt;br /&gt;
+&lt;p&gt; Some common wireless encryptions today are WEP, WPA, WPA2. WPA/WPA2 is considered as secure one. With WPS feautre enabled, it might be easier to crack the wifi. And if not, the only way is the dictionary  attack which involves comparing the dictionay(list of passwords) with handshake file.&lt;/p&gt;</content><author><name></name></author><summary type="html">There are various algorithms implemented to encrypt passwords. It’s not ethical to steal passwords of any kind, without owner’s consent. However we can setup our own environment to do some ethical practises and there are tools available for the purpose.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/wifi.png" /></entry><entry><title type="html">Basics of TCP/IP</title><link href="http://localhost:4000/TCP-and-IP-Basics/" rel="alternate" type="text/html" title="Basics of  TCP/IP" /><published>2019-03-04T00:00:00+00:00</published><updated>2019-03-04T00:00:00+00:00</updated><id>http://localhost:4000/TCP-and-IP-Basics</id><content type="html" xml:base="http://localhost:4000/TCP-and-IP-Basics/">&lt;p&gt;TCP/IP is at the core of computer netwoking as we know today. TCP/IP standards are checked against certain criteria to maintain its integrity and ensure that any dramatic changes are not made and proprietary features are not added. This open apporach makes it most reliable and thus, popular.&lt;br /&gt;
 &lt;!--continue--&gt;&lt;/p&gt;
 &lt;p&gt;
 Open System Interconnection(OSI) Model was developed to logically address the characteristics and standarize the communication functions in telecommunication.
@@ -95,10 +143,10 @@ There are 4 logical layers [ Process/Application, Transport, Internet, Link ] in
  Based on the network size, classes are created.&lt;br /&gt;&lt;br /&gt;
  
  &lt;table&gt;
- &lt;th&gt;Class &lt;/th&gt;&lt;th&gt;Fist bits &lt;/th&gt;&lt;th&gt;Network Address Range&lt;/th&gt;&lt;th&gt;Total Hosts&lt;/th&gt;
-&lt;tr&gt;&lt;td&gt;Class A &lt;/td&gt;&lt;td&gt; 0 &lt;/td&gt;&lt;td&gt; 0 - 127 &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;Class B &lt;/td&gt;&lt;td&gt; 10 &lt;/td&gt;&lt;td&gt; 128 - 191 &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;Class C &lt;/td&gt;&lt;td&gt; 110 &lt;/td&gt;&lt;td&gt; 192 - 223 &lt;/td&gt;&lt;/tr&gt;
+ &lt;th&gt;Class &lt;/th&gt;&lt;th&gt;Fist bits &lt;/th&gt;&lt;th&gt;Network Address Range&lt;/th&gt;&lt;th&gt;Total Unique Hosts per Network&lt;/th&gt;
+&lt;tr&gt;&lt;td&gt;Class A &lt;/td&gt;&lt;td&gt; 0 &lt;/td&gt;&lt;td&gt; 0 - 127 &lt;/td&gt;&lt;td&gt;2^(24) - 2 = 16,777,214&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Class B &lt;/td&gt;&lt;td&gt; 10 &lt;/td&gt;&lt;td&gt; 128 - 191 &lt;/td&gt;&lt;td&gt;2^(16) - 2 = 65534&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Class C &lt;/td&gt;&lt;td&gt; 110 &lt;/td&gt;&lt;td&gt; 192 - 223 &lt;/td&gt;&lt;td&gt;2^(8) - 2 = 254&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;Class D &lt;/td&gt;&lt;td&gt; 1110 &lt;/td&gt;&lt;td&gt; 224 - 239&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;Class E &lt;/td&gt;&lt;td&gt; 11110 &lt;/td&gt;&lt;td&gt; 240 - 255 &lt;/td&gt;&lt;/tr&gt;
 &lt;/table&gt;
@@ -511,7 +559,7 @@ t -&amp;gt; sticky bit sermissions, represented in the executable portion of the
 
 
 
-&lt;/h5&gt;</content><author><name></name></author><summary type="html">&quot;Everything is a file&quot;, which is one of the definitive features of UNIX Operating System and its derivatives like Linux.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/file_permi.png" /></entry><entry><title type="html">Using Vi Editor</title><link href="http://localhost:4000/Using-Vi/" rel="alternate" type="text/html" title="Using Vi Editor" /><published>2018-11-18T00:00:00+00:00</published><updated>2018-11-18T00:00:00+00:00</updated><id>http://localhost:4000/Using-Vi</id><content type="html" xml:base="http://localhost:4000/Using-Vi/">&lt;p&gt;Vi(Visual Editor) is a screen oriented text editor originally created for Unix Operating System. Almost all Llinux distributions includes vi by default.&lt;br /&gt;
+&lt;/h5&gt;</content><author><name></name></author><summary type="html">&quot;Everything is a file&quot;, which is one of the definitive features of UNIX Operating System and its derivatives like Linux.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/linux.png" /></entry><entry><title type="html">Using Vi Editor</title><link href="http://localhost:4000/Using-Vi/" rel="alternate" type="text/html" title="Using Vi Editor" /><published>2018-11-18T00:00:00+00:00</published><updated>2018-11-18T00:00:00+00:00</updated><id>http://localhost:4000/Using-Vi</id><content type="html" xml:base="http://localhost:4000/Using-Vi/">&lt;p&gt;Vi(Visual Editor) is a screen oriented text editor originally created for Unix Operating System. Almost all Llinux distributions includes vi by default.&lt;br /&gt;
 Vi has three different  modes: &lt;i&gt;Command Mode, Insert Mode &amp;amp; Ex Mode&lt;/i&gt;&lt;/p&gt;
 
 &lt;!--continue--&gt;
@@ -787,14 +835,18 @@ int main(){
         }
         printf(&quot;%d %d %d\n&quot;,nl, nw, nc);
 }
-&lt;/pre&gt;</content><author><name></name></author><summary type="html">&quot;The only way to learn any programming languages is by writing program in it.&quot; C is a low-level language closer to the assembly language and powerful for doing heavy lifting jobs.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/c.png" /></entry><entry><title type="html">Learning Laravel</title><link href="http://localhost:4000/Laravel-Basics/" rel="alternate" type="text/html" title="Learning Laravel" /><published>2018-11-15T00:00:00+00:00</published><updated>2018-11-15T00:00:00+00:00</updated><id>http://localhost:4000/Laravel-Basics</id><content type="html" xml:base="http://localhost:4000/Laravel-Basics/">&lt;h4&gt;Laravel is open-source php  web framework, based on Symfony that follows Model-View-Controller(MVC) architectural pattern and intended for development of web applications.&lt;/h4&gt;
+&lt;/pre&gt;</content><author><name></name></author><summary type="html">&quot;The only way to learn any programming languages is by writing program in it.&quot; C is a low-level language closer to the assembly language and powerful for doing heavy lifting jobs.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/c.png" /></entry><entry><title type="html">Basics of Laravel</title><link href="http://localhost:4000/Laravel-Basics/" rel="alternate" type="text/html" title="Basics of Laravel" /><published>2018-11-15T00:00:00+00:00</published><updated>2018-11-15T00:00:00+00:00</updated><id>http://localhost:4000/Laravel-Basics</id><content type="html" xml:base="http://localhost:4000/Laravel-Basics/">&lt;h4&gt;Laravel is open-source php  web framework, based on Symfony that follows Model-View-Controller(MVC) architectural pattern and intended for development of web applications.&lt;/h4&gt;
 
 &lt;!--continue--&gt;
 &lt;ol&gt;
 &lt;h3&gt;&lt;li&gt;Installation&lt;/li&gt;&lt;/h3&gt;
 Using Composer&lt;br /&gt;
-&lt;pre&gt;composer create-project laravel/laravel &lt;i&gt;projectname&lt;/i&gt; --prefer-dist&lt;/pre&gt;
+&lt;pre&gt;composer create-project laravel/laravel &lt;i&gt;projectname&lt;/i&gt; --prefer-dist
+#laravel installer can be installed using composer
+composer global require &quot;laravel/installer=~1.1&quot;&lt;/pre&gt;
 
+Using Larvel &lt;br /&gt;
+&lt;pre&gt; laravel new projectname &lt;/pre&gt;
 
 
 &lt;h3&gt;&lt;li&gt;Laravel App Skeleton&lt;/li&gt;&lt;/h3&gt;

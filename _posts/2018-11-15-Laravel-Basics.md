@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Learning Laravel
+title: Basics of Laravel
 description: Learning frameworks built on specific programming language can be an effective way to learn any PLs. With the basics of php, I hope learning Laravel; a php framework, can help me understand the language along with real web development works.  
 categories: [Laravel Framework ]
 image: laravel.png
@@ -12,8 +12,12 @@ image: laravel.png
 <ol>
 <h3><li>Installation</li></h3>
 Using Composer<br>
-<pre>composer create-project laravel/laravel <i>projectname</i> --prefer-dist</pre>
+<pre>composer create-project laravel/laravel <i>projectname</i> --prefer-dist
+#laravel installer can be installed using composer
+composer global require "laravel/installer=~1.1"</pre>
 
+Using Larvel <br>
+<pre> laravel new projectname </pre>
 
 
 <h3><li>Laravel App Skeleton</li></h3>
