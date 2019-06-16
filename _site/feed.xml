@@ -1,8 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-05-27T17:43:39+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Tutorials | HimaliWorld</title><subtitle>Tutorials on Computer Network, Programming, PL's Framework</subtitle><entry><title type="html">SQLite Basics</title><link href="http://localhost:4000/Sqlite-Basics/" rel="alternate" type="text/html" title="SQLite Basics" /><published>2019-05-08T00:00:00+00:00</published><updated>2019-05-08T00:00:00+00:00</updated><id>http://localhost:4000/Sqlite-Basics</id><content type="html" xml:base="http://localhost:4000/Sqlite-Basics/">&lt;p&gt;SQlite is a software library providing Relational Database Management System.&lt;br /&gt;
-It is Serverless (Is integrated with application and doesn’t require a server), &lt;br /&gt;
-Self-Contained (Is developed using ANSI-C, and requires minimal support from OS or external library),&lt;br /&gt;
-&lt;!--continue--&gt;
-Zero-Configuration (No configuration files are used),&lt;br /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-06-16T16:52:09+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Tutorials | HimaliWorld</title><subtitle>Tutorials on Computer Network, Programming, PL's Framework</subtitle><entry><title type="html">SQLite Basics</title><link href="http://localhost:4000/Sqlite-Basics/" rel="alternate" type="text/html" title="SQLite Basics" /><published>2019-05-08T00:00:00+00:00</published><updated>2019-05-08T00:00:00+00:00</updated><id>http://localhost:4000/Sqlite-Basics</id><content type="html" xml:base="http://localhost:4000/Sqlite-Basics/">&lt;p&gt;SQlite is a software library providing Relational Database Management System.
+It is: Serverless (Is integrated with application and doesn’t require a server),
+&lt;!--continue--&gt;&lt;br /&gt;
+&lt;br /&gt;
+Self-Contained (Is developed using ANSI-C, and requires minimal support from OS or external library),&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Zero-Configuration (No configuration files are used),&lt;br /&gt;
 Transactional (All transactions are ACID-compliant)&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;
@@ -46,7 +48,7 @@ HAVING group_filter;
 
 SELECT column1, column2 FROM table_name;
 SELECT * from table_name;
-&lt;/pre&gt;</content><author><name></name></author><summary type="html">SQlite is a software library providing Relational Database Management System. It is Serverless (Is integrated with application and doesn’t require a server), Self-Contained (Is developed using ANSI-C, and requires minimal support from OS or external library),</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/sqlite.png" /></entry><entry><title type="html">Decrypt Wifi Password?</title><link href="http://localhost:4000/How-to-decryt-wifi-password/" rel="alternate" type="text/html" title="Decrypt Wifi Password?" /><published>2019-04-29T00:00:00+00:00</published><updated>2019-04-29T00:00:00+00:00</updated><id>http://localhost:4000/How-to-decryt-wifi-password</id><content type="html" xml:base="http://localhost:4000/How-to-decryt-wifi-password/">&lt;p&gt;There are various algorithms implemented to encrypt passwords. 
+&lt;/pre&gt;</content><author><name></name></author><summary type="html">SQlite is a software library providing Relational Database Management System. It is: Serverless (Is integrated with application and doesn’t require a server),</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/sqlite.png" /></entry><entry><title type="html">Decrypt Wifi Password?</title><link href="http://localhost:4000/How-to-decryt-wifi-password/" rel="alternate" type="text/html" title="Decrypt Wifi Password?" /><published>2019-04-29T00:00:00+00:00</published><updated>2019-04-29T00:00:00+00:00</updated><id>http://localhost:4000/How-to-decryt-wifi-password</id><content type="html" xml:base="http://localhost:4000/How-to-decryt-wifi-password/">&lt;p&gt;There are various algorithms implemented to encrypt passwords. 
 It’s not ethical to steal passwords of any kind, without owner’s consent. However
 we can setup our own environment to do some ethical practises and there are tools available for the purpose.&lt;br /&gt;&lt;/p&gt;
 
@@ -641,201 +643,56 @@ Searching in Vi
 &lt;!--continue--&gt;
 &lt;p&gt;This post derives codes and other works available on second edition of the book “The C Programming Language”. Check out the codes available in &lt;a href=&quot;https://github.com/avadhuta03/C-Basics&quot;&gt;github&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3&gt;Getting Started&lt;/h3&gt;
+&lt;h4&gt;Getting Started&lt;/h4&gt;
 &lt;p&gt;Get the gcc compiler, write files with .c extension, compile them &amp;amp; run the compiled program to get output.&lt;/p&gt;
+&lt;pre&gt;
+#vi file_name.c                       //creates file with vi editor
+#gcc file_name -o compiled_filename   //compile .c file with gcc compiler
+#./compiled_filename		     //running the compiled file
+&lt;/pre&gt;
 
-&lt;pre&gt;&lt;code&gt;
-#include&amp;lt;stdio.h&amp;gt;  //compiler gets information form standard input/output lib. 
+&lt;p&gt;Hello World Program &lt;a href=&quot;https://github.com/Avadhuta03/C-Basics/blob/master/hello.c&quot;&gt;hello.c&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;  //compiler gets information form standard input/output lib. 
 int main()		//define main function with no argument values  
 {
- printf(&quot;Hello, World!\n&quot;);   //main calls lib. function printf, 
-		              //	\n is newline character
+ printf(&quot;Hello, World!\n&quot;);   //main calls lib. function printf, \n is newline character
 }
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3&gt;Variables and Arithmetic Expressions&lt;/h3&gt;
 &lt;li&gt;Program displaying Fahrenheit-Celsius table&lt;/li&gt;
-&lt;pre&gt;&lt;code&gt;
-#include&amp;lt;stdio.h&amp;gt;     
-int main(){
+&lt;p&gt;&lt;a href=&quot;https://github.com/Avadhuta03/C-Basics/blob/master/tempTable_01.c&quot;&gt;Temperature Table 01&lt;/a&gt;&lt;/p&gt;
 
-      /*variables usually declared before executable statements */ 
-     	int fahr, celsius;		//int variable types
-	int lower, upper, step; 
-
-      /* assignment statements to assign initial values to variables */
-	lower=0; upper=300; step=20; fahr=lower;
-
-      /* while loop that repeats loop once per output line,
-        each line of table is computed the same way*/
-
-	while(fahr&amp;lt;=upper){
-		celsius = 5*(fahr-32)/9;
-
-		//%d specifies the integer argument
-		printf(&quot;%d\t%d\n&quot;,fahr,celsius);
-
-		fahr = fahr + step;
-        }
-}
-&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;More precise and clear version of above program can be:&lt;/li&gt;
-&lt;pre&gt;
-#include&amp;lt;stdio.h&amp;gt;     
-int main(){
-     	float fahr, celsius;		//float variable types
-	int lower, upper, step;        //int variable types 
+&lt;p&gt;&lt;a href=&quot;https://github.com/Avadhuta03/C-Basics/blob/master/tempTable_02.c&quot;&gt;Temperature Table 02&lt;/a&gt;&lt;/p&gt;
 
-	lower=0; upper=300; step=20; fahr=lower;
-
-      /* while loop that repeats loop once per output line,
-       because each line of table is computed the same way*/
-
-	while(fahr&amp;lt;=upper){
-	//number after decimal is not truncated.
-		celsius = (5.0/9.0)*(fahr-32.0)/9;
- 
-	//3.0f prints fahr 3 chars. wide and no decimal or fraction digits
-		printf(&quot;%3.0f %6.1f \n&quot;,fahr,celsius);
-
-		fahr = fahr + step;
-	}
-}
-&lt;/pre&gt;
 &lt;li&gt; Temperature conversion in reverse order  using for statement:&lt;/li&gt;
-&lt;pre&gt;
-    #include&amp;lt;stdio.h&amp;gt;
-   /* Fahrenheit ---&amp;gt; Ceslius Table */
+&lt;p&gt;&lt;a href=&quot;https://github.com/Avadhuta03/C-Basics/blob/master/tempTable_03.c&quot;&gt;Temprature Table 03&lt;/a&gt;&lt;/p&gt;
 
- int main(){
-       int fahr;
-
-       for(fahr=300; fahr &amp;gt;= 0; fahr=fahr-20)
-
-           printf(&quot;%3d %6.1f\n&quot;, fahr,(5.0/9.0) * (fahr-32)); 
-}    
-&lt;/pre&gt;
-
-&lt;h3&gt;Using Symbolic Constants to deal with magic numbers that appears in program.&lt;/h3&gt;
-&lt;pre&gt;
-#define LOWER 0		 //lowerlimit
-#define UPPER 300	 //upperlimit
-#define STEP 20		//step size
-
-int main(){
-  int fahr;
-  printf(&quot;Fahrenheit-Celsius table\n&quot;);
-
-  for(fahr=LOWER; fahr&amp;lt;=UPPER; fahr=fahr+STEP)
-	printf(&quot;%3d %6.1f\n&quot;,fahr,(5.0/9.0)*(fahr-32));
-}
-&lt;/pre&gt;
+&lt;h4&gt;Using Symbolic Constants to deal with magic numbers&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/Avadhuta03/C-Basics/blob/master/copy_char_02.c&quot;&gt;Symbolic Constant&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3&gt;Character Input and Output&lt;/h3&gt;
-&lt;li&gt;Text Stream:Sequence of characters divided into lines [0 or more characters followed by newline character]&amp;lt;/i&amp;gt;&lt;br /&gt;
-   Functions:&lt;br /&gt;
-		getchar() : reads the next input character from a text stream and return that as its value. &lt;br /&gt; 
-		putchar() : prints a character each time it is called&lt;br /&gt;
+&lt;li&gt;Text Stream is Sequence of characters divided into lines [0 or more characters followed by newline character&lt;br /&gt;
 &lt;/li&gt;
-&lt;pre&gt;
- /* File Copying first version */
-  	#include&amp;lt;stdio.h&amp;gt;
-	int main(){
-		int c;      // int data type because of its size
-		c=getchar();
-		while(c != EOF)      //EOF is special char whose value is distinct from that of real chars
-		{                    // != is &quot;not equal to&quot;
-		  putchar(c);
-		  c=getchar(); 
-		}
-	}
-&lt;/pre&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/Avadhuta03/C-Basics/blob/master/copy_char_01.c &quot;&gt;Copy Char 01&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Avadhuta03/C-Basics/blob/master/copy_char_02.c &quot;&gt;Copy Char 02&lt;/a&gt;&lt;/p&gt;
 
-&lt;pre&gt;
- /* File Copying--second  version */
-  	#include&amp;lt;stdio.h&amp;gt;
-	int main(){
-		int c;      
-		while((c=getchar()) != EOF) //an assignment can be a part of larger expression 
-		 { putchar(c);}
-	}
-&lt;/pre&gt;
+&lt;li&gt;Value of EOF&lt;/li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/Avadhuta03/C-Basics/blob/master/EOF_value.c&quot;&gt;EOF value&lt;/a&gt;&lt;/p&gt;
 
-&lt;li&gt;Value of EOF = ?&lt;/li&gt;
-&lt;li&gt;Verify getchar() != EOF expression has value 0 or 1&lt;/li&gt;
-&lt;pre&gt;
-    #include&amp;lt;stdio.h&amp;gt;
-	int main(){
-		int a,b;
-		printf(&quot;Value of EOF : %3d\n&quot;,a=EOF);  
-		printf(&quot; Expression: getchar() != EOF , has value :%3d\n&quot;, b=(getchar() !=EOF );
-	} 
-&lt;/pre&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/Avadhuta03/C-Basics/blob/master/char_count.c&quot;&gt;Character Count&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3&gt;Character Counting&lt;/h3&gt;
-&lt;pre&gt;
-#include&amp;lt;stdio.h&amp;gt;
-int main(){
-	long nc;
-	nc=0;
-	While(getchar() !=EOF)
-		++nc;      //operator ++ is increment by one
-		printf(&quot;%ld\n&quot;,nc);
-	}
-&lt;/pre&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/Avadhuta03/C-Basics/blob/master/line_count.c&quot;&gt;Line Count&lt;/a&gt;&lt;/p&gt;
 
-&lt;pre&gt;
-//using for loop
-#include&amp;lt;stdio.h&amp;gt;
-int main(){
-	double nc;            //using double to cope with bigger numbers
-	for(nc=0; getchar() != EOF; ++nc)
-		;          //C requires for statemnt to have body
-	printf(&quot;%.0f\n&quot;,nc);
-}
-&lt;/pre&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/Avadhuta03/C-Basics/blob/master/word_count.c &quot;&gt; Word Count&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3&gt;Line Counting&lt;/h3&gt;
-&lt;pre&gt;
-//text stream appears as a sequence of lines, each terminated by a newline
-#include&amp;lt;stdio.h&amp;gt;
-int main()
-{
-	int c,nl;
-	nl = 0;
-	while( (c=getchar()) != EOF)
-		if(c=='\n')
-		   ++nl;
-           printf(&quot;%d\n&quot;,nl);
-}
-&lt;/pre&gt;
+&lt;h3&gt;Array&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/Avadhuta03/C-Basics/blob/master/array_01.c&quot;&gt;Array to count digits and characters&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3&gt;Word Count&lt;/h3&gt;
-&lt;pre&gt;
-#include&amp;lt;stdio.h&amp;gt;
-
-#define IN 1 /*inside a word*/
-#define OUT 0 /*outside a word*/
-
-//count lines, words, and characters in input
-int main(){
-	int c, nl, nw, nc, state;
-	state = OUT;
-	nl = nw = nc = 0;
-		while((c=getchar()) != EOF) {
-		++nc;
-	    		if(c='\n')
-			    ++nl;
-			if(c==' ' || c=='\n' || c== '\t')
-			   state = OUT;
-			else if(state == OUT){
-				state=IN;
-				++nw;
-                               }
-        }
-        printf(&quot;%d %d %d\n&quot;,nl, nw, nc);
-}
-&lt;/pre&gt;</content><author><name></name></author><summary type="html">&quot;The only way to learn any programming languages is by writing program in it.&quot; C is a low-level language closer to the assembly language and powerful for doing heavy lifting jobs.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/c.png" /></entry><entry><title type="html">Basics of Laravel</title><link href="http://localhost:4000/Laravel-Basics/" rel="alternate" type="text/html" title="Basics of Laravel" /><published>2018-11-15T00:00:00+00:00</published><updated>2018-11-15T00:00:00+00:00</updated><id>http://localhost:4000/Laravel-Basics</id><content type="html" xml:base="http://localhost:4000/Laravel-Basics/">&lt;h4&gt;Laravel is open-source php  web framework, based on Symfony that follows Model-View-Controller(MVC) architectural pattern and intended for development of web applications.&lt;/h4&gt;
+&lt;h3&gt;Function&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/Avadhuta03/C-Basics/blob/master/function_01.c&quot;&gt;Function to calculate power of a number&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">&quot;The only way to learn any programming languages is by writing program in it.&quot; C is a low-level language closer to the assembly language and powerful for doing heavy lifting jobs.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/c.png" /></entry><entry><title type="html">Basics of Laravel</title><link href="http://localhost:4000/Laravel-Basics/" rel="alternate" type="text/html" title="Basics of Laravel" /><published>2018-11-15T00:00:00+00:00</published><updated>2018-11-15T00:00:00+00:00</updated><id>http://localhost:4000/Laravel-Basics</id><content type="html" xml:base="http://localhost:4000/Laravel-Basics/">&lt;h4&gt;Laravel is open-source php  web framework, based on Symfony that follows Model-View-Controller(MVC) architectural pattern and intended for development of web applications.&lt;/h4&gt;
 
 &lt;!--continue--&gt;
 &lt;ol&gt;

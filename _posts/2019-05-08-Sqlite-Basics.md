@@ -5,10 +5,12 @@ categories: Database
 image: sqlite.png 
 description: SQLite commands 
 ---
-SQlite is a software library providing Relational Database Management System.<br>
-It is Serverless (Is integrated with application and doesn't require a server), <br>
+SQlite is a software library providing Relational Database Management System.
+It is: Serverless (Is integrated with application and doesn't require a server),
+<!--continue-->  
+<br>
 Self-Contained (Is developed using ANSI-C, and requires minimal support from OS or external library),<br>
-<!--continue-->
+
 Zero-Configuration (No configuration files are used),<br>
 Transactional (All transactions are ACID-compliant)<br>
 
