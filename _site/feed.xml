@@ -1,4 +1,108 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-06-16T16:52:09+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Tutorials | HimaliWorld</title><subtitle>Tutorials on Computer Network, Programming, PL's Framework</subtitle><entry><title type="html">SQLite Basics</title><link href="http://localhost:4000/Sqlite-Basics/" rel="alternate" type="text/html" title="SQLite Basics" /><published>2019-05-08T00:00:00+00:00</published><updated>2019-05-08T00:00:00+00:00</updated><id>http://localhost:4000/Sqlite-Basics</id><content type="html" xml:base="http://localhost:4000/Sqlite-Basics/">&lt;p&gt;SQlite is a software library providing Relational Database Management System.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-10-31T19:54:53+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Tutorials | HimaliWorld</title><subtitle>Tutorials on Computer Network, Programming, PL's Framework</subtitle><entry><title type="html">Basics of Git</title><link href="http://localhost:4000/Common-Git-Commands/" rel="alternate" type="text/html" title="Basics of Git" /><published>2019-10-30T00:00:00+00:00</published><updated>2019-10-30T00:00:00+00:00</updated><id>http://localhost:4000/Common-Git-Commands</id><content type="html" xml:base="http://localhost:4000/Common-Git-Commands/">&lt;p&gt;Git is a Distributed Version Control System. It has different approach to handling data(versions of software) than most other VCS, which includes ways like, Creating Snapshots,
+&lt;!--continue--&gt;
+ Local Availability of Operations, use of SHA-1 hash mechanism for higher integrity, using 3 states to track files namely; Modified, Staged and Committed.&lt;/p&gt;
+
+&lt;h3&gt;Git Installattion &amp;amp; Initialization&lt;/h3&gt;
+&lt;pre&gt;
+ git init   // initializes git repository in desired folder, technically adds .git directory
+&lt;/pre&gt;
+
+&lt;h3&gt;Git Branching and Merging&lt;/h3&gt;
+&lt;pre&gt;
+git branch [branch name]  //creates a branch
+git checkout [branch name]  //switches to the branch
+git checkout -b [branch name] //creates and switches to the new branch 
+
+git checkout master  //switch to main branch *necessary when merging a branch
+git merge [branch name]  //merge the branch to the master
+	
+git branch -d [branch name]   //deletes the branch
+
+&lt;h5&gt;# Merge conflict occurs if same part of same file is changed in diffrent branches. In such case,
+ git pauses the merge( creating unmerged paths) to be resolved and adds conflict-resolution markers 
+ to the files that have conflicts; &amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt; , ========  and  &amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt; . Sections above and below =======
+ represents diffrent versions of same file in different branches. After replacing proper section and
+erasing the markers, the file is staged to mark as resolved.&lt;/h5&gt;
+git status    // check status of unmerged paths
+git mergetool   // fires up default visual merge tool
+git add [filename]       // stage the conflcted file to mark as resolved
+git status     // to verify everything that had conflicts has been merged
+git commit     // finalizes the merge commit
+&lt;/pre&gt;</content><author><name></name></author><summary type="html">Git is a Distributed Version Control System. It has different approach to handling data(versions of software) than most other VCS, which includes ways like, Creating Snapshots,</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/git.png" /></entry><entry><title type="html">Common Linux Commands</title><link href="http://localhost:4000/Common-Linux-Commands/" rel="alternate" type="text/html" title="Common Linux Commands" /><published>2019-09-30T00:00:00+00:00</published><updated>2019-09-30T00:00:00+00:00</updated><id>http://localhost:4000/Common-Linux-Commands</id><content type="html" xml:base="http://localhost:4000/Common-Linux-Commands/">&lt;p&gt;Linux Professional Institutes’s LPIC-1 : Linux Server Professional Certification Exams
+LPIC-1 : Exam 101 &amp;amp;&amp;amp; Exam 102
+&lt;!--continue--&gt;&lt;/p&gt;
+
+&lt;p&gt;Exam 101&lt;/p&gt;
+&lt;li&gt;Topic 101 - System Architecture&lt;/li&gt;
+&lt;li&gt;Topic 102 - Linux Installation and Package Management&lt;/li&gt;
+&lt;li&gt;Topic 103 - GNU and UNIX Commands&lt;/li&gt;
+&lt;li&gt;Topic 104 - Devices, Linux filesystems, Filesystem Hierarchy Standard&lt;/li&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Exam 102&lt;/p&gt;
+&lt;li&gt;Topic 105: Shells, scripting, and data management&lt;/li&gt;
+&lt;li&gt;Topic 106: User interfaces and desktops&lt;/li&gt;
+&lt;li&gt;Topic 107: Administrative tasks&lt;/li&gt;
+&lt;li&gt;Topic 108: Essential system services&lt;/li&gt;
+&lt;li&gt;Topic 109: Networking fundamentals&lt;/li&gt;
+&lt;li&gt;Topic 110: Security&lt;/li&gt;</content><author><name></name></author><summary type="html">Linux Professional Institutes’s LPIC-1 : Linux Server Professional Certification Exams LPIC-1 : Exam 101 &amp;amp;&amp;amp; Exam 102</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/linux.png" /></entry><entry><title type="html">Testing Feature of Laravel</title><link href="http://localhost:4000/Testing-Feature/" rel="alternate" type="text/html" title="Testing Feature of Laravel" /><published>2019-07-11T00:00:00+00:00</published><updated>2019-07-11T00:00:00+00:00</updated><id>http://localhost:4000/Testing-Feature</id><content type="html" xml:base="http://localhost:4000/Testing-Feature/">&lt;p&gt;Laravel has integrated to PHPUnit (unit testing), Behat (behavior-driven development), Mockery (mocking), and Faker (creating fake data for seeding and testing).
+Testing terms generally has 3 primary terms:&lt;/p&gt;
+
+&lt;!--continue--&gt;
+&lt;li&gt;Unit tests&lt;/li&gt;
+&lt;li&gt;Integration tests&lt;/li&gt;
+&lt;li&gt;Application tests&lt;/li&gt;</content><author><name></name></author><summary type="html">Laravel has integrated to PHPUnit (unit testing), Behat (behavior-driven development), Mockery (mocking), and Faker (creating fake data for seeding and testing). Testing terms generally has 3 primary terms:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/laravel.png" /></entry><entry><title type="html">Basics of Blockchain</title><link href="http://localhost:4000/Basics-of-BlockChain/" rel="alternate" type="text/html" title="Basics of Blockchain" /><published>2019-06-24T00:00:00+00:00</published><updated>2019-06-24T00:00:00+00:00</updated><id>http://localhost:4000/Basics-of-BlockChain</id><content type="html" xml:base="http://localhost:4000/Basics-of-BlockChain/">&lt;p&gt;Blockchain are generally referred to as digital decentralized ledgers. Blocks are like the pages of notebook where transactions are recorded. 
+&lt;!--continue--&gt;
+In blockchain notebook, all the pages are linked together. So any attempt to try and change data on any page simply breaks the link which gives Blockchain Immutability.&lt;/p&gt;
+
+&lt;p&gt;Blockchains also provide us with technology called smart contracts, which allowsus to programmatically define rules and steps that should be performed any time a certain type of event is recorded in our blockchain.
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;
+&lt;h4&gt;Blocks&lt;/h4&gt;
+Blocks stores data like pages in notebook stores information.
+Same block can hold any data like medical records, voting etc.
+Each block is chained to the previious block by embedding the block with information from the previous block. 
+Any tampering results into the break of link in obvious way.
+
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;h4&gt;Blockchain Components&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;Ledger: &lt;br /&gt;collection of transactions. In blockchain, the ledger is a distributed immutable record of a collection of transactions.&lt;/li&gt;
+&lt;li&gt; Smart Contract: &lt;br /&gt;permanent and immutable collection of code that runs on the blockchain. &lt;br /&gt;
+Users can interact with smart contracts in a similar way to the standard computer programs.&lt;/li&gt;
+&lt;li&gt; Peer network:&lt;br /&gt;stores, updates and maintains the ledger. Each node in this network maintains its own copy of the ledger and the job of the network is to come to the consensus on the contents of each update to the ledger.
+&lt;/li&gt;
+&lt;li&gt;Membership Services:&lt;br /&gt; user authentication, authorization and identity management&lt;br /&gt;
+Anyone can join the peer network and all network members have equal powersa and authority. Permissioned blockchains require authorization to join.&lt;/li&gt;
+&lt;li&gt;Wallet:&lt;br /&gt; collection of user credentials like private keys. It tracks information associated with their account.   &lt;/li&gt;ss
+&lt;li&gt;Events:&lt;br /&gt; notifications of actions that are triggered when someone interacts with the chain&lt;/li&gt;
+&lt;li&gt;Systems Management:Component creation, modification and monitoring&lt;br /&gt;
+It provides the capability of creating, modifying, and monitoring blockchain components.&lt;/li&gt;
+&lt;li&gt;Systems Integration: Integration with external systems&lt;br /&gt;
+It is included to integrate blockchains with other external systems, usually through the use of smart contracts.&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;h4&gt;Blockchain Actors&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;Architect: the person or group who designs and implements the backend code of the Blockchain&lt;/li&gt;
+&lt;li&gt;Operator: Operators(nodes) create peer network. They store copies of the ledger and keep their copy up to date by distributing transactions and new blocks througout their network.&lt;/li&gt;
+&lt;li&gt;Developer: They design, write and upload smart contracts to the blockchain to expand its capablities.&lt;/li&gt;
+&lt;li&gt;Regulator: They have more visibility into the historical ledger due to their role within the orgainiztion.&lt;/li&gt;
+&lt;li&gt;End User: They interact with blockchain using software that uses the blockchain as a backend storage solutions.&lt;/li&gt;
+&lt;li&gt;Data Storage:&lt;br /&gt;
+	Blockchain provides distributed, immutable storage with built-in integrity checking; however, for large amounts of data, data is stored off-chain and a hash of the data is stored on-chain. This prevents bloating of blockchain&amp;lt;
+
+&lt;/li&gt;
+&lt;li&gt;Data Processing:&lt;br /&gt;
+To execute smart contracts, large amount of processing power can be required. For this reason , devices external to the peer network may be used to augment the processing power of the network.&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;/p&gt;</content><author><name></name></author><summary type="html">Blockchain are generally referred to as digital decentralized ledgers. Blocks are like the pages of notebook where transactions are recorded.</summary></entry><entry><title type="html">SQLite Basics</title><link href="http://localhost:4000/Sqlite-Basics/" rel="alternate" type="text/html" title="SQLite Basics" /><published>2019-05-08T00:00:00+00:00</published><updated>2019-05-08T00:00:00+00:00</updated><id>http://localhost:4000/Sqlite-Basics</id><content type="html" xml:base="http://localhost:4000/Sqlite-Basics/">&lt;p&gt;SQlite is a software library providing Relational Database Management System.
 It is: Serverless (Is integrated with application and doesn’t require a server),
 &lt;!--continue--&gt;&lt;br /&gt;
 &lt;br /&gt;
@@ -144,14 +248,23 @@ There are 4 logical layers [ Process/Application, Transport, Internet, Link ] in
  Node address uniquely identifies a particular machine on a network, as opposed to the network address, which is a group.&lt;br /&gt; &lt;br /&gt;
  Based on the network size, classes are created.&lt;br /&gt;&lt;br /&gt;
  
- &lt;table&gt;
- &lt;th&gt;Class &lt;/th&gt;&lt;th&gt;Fist bits &lt;/th&gt;&lt;th&gt;Network Address Range&lt;/th&gt;&lt;th&gt;Total Unique Hosts per Network&lt;/th&gt;
-&lt;tr&gt;&lt;td&gt;Class A &lt;/td&gt;&lt;td&gt; 0 &lt;/td&gt;&lt;td&gt; 0 - 127 &lt;/td&gt;&lt;td&gt;2^(24) - 2 = 16,777,214&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;Class B &lt;/td&gt;&lt;td&gt; 10 &lt;/td&gt;&lt;td&gt; 128 - 191 &lt;/td&gt;&lt;td&gt;2^(16) - 2 = 65534&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;Class C &lt;/td&gt;&lt;td&gt; 110 &lt;/td&gt;&lt;td&gt; 192 - 223 &lt;/td&gt;&lt;td&gt;2^(8) - 2 = 254&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;Class D &lt;/td&gt;&lt;td&gt; 1110 &lt;/td&gt;&lt;td&gt; 224 - 239&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;Class E &lt;/td&gt;&lt;td&gt; 11110 &lt;/td&gt;&lt;td&gt; 240 - 255 &lt;/td&gt;&lt;/tr&gt;
+&lt;table&gt;
+&lt;th&gt;Class &lt;/th&gt;&lt;th&gt;Fist bits &lt;/th&gt;&lt;th&gt;Network Address Range&lt;/th&gt;&lt;th&gt;Total Usuable Network Adress&lt;/th&gt;&lt;th&gt;Total Unique Hosts per Network&lt;/th&gt;
+&lt;tr&gt;&lt;td&gt;Class A &lt;/td&gt;&lt;td&gt; 0 &lt;/td&gt;&lt;td&gt; 0 - 127 &lt;/td&gt;&lt;td&gt;2^(7) - 2 = 126&lt;/td&gt;&lt;td&gt;2^(24) - 2 = 16,777,214&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Class B &lt;/td&gt;&lt;td&gt; 10 &lt;/td&gt;&lt;td&gt; 128 - 191 &lt;/td&gt;&lt;td&gt;2^(14) - 2 = 16384&lt;/td&gt;&lt;td&gt;2^(16) - 2 = 65534&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Class C &lt;/td&gt;&lt;td&gt; 110 &lt;/td&gt;&lt;td&gt; 192 - 223 &lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;2^(8) - 2 = 254&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Class D &lt;/td&gt;&lt;td&gt; 1110 &lt;/td&gt;&lt;td&gt; 224 - 239&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Class E &lt;/td&gt;&lt;td&gt; 11110 &lt;/td&gt;&lt;td&gt; 240 - 255 &lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;/table&gt;
+
+&lt;h5&gt;Reserved Private IP address&lt;/h5&gt;
+&lt;table&gt;
+&lt;tr&gt;&lt;th&gt;Address Class&lt;/th&gt;&lt;th&gt;Reserved address space&lt;/th&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Class A&lt;/td&gt;&lt;td&gt;10.0.0.0 ~ 10.255.255.255&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Class B&lt;/td&gt;&lt;td&gt;172.16.0.0 ~ 172.31.255.255&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Class C&lt;/td&gt;&lt;td&gt;192.168.0.0 ~ 192.168.255.255&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+
 
 &lt;/p&gt;</content><author><name></name></author><summary type="html">TCP/IP is at the core of computer netwoking as we know today. TCP/IP standards are checked against certain criteria to maintain its integrity and ensure that any dramatic changes are not made and proprietary features are not added. This open apporach makes it most reliable and thus, popular.</summary></entry><entry><title type="html">Know About Router and Switch</title><link href="http://localhost:4000/Know-about-router-and-switch/" rel="alternate" type="text/html" title="Know About Router and Switch" /><published>2019-01-01T00:00:00+00:00</published><updated>2019-01-01T00:00:00+00:00</updated><id>http://localhost:4000/Know-about-router-and-switch</id><content type="html" xml:base="http://localhost:4000/Know-about-router-and-switch/">&lt;p&gt;A small local area Computer Network comprises of two or more different electronic devices(nodes) that are able to communicate with each other for the transimission of data or infromation, to and  from each other.&lt;/p&gt;
 
@@ -561,615 +674,4 @@ t -&amp;gt; sticky bit sermissions, represented in the executable portion of the
 
 
 
-&lt;/h5&gt;</content><author><name></name></author><summary type="html">&quot;Everything is a file&quot;, which is one of the definitive features of UNIX Operating System and its derivatives like Linux.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/linux.png" /></entry><entry><title type="html">Using Vi Editor</title><link href="http://localhost:4000/Using-Vi/" rel="alternate" type="text/html" title="Using Vi Editor" /><published>2018-11-18T00:00:00+00:00</published><updated>2018-11-18T00:00:00+00:00</updated><id>http://localhost:4000/Using-Vi</id><content type="html" xml:base="http://localhost:4000/Using-Vi/">&lt;p&gt;Vi(Visual Editor) is a screen oriented text editor originally created for Unix Operating System. Almost all Llinux distributions includes vi by default.&lt;br /&gt;
-Vi has three different  modes: &lt;i&gt;Command Mode, Insert Mode &amp;amp; Ex Mode&lt;/i&gt;&lt;/p&gt;
-
-&lt;!--continue--&gt;
-
-&lt;h3&gt;Command Mode: Esc &lt;/h3&gt;
-&lt;pre&gt;Movement Commands:[count] motion
-h --&amp;gt; left
-j --&amp;gt;Down
-k --&amp;gt;Up
-l --&amp;gt;Right
-w --&amp;gt;One word forward
-b --&amp;gt;One word Back
-^ --&amp;gt; Beginning of line
-$ --&amp;gt; End of line
-Move to a specific line number: LineNo. followed by G, Ex. 5G 
-gg or 1G --&amp;gt;moves to first line
-G --&amp;gt; move to last line
-CTRL-G  --&amp;gt; to find out line the curso is currently on.
-&lt;/pre&gt;
-
-&lt;p&gt;Command Mode  Actions&lt;/p&gt;
-&lt;pre&gt;   cut --&amp;gt; d(delete)
-	copy --&amp;gt; y(yank)  
-	paste --&amp;gt; p | P (put)
-
- Format:  
-	action [count] motion 
-	[count] action motion 
-      
- Delete: removes indicated text and saves to buffer. 
-	dd --&amp;gt; Delete current line
-	3dd --&amp;gt; Delete next 3 lines 
-	dw --&amp;gt; Delet the current word 
-	d3w --&amp;gt; Delete next 3 words 
-	d4h --&amp;gt; Delete 4 chars. to left 
-Change: removes indicated text, save to buffer and switch to insert mode 
-         cc --&amp;gt; Change current line
-	cw --&amp;gt; Change current word 
-	c3w --&amp;gt; Change the next 3 words 
-	c5h --&amp;gt; Change 5 chars. to the left
-
-Yank : Place content into buffer without deleting it. 
-		yy --&amp;gt; Yank Current line
-  		3yy --&amp;gt; Yank the next 3 lines
-		yw --&amp;gt; Yank the current word
-		y$ --&amp;gt; Yank to the end of the line
-	 
-Put: Place the saved text in buffer before or after the cursor
-		p : before the cursor
-		P : after
-
-Searching in Vi    
-		/ --&amp;gt; start search forward from the cursor position.
-                n --&amp;gt; to proceed to next match 
-		N --&amp;gt; to go back to previous match
-                ? --&amp;gt; start search backwards from cursor position 
-&lt;/pre&gt;
-
-&lt;h3&gt; Ex Mode: Command Mode + :(char) &lt;/h3&gt;
-&lt;pre&gt;     :w --&amp;gt; write the current file to fs.
-	:w filename --&amp;gt; save copy of the current file as filename
-	:w! --&amp;gt; Force writing to the file 
-	:1 --&amp;gt; Go to line number 1(example)
-	:e filename --&amp;gt; open filename
-	:q --&amp;gt; quit if no change is made
-	:q! --&amp;gt; quit without saving changes
-&lt;/pre&gt;
-
-&lt;h3&gt; Insert Mode: used to add text to file.&lt;/h3&gt;
-&lt;pre&gt;     a --&amp;gt; after the cursor
-     A --&amp;gt; at the end of the line
-     i --&amp;gt; right before the cursor
-     I --&amp;gt; at the beginning of the line
-     o --&amp;gt; on a blank line after the cursor
-     O --&amp;gt; on a blank line before the cursor
-&lt;/pre&gt;</content><author><name></name></author><summary type="html">Vi(Visual Editor) is a screen oriented text editor originally created for Unix Operating System. Almost all Llinux distributions includes vi by default. Vi has three different modes: Command Mode, Insert Mode &amp;amp; Ex Mode</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/vi.png" /></entry><entry><title type="html">C Basics</title><link href="http://localhost:4000/Learning-C-Basics/" rel="alternate" type="text/html" title="C Basics" /><published>2018-11-16T00:00:00+00:00</published><updated>2018-11-16T00:00:00+00:00</updated><id>http://localhost:4000/Learning-C-Basics</id><content type="html" xml:base="http://localhost:4000/Learning-C-Basics/">&lt;h4&gt;&lt;i&gt;&quot;The only way to learn any programming languages is by writing program in it.&quot;&lt;/i&gt;&lt;/h4&gt;
-&lt;p&gt;C is a low-level language closer to the assembly language and powerful for doing heavy lifting jobs.&lt;/p&gt;
-
-&lt;!--continue--&gt;
-&lt;p&gt;This post derives codes and other works available on second edition of the book “The C Programming Language”. Check out the codes available in &lt;a href=&quot;https://github.com/avadhuta03/C-Basics&quot;&gt;github&lt;/a&gt;&lt;/p&gt;
-
-&lt;h4&gt;Getting Started&lt;/h4&gt;
-&lt;p&gt;Get the gcc compiler, write files with .c extension, compile them &amp;amp; run the compiled program to get output.&lt;/p&gt;
-&lt;pre&gt;
-#vi file_name.c                       //creates file with vi editor
-#gcc file_name -o compiled_filename   //compile .c file with gcc compiler
-#./compiled_filename		     //running the compiled file
-&lt;/pre&gt;
-
-&lt;p&gt;Hello World Program &lt;a href=&quot;https://github.com/Avadhuta03/C-Basics/blob/master/hello.c&quot;&gt;hello.c&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;  //compiler gets information form standard input/output lib. 
-int main()		//define main function with no argument values  
-{
- printf(&quot;Hello, World!\n&quot;);   //main calls lib. function printf, \n is newline character
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3&gt;Variables and Arithmetic Expressions&lt;/h3&gt;
-&lt;li&gt;Program displaying Fahrenheit-Celsius table&lt;/li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/Avadhuta03/C-Basics/blob/master/tempTable_01.c&quot;&gt;Temperature Table 01&lt;/a&gt;&lt;/p&gt;
-
-&lt;li&gt;More precise and clear version of above program can be:&lt;/li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/Avadhuta03/C-Basics/blob/master/tempTable_02.c&quot;&gt;Temperature Table 02&lt;/a&gt;&lt;/p&gt;
-
-&lt;li&gt; Temperature conversion in reverse order  using for statement:&lt;/li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/Avadhuta03/C-Basics/blob/master/tempTable_03.c&quot;&gt;Temprature Table 03&lt;/a&gt;&lt;/p&gt;
-
-&lt;h4&gt;Using Symbolic Constants to deal with magic numbers&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/Avadhuta03/C-Basics/blob/master/copy_char_02.c&quot;&gt;Symbolic Constant&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3&gt;Character Input and Output&lt;/h3&gt;
-&lt;li&gt;Text Stream is Sequence of characters divided into lines [0 or more characters followed by newline character&lt;br /&gt;
-&lt;/li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/Avadhuta03/C-Basics/blob/master/copy_char_01.c &quot;&gt;Copy Char 01&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://github.com/Avadhuta03/C-Basics/blob/master/copy_char_02.c &quot;&gt;Copy Char 02&lt;/a&gt;&lt;/p&gt;
-
-&lt;li&gt;Value of EOF&lt;/li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/Avadhuta03/C-Basics/blob/master/EOF_value.c&quot;&gt;EOF value&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/Avadhuta03/C-Basics/blob/master/char_count.c&quot;&gt;Character Count&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/Avadhuta03/C-Basics/blob/master/line_count.c&quot;&gt;Line Count&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/Avadhuta03/C-Basics/blob/master/word_count.c &quot;&gt; Word Count&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3&gt;Array&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/Avadhuta03/C-Basics/blob/master/array_01.c&quot;&gt;Array to count digits and characters&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3&gt;Function&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/Avadhuta03/C-Basics/blob/master/function_01.c&quot;&gt;Function to calculate power of a number&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">&quot;The only way to learn any programming languages is by writing program in it.&quot; C is a low-level language closer to the assembly language and powerful for doing heavy lifting jobs.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/c.png" /></entry><entry><title type="html">Basics of Laravel</title><link href="http://localhost:4000/Laravel-Basics/" rel="alternate" type="text/html" title="Basics of Laravel" /><published>2018-11-15T00:00:00+00:00</published><updated>2018-11-15T00:00:00+00:00</updated><id>http://localhost:4000/Laravel-Basics</id><content type="html" xml:base="http://localhost:4000/Laravel-Basics/">&lt;h4&gt;Laravel is open-source php  web framework, based on Symfony that follows Model-View-Controller(MVC) architectural pattern and intended for development of web applications.&lt;/h4&gt;
-
-&lt;!--continue--&gt;
-&lt;ol&gt;
-&lt;h3&gt;&lt;li&gt;Installation&lt;/li&gt;&lt;/h3&gt;
-Using Composer&lt;br /&gt;
-&lt;pre&gt;composer create-project laravel/laravel &lt;i&gt;projectname&lt;/i&gt; --prefer-dist
-#laravel installer can be installed using composer
-composer global require &quot;laravel/installer=~1.1&quot;&lt;/pre&gt;
-
-Using Larvel &lt;br /&gt;
-&lt;pre&gt; laravel new projectname &lt;/pre&gt;
-
-
-&lt;h3&gt;&lt;li&gt;Laravel App Skeleton&lt;/li&gt;&lt;/h3&gt;
-&lt;pre&gt;
-app/		*bulk of app(models,controllers,route definitions, commands, PHP domain code)  
-config/		*config. files for db conn.,queue, mail settings etc. 
-		each file returns an array,each value of array can be accessed using config key; 
-		format example: filename.key1.key2
-database/	*db migrations and seeds
-public/		*public facing files like img.,stylesheets,scripts,downloads.
-		*index.php which kicks off bootstrapping process and routes all requests. 
-resources/      *non-PHP files like views, language files, src. JS files, Sass/LESS 
-routes/		*HTTP routes, console routes or Artisan commands 
-   --&amp;gt;web.php   *web routes
-   --&amp;gt;api.php   *API routes            
-
-storage/	*caches, logs and compiled system files
-tests/		*unit and integration tests
-                For tests, create file ending with test.php in tests dir. &amp;amp; run ./vendor/bin/phpunit
-vendor/		*composer installed dependencies for remote servers
-   
-.env		*file to dictate the environment variables.
-.env.example    *template file that env. duplicates to create .env file
-.gitattributes  *git config. file
-.gitignore	*git config. file
-artisan/ 	*file that allows to run artisan commands
-composer.json	*user-editable composer's config. file
-composer.lock   *not-editable composer's config. file
-gulpfile.js	*optional config file for Elixir and Gulp(for compiling &amp;amp; processing frontend assets
-package.json	*similar to composer.json for frontend assets
-phpunit.xml	*config. file for PHPUnit(tool for testing out of the box)
-readme.md	*markdown file for Intro. of Laravel
-server.php	*backup server for laravel app  to light-weight server 
-&lt;/pre&gt;
-   
-  
-&lt;h3&gt;&lt;li&gt;Understanding Routing&lt;/li&gt;&lt;/h3&gt;
-&lt;ul&gt;  
-    Simple way:  match Path with Closure.&lt;br /&gt;
-             Example:&lt;pre&gt;
-//routes/web.php
-Route::get('/',function(){ return 'Hello, World!'; } );
-&lt;/pre&gt;
-     
-         Route verbs: &lt;br /&gt;
-        &lt;pre&gt;
-	 Route::post('/',function(){});
-         Route::put('/',function(){});
-	 Route::delete('/',function(){});
-	 Route::any('/',function(){});
-         Route::match(['get','post'],'/',function(){}); 
-&lt;/pre&gt;
-
-&lt;li&gt;
-Route using Controller name and method as a string
-&lt;pre&gt;Route::get('/','GreetingController@index');&lt;/pre&gt;  
-&lt;/li&gt;
-
-&lt;li&gt;
-Route Parameters(variable segment of URL) can be defined in route and passed to closure. 
-&lt;br /&gt; Example: &lt;br /&gt;  
-&lt;pre&gt;Route::get('users/{id}/booklists', function($id){});&lt;/pre&gt;   
-    	&lt;br /&gt;-&amp;gt;Order is left to right: &lt;pre&gt;Route::get('users/{userId}/comments/{commentId}', function($userId,$commentId){});&lt;/pre&gt; 
-                        &lt;br /&gt;-&amp;gt;Optional Route parameter with ?
-                		 &lt;pre&gt;Route::get('users/{id?}',function($id='fallbackId'){} );&lt;/pre&gt;  
-	          	&lt;br /&gt;-&amp;gt;Regular expression route constraints   
-			  &lt;pre&gt;Route::get('users/{id}',function($id){ })-&amp;gt;where('id','[0-9]+');
-Route::get('users/{username}',function($username) { })-&amp;gt;where('username','[A-Za-z]+');
-Route::get('posts/{id}/{slug}',function($id,$slug){ })-&amp;gt;where(['id'=&amp;gt;'[0-9]+', 'slug'=&amp;gt;'[A-Za-z]+']);&lt;/pre&gt; 
-&lt;/li&gt; 
-
-	&lt;li&gt; Route Names &lt;br /&gt; 
-            &lt;br /&gt;Using URL helper to refer routes:&lt;br /&gt;
-		Example:&lt;pre&gt; &amp;lt; a href=&quot;&amp;lt;?php echo url('/'); ?&amp;gt;&quot;&amp;gt; &lt;/pre&gt; 
-		&lt;br /&gt;
-			//defining route with name in routes/web.php   &lt;br /&gt;
-		       &lt;pre&gt;Route::get('members/{id}', 'MembersController@show')-&amp;gt;name('members.show');&lt;/pre&gt;    
-  			
-			//link the route in a view using route() helper
-			&lt;br /&gt;&lt;pre&gt; &amp;lt;a href=&quot;&amp;lt;?php echo route('members.show',['id'=&amp;gt;13]); ?&amp;gt;&quot;&amp;gt; &lt;/pre&gt;
-                &lt;br /&gt; To Pass Route Parameters to the route() helper, 
-			define the route parameters while using route() helper.&lt;br /&gt;&lt;br /&gt;
-				Examples:&lt;br /&gt;
-					//http://himaliworld.com/users/1/comments/2 
-				&lt;pre&gt;route('users.comments.show',[1,2])
- route('users.comments.show',['userId'=&amp;gt;1,'commentId'=&amp;gt;2]
-&lt;/pre&gt; 
-				//http://himaliworld.com/users/1/comments/2?opt=a
-			       &lt;pre&gt;route('users.comments.show',['userId'=&amp;gt;1, 'commentId'=&amp;gt;2, 'opt'=&amp;gt;'a'])&lt;/pre&gt; 
-        &lt;br /&gt;&lt;/li&gt;
-   &lt;/ul&gt; 
-
-&lt;h3&gt;&lt;li&gt;Using command line Companion: Artisan&lt;/li&gt;&lt;/h3&gt;
-&lt;pre&gt;
-php artisan changes  
-php artisan --version
-php artisan route::list //display table with all routes
-php artisan tinker     //starts REPL(an interactive shell) to enter php commands
-			in the context of the application and seed output)
-php artisan down    //bring application into maintainence mode
-php artisan up      //exit maintainence mode
-php artisan optimize //trim &amp;amp; merge common classes in one file: storage/framework/compiled.php  
-        		//if app.debug is set to true, classes will not be compiled
- 			// --force flag to override
-php artisan route:cache  //cache the routes of application
-php artisan list: gives follwoing entries under make namespace
-        make:command
-        make:console
-        make:controller
-        make:event
-        make:middleware
-        make:migration
-        make:model
-        make:provider
-        make:request
-Usage Examples:
-        php artisan make:model library --no-migration
-        //creates Eloquent Model class called library at app/library.php
-        // without makting migration tables.
-php artisan make:command --help
-&lt;/pre&gt;
-
-
-&lt;h3&gt;&lt;li&gt;Database and Eloquent&lt;/li&gt;&lt;/h3&gt;
-Eloquent is a Laravel's ActiveRecord ORM(object-relational mapper).
-There is one class per table, which is responsible for retrieving, representing and persisting data in that table.&lt;br /&gt;
-Configuration File: config/database.php&lt;br /&gt;
-Database connections: multiple drivers are supported, multiple connections within the same application is also possible.
-Other db connections:Asking for specific connection can be done as:&lt;pre&gt; $users =DB::connection('secondary')-&amp;gt;select('select * from users');&lt;/pre&gt;
-
-&lt;b&gt;Migrations&lt;/b&gt;&lt;br /&gt;
-A migration is a single file that has:&lt;br /&gt;
-up() method to do its migration and down() method to undo whatever changes the up migration made.
-
-Creating migration&lt;pre&gt;php artisan make:migration create_users_table
-php artisan make:migration add_names_to_users_table --table=users
-php artisan make:migration create_users_table --create=users
-&lt;/pre&gt; 
-
-Creating tables:&lt;pre&gt;//Everything we do in migration rely on the methods of Schema. Use the create() method to create new table.
-Schema::create('tablename', function(Blueprint $table){
-	// Create columns here
-});&lt;/pre&gt;
-Creating columns:&lt;pre&gt;//Bluprint instances can be used for creating columns
-Schema::create('users', function(Blueprint $table){
-	$table-&amp;gt;string('name');
-});&lt;/pre&gt;
-&lt;h5&gt;Following are some of Blueprint methods:&lt;h5&gt;&lt;pre&gt;integer(colName), tinyInteger(colName), smallInteger(colName), mediumInteger(colName), bigInteger(colName)
-string(colName, OPTIONAL length) // adds a varchar type column
-binary(colName)	//adds a BLOB type column
-boolean(colName)
-char(colName,length)
-datetime(colName)
-decimal(colName, precision, scale)
-double(colName, total digits, digits after decimal)
-enum(colName,[choice1, choice2])
-float(colName)
-json(colName) and jsonb(colName)
-text(colName), mediumText(colName), longText(colName)
-time(colName)
-timestamp(colName)
-uuid(colName)  //char(36) in MySQL&lt;/pre&gt;
-&lt;h5&gt;Other combined blueprint methods:&lt;/h5&gt;&lt;pre&gt;softdeletes() //adds a deleted_at timestamp  
-morphs(colName) //eg. morphs('tag') adds integer tag_id and string tag_type   
-		// used in polymorphic relationships
-rememberToken() //adds a remember_token column(Varchar(100)) for user &quot;remember me&quot; tokens
-timestamps() and nullableTimestamps()&lt;/pre&gt;
-
-&lt;h5&gt;Adding extra properties&lt;/h5&gt;&lt;pre&gt;Schema::table('user',function(Blueprint $table){
-$table-&amp;gt;string('email')-&amp;gt;nullable()-&amp;gt;after('last_name');
-});&lt;/pre&gt;
-&lt;h5&gt;More of the addtional properties are:&lt;/h5&gt;&lt;pre&gt;nullable()
-default('default content')
-unsigned()
-first() //places the column first in the column order
-$table-&amp;gt;index('amount','optional_index_name');&lt;/pre&gt;
-unique() //adds a unique index
-primary()
-index()&amp;lt;/pre&amp;gt;
-
-Dropping tables:&lt;pre&gt;Schema::drop('table_name');&lt;/pre&gt;
-Modifying columns:&lt;h5&gt;Before,add the doctrine/dbal package in composer.json and update composer
-&lt;pre&gt;//changing string length to 100
-Schema::table('users', function($table){
-	$table-&amp;gt;string('name', 100)-&amp;gt;change();
-});
-//adjusting properties in the method name, eg. making nullable
-Schema::table('contacts', function($table){
-	$table-&amp;gt;string('deleted_at')-&amp;gt;nullable()-&amp;gt;change();
-});
-//rename a column
-  $table-&amp;gt;renameColumn('advancing', 'advanced');
-//drop a column
-  $table-&amp;gt;dropColumn('nickname');
-&lt;/pre&gt;
-
-Indexes and Foreign keys&lt;br /&gt;
-&lt;pre&gt; Adding column indexes in migrations
-$table-&amp;gt;primary('primary_id'); //unnecessary if present increments()
-$table-&amp;gt;primary(['first_name','last_name']); //composite keys
-$table-&amp;gt;unique('email');  //unique index
-$table-&amp;gt;unique('email', 'optional_index_name');
-$table-&amp;gt;index('amount'); //basic index
-$table-&amp;gt;index('amount','optional_index_name');&lt;/pre&gt;
-&lt;h5&gt;Removing indexes&lt;/h5&gt;&lt;pre&gt;$table-&amp;gt;dropPrimary('contacts_id_primary');
-$table-&amp;gt;dropUnique('contacts_email_unique);
-$table-&amp;gt;dropIndex('optional_index_name');
-$table-&amp;gt;dropIndex(['email','amount']);&lt;/pre&gt;
-
-&lt;h5&gt;Adding and Removing Foreign keys&lt;/h5&gt;&lt;pre&gt; $table-&amp;gt;foreign('user_id')-&amp;gt;refernces('id')-&amp;gt;on('users');
-//specifying foreign key contraints with onDelete() or onUpdate()
-$table-&amp;gt;foreign('user_id')
-	-&amp;gt;references('id')
-	-&amp;gt;on('users')
-	-&amp;gt;onDelete('cascade');
-//dropping an index by referencing its index name(combination of column name and table being referenced)  
-$table-&amp;gt;dropForeign('contacts_user_id_foreign');
-//dropping an index by passing it an array of the fields that it's referencing on the local table
-$table-&amp;gt;dropForeign(['user_id']);&lt;/pre&gt;
-
-Running Migrations&lt;pre&gt;php artisan migrate
-php artisan migrate --seed //runs migration and then seeds
-php artisan migrate:install //creates table that tracks migrations status
-php artisan migrate:reset  //rolls back all the migrations made by install
-php artisan migrate:refresh  //resets and installs
-php artisan migrate:rollback --step=1 // rolls back number of migrations specified
-php artisan migrate:status&lt;/pre&gt;
-
-&lt;b&gt;Seeding&lt;/b&gt;&lt;br /&gt;
-dabatase/seeds folder comes with DatabaseSeeder class, which has run() method.
-&lt;pre&gt;//seeding along with migration 
-php artisan migrate --seed
-php artisan migrate:refresh --seed
-//seeding independently
-php artisan db:seed
-php artisan db:seed --class=ContactsTableSeeder&lt;/pre&gt;
-
-&lt;h5&gt;Creating a Seeder&lt;/h5&gt;&lt;pre&gt;php artisan make:seeder ContactsTableSeeder
-//creates ContactsTableSeeder in database/seeds directory
-
-//edit database/seeds/DatabaseSeeder.php to run when we run our seeders
-	public function run(){
-		$this-&amp;gt;call(ContactsTableSeeder::class);
-	}
-//edit the seeder itself in ContactsTableSeeder using DB facade which creates only one record manually
-     DB::table('contacts')-&amp;gt;insert([
-			'name'=&amp;gt; 'abcdef'
-			'email' =&amp;gt; 'ghi@jkl.mno',
-		]);
-&lt;/pre&gt;
-Model Factories: define one or more patterns for creating fake entries for datbase tables&lt;pre&gt;
-$factory-&amp;gt;define(User::class, function(Faker\Generator $fake){
-	return[	'name' =&amp;gt; $faker-&amp;gt;name, ];
-});
-$factory-&amp;gt;define('users', function(Faker\Generator $faker){
-	return[ 'name' =&amp;gt; $faker-&amp;gt;name, ];
-});&lt;/pre&gt;
-
-Creating a Model Factory&lt;br /&gt;
-Defined in database/factories/ModelFactory.php
-&lt;pre&gt;//simplest factory
-$factory-&amp;gt;define(Contact::class, function(Faker\Generator $faker){
-      return['name' =&amp;gt; 'abc def','email'=&amp;gt;'ghi@jkl.mno', ];  
-});
-//with this we can use factory() global helper to create an instance of Contact in seeding &amp;amp; testing
-//create one
-$contact = factory(Contact::class)-&amp;gt;create();
-//create many
-factory(Contact::class, 20)-&amp;gt;create();
-
-//because the above instances becom repetitive, Fakeer helps randomize the creation of structured fake data
-$factory-&amp;gt;define(Contact::class, function(Faker\Generator $faker){
-	return[  'name' =&amp;gt; $faker-&amp;gt;name, 'email' =&amp;gt; $faker-&amp;gt;email, ];  }); 
-&lt;/pre&gt;
-
-Using a Model Factory
-&lt;br /&gt;&lt;pre&gt;//for seeding
-//create() saves the instance into database instantly
-//make() creates the instance but doesn't yet save it to db
-factory(Post::class)-&amp;gt;create([
-         'title' =&amp;gt; 'This is my post'
-]);
-factory(User::class, 20)-&amp;gt;create()-&amp;gt;each(function($u) use($post){
-	$post-&amp;gt;comments()-&amp;gt;save(factory(Comment::class)-&amp;gt;make(['user_id'=&amp;gt;$u-&amp;gt;id]));
-});
-//using an array to make() or create() overrides specific keys, above sets user_id on the comment and manually set the title of post
-//second parameter in factory()helper indicates the creation of more than one instance ...above each()method is used to add a comment from each newly created user
-&lt;/pre&gt;
-&lt;h5&gt;Accessing multiple model factory types&lt;/h5&gt;
-&lt;pre&gt;
-$factory-&amp;gt;define(Contact::class, function(Faker\Generator $faker){
-	return [ 'name' =&amp;gt; $faker-&amp;gt;name, 'email' =&amp;gt; $faker-&amp;gt;email, ]);
-});
-
-//defining model for vip contacts in above factory model
- $factory-&amp;gt;defineAs(Contact::class, 'vip', function(Faker\Generator $faker){
-   return[
-	'name' =&amp;gt; $faker-&amp;gt;name,
-	'email' =&amp;gt; $faker-&amp;gt;email,
-	'vip'  =&amp;gt; true,
-	];
-});
-//because there is duplication of data, above can be extended by using $factory-&amp;gt;raw()
-$factory-&amp;gt;defineAs(Contact::class, 'vip',
- function(Faker\Generator $faker) use ($factory) {
-	$contact = $factory-&amp;gt;raw(Contact::class);
-	return array_merge($contact, ['vip' =&amp;gt; true]);
-  });
-//make a specific type
-  $vip = factory(Contact::class, 'vip')-&amp;gt;create();
-  $vip = factory(Contact::class, 'vip', 3)-&amp;gt;create();
-&lt;/pre&gt; 
-
-&lt;b&gt;Query Builder&lt;/b&gt;&lt;br /&gt;
-Laravel's db architecture can connect to MySQL, Postgres, SQLite and SQL Server through a single interface.
-Fluent Interface is available in Laravel that uses method chaining to provides a simpler API.
-&lt;pre&gt; //non-fluent 
-$users = DB::select(['table' =&amp;gt; 'users', 'where' =&amp;gt; ['type'=&amp;gt; 'tall']]);
-//fluent
-$users = DB::table('users')-&amp;gt;where('type','tall')-&amp;gt;get();
-&lt;/pre&gt;
-&lt;h5&gt;Basic DB Facade usage examples&lt;/h5&gt;
-&lt;pre&gt;//basic DB facade and statement()
-DB::statement('drop table users')
-//using raw calls like select(),insert(),update(),delete(), and parameter binding
-DB::select('select * from contacts where validated=?',[true]);
-//select using fluent builder
-$users = DB::table('users')-&amp;gt;get();
-//joins and other complex calls
-DB::table('users')
-    -&amp;gt;join('contacts',function($join){
-		 $join-&amp;gt;on('users.id','=','contacts.user_id')
-			-&amp;gt;where('contacts.type','tall');
-    })
-   -&amp;gt;get();
-&lt;/pre&gt;
-&lt;h5&gt;RAW SQL&lt;/h5&gt;
-&lt;pre&gt;
-//raw select
-$users = DB::select('select * from users');
-//parameter bindings and named bindings, allows use of PDO parameter
-$booksOfCategory = DB::select(
-	'select * from books where category = ?',
-	[$category]
-   );
-   //parameters can be named for clarity
- $booksOfCategory = DB::select(
-	'select * from books where category = :category',
-		['category' =&amp;gt; $bookCategory]
-	);
-//raw insert
-    DB::insert(
-	'insert into contacts(name,email) values(?,?)',['abc', 'zyx@wvu.tsr']
-	);
-//raw updates
-   $countUpdated = DB::update(
-	'update contacts set status= ? where id = ?',
-	['tall', $id]
-	);
-//raw deletes
-	$countDeleted = DB::delete(
-		'delete from contacts where archived = ?',
-		[ture]
-	);
-&lt;/pre&gt;
-&lt;h5&gt;chaining with query builder&lt;/h5&gt;
-&lt;pre&gt;//methods can be chained together to build a query 
-    //at the end of chain get() method to trigger execution of query
-    $usersOfType = DB::table('user')
-		-&amp;gt;where('type', $type)
-		-&amp;gt;get();
-//contraining methods
-select(), select() addSelect()
-where(), orWhere()
-whereBetween(colName,[low,high]) , whereNotBetween(colName,[low,high])
-whereIn(colName,[1,2,3]), whereNotIn(colname,[1,2,3])
-whereNull(colName), whereNotNull(colName)
-whereRaw()    //queries should be carefull used as they are unescaped
-	$usageOfRaw = DB::table('contacts')-&amp;gt;whereRaw('id = 28346a')-&amp;gt;get() 
-whereExists()
-distinct()
-&lt;/pre&gt;
-
-
-
-&lt;/h5&gt;&lt;/h5&gt;&lt;/h5&gt;&lt;/ol&gt;</content><author><name></name></author><summary type="html">Laravel is open-source php web framework, based on Symfony that follows Model-View-Controller(MVC) architectural pattern and intended for development of web applications.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/laravel.png" /></entry><entry><title type="html">Arch Linux Installation Guide</title><link href="http://localhost:4000/install-Arch-Linux-and-Desktop-environment/" rel="alternate" type="text/html" title="Arch Linux Installation Guide" /><published>2018-11-14T00:00:00+00:00</published><updated>2018-11-14T00:00:00+00:00</updated><id>http://localhost:4000/install-Arch-Linux-and-Desktop-environment</id><content type="html" xml:base="http://localhost:4000/install-Arch-Linux-and-Desktop-environment/">&lt;p&gt;Arch  linux is a linux distribution for computers based on x86-64 architectures. This distro of linux is popular for its minimalism, simplicity, code correctness and elegance. The pacakage manager, &lt;i&gt;pacman&lt;/i&gt; is used to install, remove and update software packages.&lt;/p&gt;
-
-&lt;!--continue--&gt;
-&lt;h3&gt;Installation of Arch Linux on hard drive from a live media. &lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;Connect to the Internet&lt;pre&gt;wireless: wifi-menu
-ethernet: systemctl start dhcpd&lt;/pre&gt;   
-&lt;/li&gt;
-
-&lt;li&gt;
-Partition the disk in suitable file system and create swap space
-&lt;pre&gt;cfdisk
-mkfs.ext4 /dev/sda? /*? number varies */
-mkswap /dev/sda? &amp;amp;&amp;amp; swapon /dev/sda?&lt;/pre&gt;
-&lt;/li&gt; 
-
-&lt;li&gt;Mount the partition for root to /mnt directory&lt;pre&gt; mount /dev/sda? /mnt&lt;/pre&gt;
- &lt;/li&gt; 
-
-&lt;li&gt;Install the base package and the required packages like for packages for wifi connection &lt;pre&gt;pacstrap /mnt base 
-pacstrap /mnt wpa-supplicant dialog&lt;/pre&gt;
-&lt;/li&gt;
-
-&lt;li&gt;Generate filesystem table(fstab)&lt;pre&gt;fstab -U /mnt &amp;gt;&amp;gt; /mnt/etc/fstab&lt;/pre&gt;&lt;/li&gt; 
-
-&lt;li&gt;chroot&lt;pre&gt;arch-chroot /mnt &lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;set password for root&lt;pre&gt;passwd&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;create initial ramdisk environment&lt;pre&gt;mkinitcpio -p linux&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;install boot loader and install grub on hard-drive(sda)
-&lt;pre&gt;pacman -S grub 
-grub-install /dev/sda&lt;/pre&gt;
-&lt;/li&gt;
-
-&lt;li&gt;if other OS are available in different partitions, mount the partition containing os, download os-prober package and run it to scan.
-&lt;pre&gt;os-prober&lt;/pre&gt;
-&lt;/li&gt;
-
-&lt;li&gt;generate grub configuration file to load OS during boot.
-&lt;pre&gt;grub-mkconfig -o /boot/grub/grub.cfg&lt;/pre&gt;&lt;/li&gt; 
-
-&lt;li&gt;Check for official offline manual on the file &lt;b&gt;install.txt&lt;/b&gt; located in the &lt;b&gt;/root&lt;/b&gt; directory. 
- Also available on the internet at &lt;a href=&quot;https://wiki.archlinux.org/index.php/installation_guide&quot;&gt;arch wiki&lt;/a&gt;&lt;/li&gt;     
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;h3&gt;Installing Desktop Environment&lt;/h3&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Create user to login other than root with admin privileges
-&lt;pre&gt;useradd -m -g users -s /bin/bash user_name
-passwd user_name   //set password for the user_name
-
-/*giving admin priveleges requires to update sudoers file in /etc direcory 
-if absent, install sudo package with pacman */
-
-pacman -S sudo
-vi /etc/sudoers
-/*edit sudoers, add the following line; usually under the line,
-root ALL=(ALL) ALL 
-*/
-user_name ALL=(ALL) ALL
-&lt;/pre&gt;
-&lt;/li&gt;
-
-&lt;li&gt; Install Display server&lt;pre&gt;pacman -S xorg-server xorg-xinit&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;Install Graphics driver&lt;pre&gt;pacman -S xf86-video-intel 
-	/* install the driver as per your graphics card,
-	   amd ---&amp;gt; xf86-xvideo-amdgpu
-	   intel --&amp;gt; xf86-video-intel
-	   nividea --&amp;gt;xf86-video-nouveau
-	*/&lt;/pre&gt;
-&lt;/li&gt;
-&lt;li&gt;Install Display Manager&lt;pre&gt;//to install gnome diplay manager
-	pacman -S gdm&lt;/pre&gt;
-&lt;/li&gt;
-
-&lt;li&gt;Finally install Desktop Environment and enable it on boot&lt;pre&gt;pacman -S gnome
-systemctl enable gdm&lt;/pre&gt;
-&lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><summary type="html">Arch linux is a linux distribution for computers based on x86-64 architectures. This distro of linux is popular for its minimalism, simplicity, code correctness and elegance. The pacakage manager, pacman is used to install, remove and update software packages.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/arch.png" /></entry></feed>
+&lt;/h5&gt;</content><author><name></name></author><summary type="html">&quot;Everything is a file&quot;, which is one of the definitive features of UNIX Operating System and its derivatives like Linux.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/linux.png" /></entry></feed>

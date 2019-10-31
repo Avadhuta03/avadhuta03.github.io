@@ -57,13 +57,24 @@ There are 4 logical layers [ Process/Application, Transport, Internet, Link ] in
  Node address uniquely identifies a particular machine on a network, as opposed to the network address, which is a group.<br> <br>
  Based on the network size, classes are created.<br><br>
  
- <table>
- <th>Class </th><th>Fist bits </th><th>Network Address Range</th><th>Total Unique Hosts per Network</th>
-<tr><td>Class A </td><td> 0 </td><td> 0 - 127 </td><td>2^(24) - 2 = 16,777,214</td></tr>
-<tr><td>Class B </td><td> 10 </td><td> 128 - 191 </td><td>2^(16) - 2 = 65534</td></tr>
-<tr><td>Class C </td><td> 110 </td><td> 192 - 223 </td><td>2^(8) - 2 = 254</td></tr>
-<tr><td>Class D </td><td> 1110 </td><td> 224 - 239</td></tr>
-<tr><td>Class E </td><td> 11110 </td><td> 240 - 255 </td></tr>
+<table>
+<th>Class </th><th>Fist bits </th><th>Network Address Range</th><th>Total Usuable Network Adress</th><th>Total Unique Hosts per Network</th>
+<tr><td>Class A </td><td> 0 </td><td> 0 - 127 </td><td>2^(7) - 2 = 126</td><td>2^(24) - 2 = 16,777,214</td></tr>
+<tr><td>Class B </td><td> 10 </td><td> 128 - 191 </td><td>2^(14) - 2 = 16384</td><td>2^(16) - 2 = 65534</td></tr>
+<tr><td>Class C </td><td> 110 </td><td> 192 - 223 </td><td></td><td>2^(8) - 2 = 254</td></tr>
+<tr><td>Class D </td><td> 1110 </td><td> 224 - 239</td><td></td><td></td></tr>
+<tr><td>Class E </td><td> 11110 </td><td> 240 - 255 </td><td></td><td></td></tr>
 </table>
 
+<h5>Reserved Private IP address</h5>
+<table>
+<tr><th>Address Class</th><th>Reserved address space</th></tr>
+<tr><td>Class A</td><td>10.0.0.0 ~ 10.255.255.255</td></tr>
+<tr><td>Class B</td><td>172.16.0.0 ~ 172.31.255.255</td></tr>
+<tr><td>Class C</td><td>192.168.0.0 ~ 192.168.255.255</td></tr>
+</table>
+
+
 </p>
+
+
