@@ -24,10 +24,10 @@ mkswap /dev/sda? && swapon /dev/sda?</pre>
  </li> 
 
 <li>Install the base package and the required packages like for packages for wifi connection <pre>pacstrap /mnt base 
-pacstrap /mnt wpa-supplicant dialog</pre>
+pacstrap /mnt wpa_supplicant dialog</pre>
 </li>
 
-<li>Generate filesystem table(fstab)<pre>fstab -U /mnt >> /mnt/etc/fstab</pre></li> 
+<li>Generate filesystem table(fstab)<pre>genfstab -U /mnt >> /mnt/etc/fstab</pre></li> 
 
 <li>chroot<pre>arch-chroot /mnt </pre></li>
 
