@@ -23,7 +23,7 @@ mkswap /dev/sda? && swapon /dev/sda?</pre>
 <li>Mount the partition for root to /mnt directory<pre> mount /dev/sda? /mnt</pre>
  </li> 
 
-<li>Install the base package and the required packages like for packages for wifi connection <pre>pacstrap /mnt base 
+<li>Install the base package and the required packages like packages for wifi connection, kernel presets, firmwares <pre>pacstrap /mnt base linux linux-firmware 
 pacstrap /mnt wpa_supplicant dialog</pre>
 </li>
 
@@ -33,14 +33,19 @@ pacstrap /mnt wpa_supplicant dialog</pre>
 
 <li>set password for root<pre>passwd</pre></li>
 
-<li>create initial ramdisk environment<pre>mkinitcpio -p linux</pre></li>
+<li>set desired locale<pre>//english locales needs to be generated for terminal to work on boot.
+//Uncomment en_US.UTF-8, Save file and generate locales.
+vi /etc/locale.gen
+locale-gen</pre></li>
+
+<li>create initial ramdisk environment<pre>mkinitcpio -p linux   //make sure to install linux package first to generate presets  </pre></li>
 
 <li>install boot loader and install grub on hard-drive(sda)
 <pre>pacman -S grub 
 grub-install /dev/sda</pre>
 </li>
 
-<li>if other OS are available in different partitions, mount the partition containing os, download os-prober package and run it to scan.
+<li>if other OS are available in different partitions, <strong>mount the partition containing os</strong>, download os-prober package and run it to scan.
 <pre>os-prober</pre>
 </li>
 
@@ -72,8 +77,10 @@ user_name ALL=(ALL) ALL
 </pre>
 </li>
 
-<li> Install Display server<pre>pacman -S xorg-server xorg-xinit</pre></li>
-<li>Install Graphics driver<pre>pacman -S xf86-video-intel 
+<li> Install Display server<pre>pacman -S xorg-server </pre></li>
+<li>Install Graphics driver<pre>*Physical Graphics driver can be cheked using command 
+lspci | grep VGA
+pacman -S xf86-video-intel 
 	/* install the driver as per your graphics card,
 	   amd ---> xf86-xvideo-amdgpu
 	   intel --> xf86-video-intel
