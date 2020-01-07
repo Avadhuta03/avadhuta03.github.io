@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-11-21T08:08:43+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Tutorials | HimaliWorld</title><subtitle>Tutorials on Computer Network, Programming, PL's Framework</subtitle><entry><title type="html">Basics of Git</title><link href="http://localhost:4000/Common-Git-Commands/" rel="alternate" type="text/html" title="Basics of Git" /><published>2019-10-30T00:00:00+00:00</published><updated>2019-10-30T00:00:00+00:00</updated><id>http://localhost:4000/Common-Git-Commands</id><content type="html" xml:base="http://localhost:4000/Common-Git-Commands/">&lt;p&gt;Git is a Distributed Version Control System. It has different approach to handling data(versions of software) than most other VCS, which includes ways like, Creating Snapshots,
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-01-07T09:26:16+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Tutorials | HimaliWorld</title><subtitle>Tutorials on Computer Network, Programming, PL's Framework</subtitle><entry><title type="html">Basics of Git</title><link href="http://localhost:4000/Common-Git-Commands/" rel="alternate" type="text/html" title="Basics of Git" /><published>2019-10-30T00:00:00+00:00</published><updated>2019-10-30T00:00:00+00:00</updated><id>http://localhost:4000/Common-Git-Commands</id><content type="html" xml:base="http://localhost:4000/Common-Git-Commands/">&lt;p&gt;Git is a Distributed Version Control System. It has different approach to handling data(versions of software) than most other VCS, which includes ways like, Creating Snapshots,
 &lt;!--continue--&gt;
  Local Availability of Operations, use of SHA-1 hash mechanism for higher integrity, using 3 states to track files namely; Modified, Staged and Committed.&lt;/p&gt;
 
@@ -204,33 +204,49 @@ There are 4 logical layers [ Process/Application, Transport, Internet, Link ] in
 
 
 &lt;table&gt;
-&lt;tr&gt;&lt;th&gt;Name of Logical Layers&lt;/th&gt;&lt;th&gt;Protocols Implemented&lt;/th&gt;&lt;th&gt;Functions&lt;/th&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;1.  Application&lt;br /&gt;
-2. Presentation&lt;br /&gt;
-3.  Session&lt;/td&gt;
-&lt;td&gt;Telnet, FTP, TFTP, SNMP,&lt;br /&gt; DHCP, NTP, TSL/SSL, RIP, SSH...&lt;/td&gt;
-&lt;td&gt;node to node application communication, controls UI specifications&lt;/td&gt;
+&lt;tr&gt;&lt;th&gt;Layer&lt;/th&gt;&lt;th&gt;Logical Name&lt;/th&gt;&lt;th&gt;Protocols Implemented&lt;/th&gt;&lt;th&gt;Functions&lt;/th&gt;&lt;/tr&gt;
+
+&lt;tr&gt;
+ &lt;td&gt;1&lt;/td&gt;
+ &lt;td&gt;Physical&lt;/td&gt;
+ &lt;td&gt;IrDA, DSL, USB, Ethernet physical layer...&lt;/td&gt;
+ &lt;td&gt;related to electrical and mechanical aspects of data transmission such as voltage levels and connector pin assignments.&lt;/td&gt;
 &lt;/tr&gt;
- 
+
+&lt;tr&gt;
+ &lt;td&gt;2&lt;/td&gt;
+ &lt;td&gt;Link/Data Link&lt;/td&gt;
+ &lt;td&gt;ARP,NDP, OSPF, L2TP, PPP, MAC,Ethernet, FDDI, ...&lt;/td&gt;
+ &lt;td&gt;oversees hardware addressing,defines protocols for the physical transmission of data&lt;/td&gt;
+ &lt;/tr&gt;
+
  &lt;tr&gt;
- &lt;td&gt;4. Transport&lt;/td&gt;
+ &lt;td&gt;3&lt;/td&gt;&lt;td&gt;Network&lt;/td&gt;
+ &lt;td&gt;IP, ICMP, ARP, RARP, ....&lt;/td&gt;
+ &lt;td&gt;handles addressing of hosts using IP address and  routing of packets among multiple networks&lt;/td&gt;
+ &lt;/tr&gt;
+
+
+ &lt;tr&gt;
+ &lt;td&gt;4&lt;/td&gt;&lt;td&gt;Transport&lt;/td&gt;
  &lt;td&gt;TCP, UDP, ....&lt;/td&gt;
  &lt;td&gt;creating reliable end-to-end communication,&lt;br /&gt; ensure error-free delivery of data,&lt;br /&gt;maintains data integrity, handles packet sequencing&lt;/td&gt;
  &lt;/tr&gt;
 
- &lt;tr&gt;
- &lt;td&gt;5. Network&lt;/td&gt;
- &lt;td&gt;IP, ICMP, ARP, RARP, ....&lt;/td&gt;
- &lt;td&gt;handles addressing of hosts using IP address and  routing of packets among multiple networks&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;6.  Data Link&lt;br /&gt;
- 7. Physical &lt;/td&gt;
- &lt;td&gt;ARP,NDP, OSPF, L2TP, PPP, MAC, ....&lt;br /&gt;
- Ethernet, FDDI, ...&lt;/td&gt;
- &lt;td&gt;oversees hardware addressing and &lt;br /&gt;defines protocols for the physical transmission of data&lt;/td&gt;
- &lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;5 &lt;br /&gt;6&lt;br /&gt;7&lt;/td&gt;
+&lt;td&gt;Session&lt;br /&gt;
+Presentation&lt;br /&gt;
+Application&lt;/td&gt;
+&lt;td&gt;Telnet, FTP, TFTP, SNMP,&lt;br /&gt; DHCP, NTP, TSL/SSL, RIP, SSH...&lt;/td&gt;
+&lt;td&gt;node to node application communication, controls UI specifications&lt;/td&gt;
+&lt;/tr&gt; 
+
+
  &lt;/table&gt;
+
+
 &lt;/p&gt;
 &lt;h3&gt;IP addressing &lt;/h3&gt;
 &lt;p&gt;IP address is software address designed to facilitate communication between hosts in different networks. &lt;br /&gt;
@@ -257,7 +273,7 @@ There are 4 logical layers [ Process/Application, Transport, Internet, Link ] in
 &lt;tr&gt;&lt;td&gt;Class E &lt;/td&gt;&lt;td&gt; 11110 &lt;/td&gt;&lt;td&gt; 240 - 255 &lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;/table&gt;
 
-&lt;h5&gt;Reserved Private IP address&lt;/h5&gt;
+&lt;h4&gt;Reserved Private IP address&lt;/h4&gt;
 &lt;table&gt;
 &lt;tr&gt;&lt;th&gt;Address Class&lt;/th&gt;&lt;th&gt;Reserved address space&lt;/th&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;Class A&lt;/td&gt;&lt;td&gt;10.0.0.0 ~ 10.255.255.255&lt;/td&gt;&lt;/tr&gt;

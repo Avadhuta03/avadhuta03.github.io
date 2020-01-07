@@ -33,7 +33,7 @@ pacstrap /mnt wpa_supplicant dialog</pre>
 
 <li>set password for root<pre>passwd</pre></li>
 
-<li>set desired locale<pre>//english locales needs to be generated for terminal to work on boot.
+<li>set desired locale<pre>//*english locales needs to be generated for terminal to work on boot.
 //Uncomment en_US.UTF-8, Save file and generate locales.
 vi /etc/locale.gen
 locale-gen</pre></li>

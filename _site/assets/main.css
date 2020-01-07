@@ -45,7 +45,7 @@ main {
  * Images
  */
 img {
-  max-width: 100%;
+  max-width: 60%;
   vertical-align: middle;
   border-radius: 12px;
   margin-left: 10px;
@@ -244,6 +244,9 @@ table {
 
 .card .snippet-body {
   max-width: 300px; }
+
+.card .card-image {
+  max-width: 20%; }
 
 .categories {
   margin-top: 65px;

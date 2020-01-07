@@ -1,7 +1,7 @@
 ---
 layout: post
 title : Basics of Blockchain
-categories: BlockChain
+categories: Other
 image: 
 description:
 ---

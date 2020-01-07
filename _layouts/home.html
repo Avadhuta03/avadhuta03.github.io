@@ -38,38 +38,45 @@ layout: default
 {% for post in paginator.posts %}
 
   {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-  <div class= "card">
-    <div class="snippet-head">
-          
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-      
-           <span class="post-meta">{{ post.date | date: date_format }}</span>
-           &nbsp;&nbsp;
-  
-<!-- page category -->
-    {% if post %}
-            {% assign categories = post.categories %}
-    {% else %}
-            {% assign categories = page.categories %}
-    {% endif %}
+           
+              <div class= "card">
 
-    {% for category in categories %}
-   <span class="post-meta"><a href="#">{{ category }}</a></span>   
-        {% unless forloop.last %}&nbsp;{% endunless %}
-    {% endfor %}
-<br><br>
-          {{ post.excerpt }}
+                    <div class="snippet-head">
+                          
+                          <h3>
+                            <a class="post-link" href="{{ post.url | relative_url }}">
+                              {{ post.title | escape }}
+                            </a>  
+                          </h3>
+                      
+                          <span class="post-meta">{{ post.date | date: date_format }}</span>
+                          &nbsp;&nbsp;
+                  
+                <!-- page category -->
+                    {% if post %}
+                            {% assign categories = post.categories %}
+                    {% else %}
+                            {% assign categories = page.categories %}
+                    {% endif %}
 
-          
-          
-    </div>
-          <div class="snippet-body">
-           <img src="{{ site.url }}/assets/images/{{ post.image }}">
-         </div>
-               
-  </div>
+                    {% for category in categories %}
+                  <span class="post-meta"><a href="#">{{ category }}</a></span>   
+                        {% unless forloop.last %}&nbsp;{% endunless %}
+                    {% endfor %}   
+                    
+                    
+                    {{ post.excerpt }}
+
+                    </div>
+                    
+                    <div class="card-image">
+                      <img src="{{ site.url }}/assets/images/{{ post.image }}">
+
+                    </div>
+                              
+            </div>
+
+
 {% endfor %}
 
 </div>

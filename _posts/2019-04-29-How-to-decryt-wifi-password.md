@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Decrypt Wifi Password?
-categories: [Computer Network]
+categories: Other
 image: wifi.png
 description: How to decrypt wifi password | hack wifi password | Kali Linux | 
 ---

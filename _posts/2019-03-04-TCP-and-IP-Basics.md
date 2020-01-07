@@ -13,33 +13,49 @@ There are 4 logical layers [ Process/Application, Transport, Internet, Link ] in
 
 
 <table>
-<tr><th>Name of Logical Layers</th><th>Protocols Implemented</th><th>Functions</th></tr>
-<tr><td>1.  Application<br>
-2. Presentation<br>
-3.  Session</td>
-<td>Telnet, FTP, TFTP, SNMP,<br> DHCP, NTP, TSL/SSL, RIP, SSH...</td>
-<td>node to node application communication, controls UI specifications</td>
+<tr><th>Layer</th><th>Logical Name</th><th>Protocols Implemented</th><th>Functions</th></tr>
+
+<tr>
+ <td>1</td>
+ <td>Physical</td>
+ <td>IrDA, DSL, USB, Ethernet physical layer...</td>
+ <td>related to electrical and mechanical aspects of data transmission such as voltage levels and connector pin assignments.</td>
 </tr>
- 
+
+<tr>
+ <td>2</td>
+ <td>Link/Data Link</td>
+ <td>ARP,NDP, OSPF, L2TP, PPP, MAC,Ethernet, FDDI, ...</td>
+ <td>oversees hardware addressing,defines protocols for the physical transmission of data</td>
+ </tr>
+
  <tr>
- <td>4. Transport</td>
+ <td>3</td><td>Network</td>
+ <td>IP, ICMP, ARP, RARP, ....</td>
+ <td>handles addressing of hosts using IP address and  routing of packets among multiple networks</td>
+ </tr>
+
+
+ <tr>
+ <td>4</td><td>Transport</td>
  <td>TCP, UDP, ....</td>
  <td>creating reliable end-to-end communication,<br> ensure error-free delivery of data,<br>maintains data integrity, handles packet sequencing</td>
  </tr>
 
- <tr>
- <td>5. Network</td>
- <td>IP, ICMP, ARP, RARP, ....</td>
- <td>handles addressing of hosts using IP address and  routing of packets among multiple networks</td>
- </tr>
- <tr>
- <td>6.  Data Link<br>
- 7. Physical </td>
- <td>ARP,NDP, OSPF, L2TP, PPP, MAC, ....<br>
- Ethernet, FDDI, ...</td>
- <td>oversees hardware addressing and <br>defines protocols for the physical transmission of data</td>
- </tr>
+
+<tr>
+<td>5 <br>6<br>7</td>
+<td>Session<br>
+Presentation<br>
+Application</td>
+<td>Telnet, FTP, TFTP, SNMP,<br> DHCP, NTP, TSL/SSL, RIP, SSH...</td>
+<td>node to node application communication, controls UI specifications</td>
+</tr> 
+
+
  </table>
+
+
 </p>
  <h3>IP addressing </h3>
  <p>IP address is software address designed to facilitate communication between hosts in different networks. <br>
@@ -66,7 +82,7 @@ There are 4 logical layers [ Process/Application, Transport, Internet, Link ] in
 <tr><td>Class E </td><td> 11110 </td><td> 240 - 255 </td><td></td><td></td></tr>
 </table>
 
-<h5>Reserved Private IP address</h5>
+<h4>Reserved Private IP address</h4>
 <table>
 <tr><th>Address Class</th><th>Reserved address space</th></tr>
 <tr><td>Class A</td><td>10.0.0.0 ~ 10.255.255.255</td></tr>
