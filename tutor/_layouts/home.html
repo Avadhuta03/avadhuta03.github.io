@@ -1,0 +1,113 @@
+---
+layout: default
+---
+
+
+
+
+<div class="row">
+  
+
+
+
+<!-- creating categories-->
+
+<div class="categories">
+  <div class="categories-heading" >CATEGORIES
+  </div>
+  {% for category in site.categories %}
+
+     <div class="categories-group" >
+         {% capture category_name %}{{ category | first }}{% endcapture %}  
+           <div id="#{{ category_name | slugize }}"></div>
+
+    <span class="category_name">{{ category_name }}</span>
+		 <a name="{{ category_name | slugize }}"></a>
+
+	    {% for post in site.categories[category_name] %}
+            <article class="categories-item" >
+			           <a  href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+	           </article>
+	    {% endfor %}
+     </div>
+
+	{% endfor %}
+</div>
+
+
+
+
+
+
+
+
+<!-- loop through paginated pages -->
+
+<div class="snippet-wrapper">
+
+
+          {% for post in paginator.posts %}
+
+<a href="{{ post.url | relative_url }}">
+
+              <div class="snippet">
+                        
+
+                                   
+
+                                    
+
+                              <div class="snippet-head">
+                                        
+                                        {{ post.title | escape }}
+                                    
+                                
+                                          <!-- page category -->
+                                                {% if post %}
+                                                        {% assign categories = post.categories %}
+                                                {% else %}
+                                                        {% assign categories = page.categories %}
+                                                {% endif %}
+
+                                                {% for category in categories %}
+
+
+                                                    <div class="post-meta">
+
+                                                      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+
+                                                      {{ post.date | date: date_format }} 
+
+                                                            <span> Category: {{ category }} </span>
+                                                    </div>   
+
+
+                                                    {% unless forloop.last %}&nbsp;{% endunless %}
+
+                                                {% endfor %}   
+                                  </div>
+
+
+
+
+                                  <div class="snippet-body">
+                                    
+                                      <p>{{ post.excerpt }}</p>
+
+                                  </div>
+                                                                        
+                                    
+              </div>
+
+                            </a>  
+          {% endfor %}
+
+
+</div>
+
+
+
+
+
+</div>
+

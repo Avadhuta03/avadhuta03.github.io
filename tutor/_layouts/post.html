@@ -1,0 +1,60 @@
+---
+layout: default
+---
+
+
+<header class="post-header">
+
+    <h5 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h5>
+
+    <p class="post-meta">
+      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        {{ page.date | date: date_format }}
+      </time>
+
+   <!-- page category -->
+<div class="post-categories">
+        {% if post %}
+                {% assign categories = post.categories %}
+        {% else %}
+                {% assign categories = page.categories %}
+        {% endif %}
+
+        {% for category in categories %}
+         Category: <a href="#">{{ category }}</a>
+            {% unless forloop.last %}&nbsp;{% endunless %}
+        {% endfor %}
+</div>
+
+<br>
+<a href="{{site.github.repository_url}}/tree/master/{{page.path}}">Edit on github</a>
+
+
+</header>
+
+
+<article>
+
+<div class="post-content e-content" itemprop="articleBody">
+    {{ content }}
+</div>
+
+  
+
+  {%- if site.disqus.shortname -%}
+    {%- include disqus_comments.html -%}
+  {%- endif -%}
+
+  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+</article>   
+
+
+
+
+
+
+
+
+
+
