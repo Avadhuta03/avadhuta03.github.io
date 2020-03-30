@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Open Short Path First (OSPF) Protocol
-category: [computer network]
+category: [Computer Network]
 comments: true
 image: ospf.png
 ---

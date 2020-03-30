@@ -20,7 +20,7 @@ title: Tutorials | HimaliWorld
 email: tutorials@himaliworld.com 
 description:  Tutorials on Computer Network, Programming, Frameworks 
 baseurl:  # the subpath of your site, e.g. /blog
-url: "https://www.himaliworld.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.tutor.himaliworld.com" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: avadhuta03 
 
 

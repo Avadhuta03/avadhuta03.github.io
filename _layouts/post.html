@@ -59,11 +59,15 @@ layout: default
 
 
 
-  {%- if site.disqus.shortname -%}
+  <!-- {%- if site.disqus.shortname -%} -->
+
+  (% if page.comments == true %)
 
     {%- include disqus_comments.html -%}
 
-  {%- endif -%}
+  (% endif %)
+
+  <!-- {%- endif -%} -->
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 
