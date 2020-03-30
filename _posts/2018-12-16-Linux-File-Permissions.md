@@ -2,6 +2,7 @@
 layout: post
 title : Linux File Permissions
 categories: Linux
+comments: true
 image: linux.png
 ---
 <h4>"Everything is a file", which is one of the definitive features of  UNIX Operating System and its derivatives like Linux.</h4>

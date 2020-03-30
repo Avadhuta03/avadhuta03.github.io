@@ -2,6 +2,7 @@
 layout: post
 title: Testing Feature of Laravel
 categories: [Laravel Framework]
+comments: true
 image: laravel.png
 ---
 

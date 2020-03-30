@@ -3,6 +3,7 @@ layout : post
 title : Basics of  TCP/IP 
 description: TCP/IP protocol is at the core of computer netwoking as we know today. IP addressinng, Network Addressing, Classful Network Addressing, Special Purpose Network Addresses, Private IP address, Unicast Address, BroadCast Address, MulticastAddress, Layer 2 BroadCasts, Layer 3 Broadcasts
 categories: [Computer Network]
+comments: true
 image:
 ---
 TCP/IP is at the core of computer netwoking as we know today. TCP/IP standards are checked against certain criteria to maintain its integrity and ensure that any dramatic changes are not made and proprietary features are not added. This open apporach makes it most reliable and thus, popular.<br>
@@ -48,7 +49,7 @@ There are 4 logical layers [ Process/Application, Transport, Internet, Link ] in
 <td>Session<br>
 Presentation<br>
 Application</td>
-<td>Telnet, FTP, TFTP, SNMP,<br> DHCP, NTP, TSL/SSL, RIP, SSH...</td>
+<td>Telnet, FTP, TFTP, SNMP,<br> DHCP, NTP, TSL/SSL, RIP, SSH<br>HTTP, SMTP, POP3...</td>
 <td>node to node application communication, controls UI specifications</td>
 </tr> 
 
@@ -57,7 +58,29 @@ Application</td>
 
 
 </p>
- <h3>IP addressing </h3>
+
+
+<h3>TCP/IP Application Layer</h3>
+<p>
+	
+</p>
+
+
+<h3>TCP/IP Transport Layer</h3>
+<p>
+	
+</p>
+
+<h3>TCP/IP Network Layer</h3>
+
+
+<h3>TCP/IP Data-Link & Physical Layers</h3>
+<p>
+	
+</p>
+
+
+ <h5>IP addressing </h5>
  <p>IP address is software address designed to facilitate communication between hosts in different networks. <br>
  Hardware address is hard-coded into NIC card and used for finding hosts on a local network.
  <br><br>

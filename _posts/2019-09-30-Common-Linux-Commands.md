@@ -2,6 +2,7 @@
 layout: post
 title: Common Linux Commands
 categories: Linux
+comments: true
 image: linux.png
 ---
 

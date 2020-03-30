@@ -2,6 +2,7 @@
 layout: post
 title: Arch Linux Installation Guide 
 categories: Linux
+comments: true
 image: arch.png
 ---
 Arch  linux is a linux distribution for computers based on x86-64 architectures. This distro of linux is popular for its minimalism, simplicity, code correctness and elegance. The pacakage manager, <i>pacman</i> is used to install, remove and update software packages.

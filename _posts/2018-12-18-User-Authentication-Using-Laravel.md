@@ -2,6 +2,7 @@
 layout: post
 title: Laravel's Authentication System 
 categories: [Laravel Framework]
+comments: true
 image: login.png
 ---
 

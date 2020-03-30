@@ -2,6 +2,7 @@
 layout: post
 title: SQLite Basics
 categories: Database
+comments: true
 image: sqlite.png 
 description: SQLite commands 
 ---
