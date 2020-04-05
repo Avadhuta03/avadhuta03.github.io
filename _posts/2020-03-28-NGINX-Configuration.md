@@ -30,3 +30,32 @@ More on <a href="https://nginx.org/en/" target="__blank">nginx webpage</a>
    				the top-level http block from within the /etc/nginx/nginx.conf file.
 /var/log/nginx/	: the default log location for NGINX.
 </pre>
+
+<h4>NGINX Commands</h4>
+<pre>
+-- nginx -h                  // prints help menu
+-- nginx -v                 // shows the nginx version
+-- nginx -V                 // shows the version, build information and config. arguments.
+-- nginx -t                 // tests the config.
+-- nginx -T                 // tests and prints the validated configuration
+-- nginx -s signal         // sends signal to the NGINX master process, signal can be stop, quit, reload  or reopen 
+</pre>
+
+<pre>
+-- nginx -s reload      //reloads the nginx configuration without dropping packets
+</pre>
+
+<h5><u>Serving static content with NGINX</u></h5>
+<pre>
+server {
+	
+	listen 80 default_server;
+	server_name www.example.com;
+
+	location / {
+		root /usr/share/nginx/html;
+		# alias /usr/share/nginx/html;
+		index index.html index.htm;
+	}
+}
+</pre>
