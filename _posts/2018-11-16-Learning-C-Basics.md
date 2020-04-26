@@ -67,3 +67,10 @@ int main()		//define main function with no argument values
 
 <h3>Function</h3>
 <a href="https://github.com/Avadhuta03/C-Basics/blob/master/chapter_01/1.7-function_01.c" target="__blank">Function to calculate power of a number</a>
+
+
+<h3>Arguments-Call By Value</h3>
+<p>The called function cannot directly alter avariable in the calling function; it can only alter its private, temporary copy
+<a href="https://github.com/Avadhuta03/C-Basics/blob/master/chapter_01/1.8-function_02.c" target="__blank">Function to calculate power of a number</a>
+
+</p>
