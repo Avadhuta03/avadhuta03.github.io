@@ -6,7 +6,7 @@ categories: [Laravel Framework ]
 comments: true
 image: laravel.png
 ---
-<h4>Laravel is open-source php  web framework, based on Symfony that follows Model-View-Controller(MVC) architectural pattern and intended for development of web applications.</h4>
+Laravel is open-source php  web framework, based on Symfony that follows Model-View-Controller(MVC) architectural pattern and intended for development of web applications.
 
 
 <!--continue-->
@@ -35,41 +35,43 @@ routes/		*HTTP routes, console routes or Artisan commands
    -->web.php   *web routes
    -->api.php   *API routes            
 
-storage/	*caches, logs and compiled system files
-tests/		*unit and integration tests
+storage/	* caches, logs and compiled system files
+tests/		* unit and integration tests
                 For tests, create file ending with test.php in tests dir. & run ./vendor/bin/phpunit
-vendor/		*composer installed dependencies for remote servers
+vendor/		* composer installed dependencies for remote servers
    
-.env		*file to dictate the environment variables.
-.env.example    *template file that env. duplicates to create .env file
-.gitattributes  *git config. file
-.gitignore	*git config. file
-artisan/ 	*file that allows to run artisan commands
-composer.json	*user-editable composer's config. file
-composer.lock   *not-editable composer's config. file
-gulpfile.js	*optional config file for Elixir and Gulp(for compiling & processing frontend assets
-package.json	*similar to composer.json for frontend assets
-phpunit.xml	*config. file for PHPUnit(tool for testing out of the box)
-readme.md	*markdown file for Intro. of Laravel
-server.php	*backup server for laravel app  to light-weight server 
+.env		* file to dictate the environment variables.
+.env.example    * template file that env. duplicates to create .env file
+.gitattributes  * git config. file
+.gitignore  	* git config. file
+artisan/ 	    * file that allows to run artisan commands
+composer.json	* user-editable composer's config. file
+composer.lock   * not-editable composer's config. file
+gulpfile.js		* optional config file for Elixir and Gulp(for compiling & processing frontend assets
+package.json	* similar to composer.json for frontend assets
+phpunit.xml		* config. file for PHPUnit(tool for testing out of the box)
+readme.md	 	* markdown file for Intro. of Laravel
+server.php		* backup server for laravel app  to light-weight server 
 </pre>
    
   
 <h3><li>Understanding Routing</li></h3>
 <ul>  
     Simple way:  match Path with Closure.<br>
-             Example:<pre>
+             Example:
+ <pre>
 //routes/web.php
 Route::get('/',function(){ return 'Hello, World!'; } );
 </pre>
      
-         Route verbs: <br>
-        <pre>
+Route verbs: <br>
+        
+ <pre>
 	 Route::post('/',function(){});
-         Route::put('/',function(){});
+     Route::put('/',function(){});
 	 Route::delete('/',function(){});
 	 Route::any('/',function(){});
-         Route::match(['get','post'],'/',function(){}); 
+     Route::match(['get','post'],'/',function(){}); 
 </pre>
 
 <li>
@@ -90,9 +92,17 @@ Route::get('users/{username}',function($username) { })->where('username','[A-Za-
 Route::get('posts/{id}/{slug}',function($id,$slug){ })->where(['id'=>'[0-9]+', 'slug'=>'[A-Za-z]+']);</pre> 
 </li> 
 
-	<li> Route Names <br> 
-            <br>Using URL helper to refer routes:<br>
-		Example:<pre> &lt; a href="&lt;?php echo url('/'); ?>"> </pre> 
+<li> Route Names 
+
+<br> 
+<br>Using URL helper to refer routes: 
+<br>
+
+Example:
+<pre> 
+&lt; a href="&lt;?php echo url('/'); ?>"> 
+
+</pre> 
 		<br>
 			//defining route with name in routes/web.php   <br>
 		       <pre>Route::get('members/{id}', 'MembersController@show')->name('members.show');</pre>    

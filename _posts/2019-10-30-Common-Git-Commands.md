@@ -59,17 +59,30 @@ git branch [branch name]  //creates a branch
 git checkout [branch name]  //switches to the branch
 git checkout -b [branch name] //creates and switches to the new branch 
 
-git checkout master  //switch to main branch *necessary when merging a branch
+git checkout master  //switch to main branch --> required while merging
+
 git merge [branch name]  //merge the branch to the master	
 git branch -d [branch name]   //deletes the branch
+
 <h5># Merge conflict occurs if same part of same file is changed in diffrent branches. In such case,
  git pauses the merge( creating unmerged paths) to be resolved and adds conflict-resolution markers 
  to the files that have conflicts; <<<<<<< , ========  and  >>>>>>>> . Sections above and below =======
  represents diffrent versions of same file in different branches. After replacing proper section and
-erasing the markers, the file is staged to mark as resolved.</h5>
+erasing the markers, the file is staged to mark as resolved.
+</h5>
+
+
 git status    // check status of unmerged paths
 git mergetool   // fires up default visual merge tool
 git add [filename]       // stage the conflcted file to mark as resolved
 git status     // to verify everything that had conflicts has been merged
 git commit     // finalizes the merge commit
+</pre>
+
+
+<h3>Git Commit</h3>
+<pre>
+git reset --soft HEAD~1   //undo last commit while keeping changes
+
+git reset --hard HEAD~1   //undo last commit and removes the changes altogether
 </pre>

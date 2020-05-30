@@ -87,6 +87,7 @@ ul, ol {
   margin-left: $spacing-unit;
 }
 
+
 li {
   > ul,
   > ol {
@@ -186,10 +187,11 @@ pre {
  * Wrapper
  */
 .wrapper {
-  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-  max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} ));
+  max-width:         calc(#{$content-width} - (#{$spacing-unit} ));
   margin-right: auto;
   margin-left: auto;
+  display: flex;
   padding-right: $spacing-unit;
   padding-left: $spacing-unit;
   @extend %clearfix;

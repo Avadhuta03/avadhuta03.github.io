@@ -3,58 +3,57 @@ layout: default
 ---
 
 
-<header class="post-header">
-
-    <h5 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h5>
-
-    <p class="post-meta" style="display:inline;">
-      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        {{ page.date | date: date_format }}
-      </time>
-
-   <!-- page category -->
-  <div class="post-categories" style="display:inline-flex;margin-left:10px;align-items:center;">
-
-        {% if post %}
-                {% assign categories = post.categories %}
-        {% else %}
-                {% assign categories = page.categories %}
-        {% endif %}
-
-        {% for category in categories %}
-        Category :&nbsp;&nbsp;<a href="#">{{ category }}</a>
-            {% unless forloop.last %}&nbsp;{% endunless %}
-        {% endfor %}
-
-     <div class="edit" style="margin-left:33px;">
-       
-        
-        edit on<a href="{{site.github.repository_url}}/tree/master/{{page.path}}" target="__blank" style="margin-left:3px;">
-          <svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}">
-        </a>
-     
-     </div>   
+<div class="post">
 
 
-</div>
+  <header class="post-header">
+
+      <h5 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h5>
+
+      <p class="post-meta" style="display:inline;">
+        <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+          {{ page.date | date: date_format }}
+        </time>
+
+     <!-- page category -->
+      <div class="post-categories" style="display:inline-flex;margin-left:10px;align-items:center;">
+
+            {% if post %}
+                    {% assign categories = post.categories %}
+            {% else %}
+                    {% assign categories = page.categories %}
+            {% endif %}
+
+            {% for category in categories %}
+            Category :&nbsp;&nbsp;<a href="#">{{ category }}</a>
+                {% unless forloop.last %}&nbsp;{% endunless %}
+            {% endfor %}
+
+         <div class="edit" style="margin-left:33px;">
+           
+            
+            edit on<a href="{{site.github.repository_url}}/tree/master/{{page.path}}" target="__blank" style="margin-left:3px;">
+              <svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}">
+            </a>
+         
+         </div>   
+
+
+       </div>
+
+  </header>
 
 
 
 
-</header>
-
-
-<article>
 
 <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
 
     <br><br>
     <hr>
-    <br>
 
-</div>
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 
@@ -68,8 +67,10 @@ layout: default
 
   <script id="dsq-count-scr" src="//avadhuta03-github-io.disqus.com/count.js" async></script>
 
-</article>   
+  
+</div>
 
+</div>
 
 
 

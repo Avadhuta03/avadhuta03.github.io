@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
 
   {%- include head.html -%}
   {% seo %}
@@ -10,8 +11,47 @@
     {%- include header.html -%}
 
     <main class="page-content" aria-label="Content">
+
       <div class="wrapper">
-        {{ content }}
+
+       <!-- creating categories-->
+
+        <div class="categories">
+
+          <div class="categories-heading" >CATEGORIES
+          </div>
+          {% for category in site.categories %}
+
+             <div class="categories-group" >
+                 {% capture category_name %}{{ category | first }}{% endcapture %}  
+                   <div id="#{{ category_name | slugize }}"></div>
+
+            <span class="category_name">{{ category_name }}</span>
+             <a name="{{ category_name | slugize }}"></a>
+
+              {% for post in site.categories[category_name] %}
+                    <article class="categories-item" >
+                         <a  href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+                     </article>
+              {% endfor %}
+             </div>
+
+          {% endfor %}
+
+        </div>
+
+
+
+
+        <div >
+
+            {{ content }}
+
+        </div>
+      
+
+
+
       </div>
       
     </main>
