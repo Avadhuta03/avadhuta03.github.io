@@ -100,11 +100,14 @@ Examples : IPVersion 4 (IPv4) and IP Version 6 (IPv6)</li>
 
 <h3>Administrative Distance</h3>
 
-<span>If two or more AS use different routing protocols, and their networks need to connect to each other, they need to exchange some routing information. For example, If one company uses OSPF and the other uses EIGRP on at least one router, both OSPF and EIGRP must be used. Then that router can take routes learned by OSPF and advertise them into EIGRP, and vice versa, through a process called route redistribution.
+If two or more AS use different routing protocols, and their networks need to connect to each other, they need to exchange some routing information. For example, If one company uses OSPF and the other uses EIGRP on at least one router, both OSPF and EIGRP must be used. Then that router can take routes learned by OSPF and advertise them into EIGRP, and vice versa, through a process called route redistribution.
 <br><br>
 Because protocols use diffrent metrics, there is no basis of comparision for finding out the best routes. When IOS must choose between routes learned using different routing protocols, IOS uses a concept called administrative distance. 
 <br><br>
-Administrative distance is a number that denotes how believable an entire routing protocol is on a single router. The lower the number, the better, or more believable, the routing protocol.</span>
+Administrative distance is a number that denotes how believable an entire routing protocol is on a single router. The lower the number, the better, or more believable, the routing protocol.
+<br>
+
+The administrative distance values are configured on a single router and are not exchanged with other routers.
 
 
 <table>
@@ -157,9 +160,8 @@ Administrative distance is a number that denotes how believable an entire routin
 
 
 
-<p>
 	
-<h3>OSPF</h3>
+### OSPF
 
 <span>Open Shortest Path First (OSPF), the most popular link-state IP routing protocol, organizes topology information using Link State Advertisements (LSAs) and the link-state database (LSDB). <br>
 Each LSA is a data structure with some specific information about the network topology; the LSDB is simply the collection of all the LSAs known to a router.
@@ -174,7 +176,7 @@ Each LSA is a data structure with some specific information about the network to
 <li>Second, the routers flood the information, so all routers know the same information. At that
 point, each router can calculate routes to all subnets, but from each router’s own perspective.</li>
 
-<li>All link state routing protocols uses Dijkstra Shortest Path First (SPF) algorithm, to process LSDB and builds the he routes that the local router should add to the IP routing table—routes that list a subnet number and mask, an outgoing interface, and a next-hoprouter IP address.</li>
+<li>All link state routing protocols uses Dijkstra Shortest Path First (SPF) algorithm, to process LSDB and builds the he routes that the local router should add to the IP routing table—routes that list a subnet number and mask, an outgoing interface, and a next-hop(router) IP address.</li>
 
 </ol>
 
@@ -191,7 +193,59 @@ point, each router can calculate routes to all subnets, but from each router’s
 
 </ol>
 
-</p>
+
+
+### Becoming OSPF Neighbors  
+
+
+
+#### The Basics of OSPF Neighbors
+
+OSPF neighbors are routers that both use OSPF and both are on the same data link. 
+
+Becoming OSPF neighbors is possible only when 
+
+1. routers are connected to the same VLAN, or same serial link, or same ethernet WAN link.
+2. two routers  send OSPF messages(send OSPF Hello messaages) introducing themselves as potential neighbors with compatible OSPF parameters.
+3. they agree and form an OSPF neighbor relationship which can be displayed by the command.
+<pre>
+#show ip ospf neighbor
+</pre> 
+
+OSPF neighbor modle allows new routers to be dynamically discovered. The routers just listen for OSPF Hello messages, attempting to become neighbors and exchange LSDBs.
+
+
+#### Meeting Neighbors and Learning their router ID
+
+The process starts with messages called OSPF Hello Messages.
+The Hello in turn list each router's router ID (RID), which is used as identifier for OSPF. OSFP does check the information on Hello Messages to ensure thate the two routers should become neighbors.
+
+<br>
+RID are 32-bit numbers. They are commonly listed as DDN. By default, IOS chooses one of the routers's interface IPv4 address to use as its OSPF RID. However can be manually configured.
+
+<br>
+When OSPF RID is chosen, some interfaces come up. To discover other OSPF-speaking routers in the same subnet, the router sends multicast OSPF Hello packets to each interface and hopes to receive the OSPF Hello Packets from the other routers connected to those interfaces.
+
+<br>
+
+The Hello Message has the following features.
+1. The Hello message follows the IP packet header, with IP protocol type 89.
+2. Hello packets are sent to multicast IP address 224.0.0.5, a multicast IP address intended for all OSPF-speaking routers.
+3. OSPF routers listen for packets sent to IP multicast address 224.0.0.5, in part hoping to recieve Hello packets and learn about new neighbors.
+
+
+#### Exchanging the LSDB between Neighbors
+
+When both routers reach a 2-way state with each other, it means that both routers meet all OSPF configuration requirements to become neighbors. Now they can immediately start the process of exhanging LSDB.  
+
+<br>
+To reach **the full state** of database exchange, routers don't simply send the entire database. Instead, they let  know each other the LSAs in their respective database. Then each router can check which LSAs it has and ask the other router for onl the LSAs thar are not known yet.
+
+<br>
+
+
+
+
 
 
 
