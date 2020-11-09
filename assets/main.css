@@ -2,8 +2,50 @@
 ---
 
 
-@import "minima" 
+
+
+pre {
+	margin: 12px;
+	padding: 9px;
+	border-radius: 5px;
+	background-color: #cbd5e0;
+	overflow-x: scroll;
+}
 
 
 
+p {
+	margin: 10px;
+}
 
+
+
+/**
+ * Tables
+ */
+table {
+  margin-bottom: 30px;
+  width: 100%;
+  text-align: left;
+  color: grey;
+  border-collapse: collapse;
+
+  tr {
+    &:nth-child(even) {
+      background-color:  #cbd5e0;
+    }
+  }
+
+  th, td {
+    padding: 10px 15px;
+  }
+  th {
+    background-color: #1a202c;
+    border: 1px solid #2d3748;
+    border-bottom-color:#718096;
+  }
+
+  td {
+    border: 1px solid l #718096;
+  }
+}

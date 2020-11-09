@@ -6,27 +6,23 @@ comments: true
 image: ospf.png
 ---
 Open Short Path First (OSPF) Protocol is the standarized link state routing protocol.
+
 <!--continue-->
+Routing Protocol :  A set of messages, rules, and algorithms used by routers for the overall purpose of learning routes. Examples include RIP, EIGRP, OSPF, and BGP.
+
+<br>
+Routed protocol and routable protocol:  protocol that defines a packet structure and logical addressing, allowing routers to forward or route the packets.  
+Examples : IPVersion 4 (IPv4) and IP Version 6 (IPv6)
 
 
-
-<p>
-	<ul>
-	<li>Routing Protocol :  A set of messages, rules, and algorithms used by routers for the overall purpose of learning routes. Examples include RIP, EIGRP, OSPF, and BGP. </li>
-
-
-<li>Routed protocol and routable protocol:  protocol that defines a packet structure and logical addressing, allowing routers to forward or route the packets.  
-Examples : IPVersion 4 (IPv4) and IP Version 6 (IPv6)</li>
-
-</ul>
-	<h3>Routing Protocol Functions</h3>
+  <h3>Routing Protocol Functions</h3>
 
    <ol>
-   	 <li>Learn routing information about IP subnets from neighboring routers.</li>
-   	 <li>Advertise routing information about IP subnets to neighboring routers.</li>
-   	 <li>If more than one possible route exists to reach one subnet, pick the best route based on a metric.</li>
-   	 <li>Convergence : If the network topology changes—for example, a link fails—react by advertising that some routes have failed and pick a new currently best route.</li>
-	</ol>
+     <li>Learn routing information about IP subnets from neighboring routers.</li>
+     <li>Advertise routing information about IP subnets to neighboring routers.</li>
+     <li>If more than one possible route exists to reach one subnet, pick the best route based on a metric.</li>
+     <li>Convergence : If the network topology changes—for example, a link fails—react by advertising that some routes have failed and pick a new currently best route.</li>
+  </ol>
 </p>
 
 
@@ -35,9 +31,9 @@ Examples : IPVersion 4 (IPv4) and IP Version 6 (IPv6)</li>
   <h3>Interior and Exterior Routing Protocols</h3>
 
   <ol>
-  		<li>Interior Gateway Protocol (IGP) : A routing protocol that was designed and intended for use inside a single autonomous system (AS). Example: OSPF, EIGRP</li>
+      <li>Interior Gateway Protocol (IGP) : A routing protocol that was designed and intended for use inside a single autonomous system (AS). Example: OSPF, EIGRP</li>
 
-  		<li>Exterior Gateway Protocol (EGP) : A routing protocol that was designed and intended for use between different autonomous systems. Example: Border Gateway Protocol(BGP)</li>
+      <li>Exterior Gateway Protocol (EGP) : A routing protocol that was designed and intended for use between different autonomous systems. Example: Border Gateway Protocol(BGP)</li>
   </ol>
 
 <span>Autonomous System (AS) : An AS is a network under the administrative control of a single organization. Each AS can be assigned a number called an AS number (ASN). The IANA controls the worldwide rights to assign ASNs</span>
@@ -48,11 +44,11 @@ Examples : IPVersion 4 (IPv4) and IP Version 6 (IPv6)</li>
 
 
 <p>
-		<h3>IGP Routing Protocol Algorithms</h3>
+    <h3>IGP Routing Protocol Algorithms</h3>
 
 <span>Three main branches of routing protocol algorithms exist for IGP routing protocols:</span>
 <ol>
-	<li>Distance vector : Used by Routing Information Protocol in 1980s. Cisco Proprietary Interior Gateway Routing Protocol(IGRP) introduced later</li>
+  <li>Distance vector : Used by Routing Information Protocol in 1980s. Cisco Proprietary Interior Gateway Routing Protocol(IGRP) introduced later</li>
 
 <li>Advanced Distance Vector : Enhanced Interior Gateway Routing Protocol (EIGRP), a cisco proprietary routing protocol, was introduced to address the issues of slow convergence and potential of routing loops. Less planning was required while implementing than the Link-state</li>
 
@@ -62,7 +58,7 @@ Examples : IPVersion 4 (IPv4) and IP Version 6 (IPv6)</li>
 
 <h3>IP IGP Metrics</h3>
 <table>
-	<tr><th>IGP</th><th>Metric</th><th>Description</th></tr>
+  <tr><th>IGP</th><th>Metric</th><th>Description</th></tr>
 
    <tr><td>RIPv2</td><td>Hop Count</td><td>The number of routers (hops) between a router and the destination subnet</td></tr>
 
@@ -111,7 +107,7 @@ The administrative distance values are configured on a single router and are not
 
 
 <table>
-	<h3>Default Administrative Distance</h3>
+  <h3>Default Administrative Distance</h3>
 
    <tr><th>Route Type</th><th>Administrative Distance</th></tr>
 
@@ -144,14 +140,15 @@ The administrative distance values are configured on a single router and are not
 
 
 <pre>
--- show ip route     // lists each route’s administrative distance as the first of the two numbers inside the brackets. 
-						The second number in brackets is the metric.
+-- show ip route     
+// lists each route’s administrative distance as the first of the two numbers 
+// inside the brackets. The second number in brackets is the metric.
 
 -- ip route 10.1.3.0 255.255.255.0 10.1.130.253 
-					//defines a static route with a default administrative distance of 1
+    //defines a static route with a default administrative distance of 1
 
 -- ip route 10.1.3.0 255.255.255.0 10.1.130.253 210
-					//defines the same static route with an administrative distance of 210
+    //defines the same static route with an administrative distance of 210
 </pre>
 
 </p>
@@ -160,7 +157,7 @@ The administrative distance values are configured on a single router and are not
 
 
 
-	
+  
 ### OSPF
 
 <span>Open Shortest Path First (OSPF), the most popular link-state IP routing protocol, organizes topology information using Link State Advertisements (LSAs) and the link-state database (LSDB). <br>
@@ -242,8 +239,6 @@ When both routers reach a 2-way state with each other, it means that both router
 To reach **the full state** of database exchange, routers don't simply send the entire database. Instead, they let  know each other the LSAs in their respective database. Then each router can check which LSAs it has and ask the other router for onl the LSAs thar are not known yet.
 
 <br>
-
-
 
 
 

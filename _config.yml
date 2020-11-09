@@ -18,7 +18,7 @@ href: true
 
 title: Tutorials | HimaliWorld 
 email: tutorials@himaliworld.com 
-description:  Tutorials on Computer Network, Programming, Frameworks 
+description:  Tutorials on Linux, Computer Network and Programming
 baseurl:  # the subpath of your site, e.g. /blog
 url: "https://himaliworld.com" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: avadhuta03 
@@ -45,7 +45,13 @@ permalink: /:title/
 
 # Build settings
 markdown: kramdown
-theme: minima 
+# theme: minima 
+
+# sass:
+#    sass_dir: _sass
+#    style: compressed
+
+
 plugins:
   - jekyll-feed
   - jekyll-paginate
@@ -56,11 +62,13 @@ plugins:
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - "*.config.js"
+  - "package*.json"

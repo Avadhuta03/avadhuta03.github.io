@@ -158,7 +158,9 @@ The desired permission settings can be: read(4), write(2) and execute(1).
 
 	
 <pre>
-#chmod 640 filename            //sets owner has read and write permissions, the group has read permissions,and all other users have no permissions to the file.
+#chmod 640 filename            
+//sets owner has read and write permissions, the group has read permissions,and all other users 
+//have no permissions to the file.
 </pre>
 
 </p>

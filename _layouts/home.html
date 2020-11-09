@@ -7,15 +7,15 @@ layout: default
 
 <!-- loop through paginated pages -->
 
-<div class="snippet-wrapper">
+<div class="">
 
 {% for post in paginator.posts %}
 
-<a href="{{ post.url | relative_url }}">
+<a href="{{ post.url | relative_url }}" class="">
 
-    <div class="snippet">
+    <div class="mb-6  hover:shadow-md hover:bg-gray-100 p-3 rounded-lg ">
 
-        <div class="snippet-head">
+        <div class="font-semibold mb-2">
                   
                   {{ post.title | escape }}
               
@@ -57,6 +57,10 @@ layout: default
 </a> 
 
 {% endfor %}
+
+
+    {%- include footer.html -%}
+
 
 </div>
 

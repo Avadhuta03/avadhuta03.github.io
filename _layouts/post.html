@@ -4,18 +4,21 @@ layout: default
 
 
 
-  <header class="post-header">
+  <header class="w-full">
 
-      <h5 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h5>
+            <h5 class="font-semibold text-xl mb-6" itemprop="name headline">{{ page.title | escape }}</h5>
 
-      <p class="post-meta" style="display:inline;">
-        <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-          {{ page.date | date: date_format }}
-        </time>
+    <div class="flex justify-between h-24">
+      
+        <div class="w-1/2">
+          
+          <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+            {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+            {{ page.date | date: date_format }}
+          </time>
 
-     <!-- page category -->
-      <div class="post-categories" style="display:inline-flex;margin-left:10px;align-items:center;">
+          <div>
+            
 
             {% if post %}
                     {% assign categories = post.categories %}
@@ -27,18 +30,28 @@ layout: default
             Category :&nbsp;&nbsp;<a href="#">{{ category }}</a>
                 {% unless forloop.last %}&nbsp;{% endunless %}
             {% endfor %}
+          </div>
+        </div>
 
-         <div class="edit" style="margin-left:33px;">
-           
-            
-            edit on<a href="{{site.github.repository_url}}/tree/master/{{page.path}}" target="__blank" style="margin-left:3px;">
+        
+
+        <div class="w-1/2 flex justify-between">
+          
+          <p class="w-64"> Edit On </p>
+
+            <span ><a href="{{site.github.repository_url}}/tree/master/{{page.path}}" target="__blank" >
               <svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}">
-            </a>
-         
-         </div>   
+              </a>
+            </span>
+            
+
+          </p>
 
 
-       </div>
+        </div>
+
+
+    </div>
 
   </header>
 
@@ -46,7 +59,7 @@ layout: default
 
 
 
-<div class="post-content e-content" itemprop="articleBody">
+<div class="" itemprop="articleBody">
     {{ content }}
 
     <br><br>
@@ -64,6 +77,15 @@ layout: default
 
 
   <script id="dsq-count-scr" src="//avadhuta03-github-io.disqus.com/count.js" async></script>
+
+
+
+  <div class="mt-6">
+    
+    {%- include footer.html -%}
+    
+  </div>
+
 
   
 </div>
