@@ -10,12 +10,11 @@
 
     {%- include header.html -%}
 
-
-<div class="px-6 flex justify-center mb-6 h-screen">
+<div class="flex pt-16">
   
 
 
-  <div class="w-1/5 pt-24 h-full overflow-y-scroll">
+  <div class="w-1/5 h-full overflow-y-scroll px-6" style="height:calc(100vh - 100px);">
     
           {% for category in site.categories %}
 
@@ -40,17 +39,15 @@
   </div>
 
 
-        <div class="w-4/5 h-screen mt-24 pl-6">
+        <div class="w-4/5 px-6 overflow-y-scroll" style="height:calc(100vh - 100px);">
 
-            {{ content }}
+            {{ content }}   
 
         </div>
       
 
 
 </div>
-
-
 
 
 
