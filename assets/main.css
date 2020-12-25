@@ -66,12 +66,21 @@ pre {
 /** lists **/
 
 ol li{
+  list-style-type: decimal;
+}
+
+ul li {
+
   list-style-type: disc;
 }
 
 li {
   margin: 5px;
   list-style: none;
+}
+
+li p {
+  margin: 0 0 2px;
 }
 
 
