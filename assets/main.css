@@ -1,13 +1,16 @@
----
----
+
+header {
+  padding-top: 32px;
+}
 
 h1, h2, h3, h4, h5, h6 {
-  color:#222;
+  color: #000;
   margin:0 0 20px;
+  padding-bottom: 5px;
 }
 
 p, ul, ol, table, pre, dl {
-  margin:0 20px 20px;
+  margin:0 0 20px;
 }
 
 h1, h2, h3 {
@@ -15,16 +18,19 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size:28px;
+  font-size: 32px;
 }
 
-h2 {
-  color:#393939;
+h3 {
+  font-size: 20px;
 }
 
-h3, h4, h5, h6 {
-  color:#494949;
+h2, h3, h4, h5, h6 {
+  color:rgba(6, 78, 59);
+  font-weight: bolder;
 }
+
+
 
 a {
   color:#267CB9;
@@ -57,7 +63,11 @@ pre {
 	overflow-x: scroll;
 }
 
+/** lists **/
 
+ol li{
+  list-style-type: disc;
+}
 
 li {
   margin: 5px;
@@ -94,3 +104,4 @@ table {
     border: 1px solid l #718096;
   }
 }
+

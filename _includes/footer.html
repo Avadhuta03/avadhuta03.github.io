@@ -1,11 +1,11 @@
 
 
-<footer class="border-t-2 border-blue-600 flex items-center justify-between flex-wrap bg-white shadow-sm py-4 px-6 w-full">
+<footer class="border-t-2 border-blue-600 bg-white shadow-sm py-2 w-full">
   
 
-<div class="flex justify-between">
+<div class="flex">
   
-  <div class="w-1/3 p-3">
+  <div class="w-1/2 p-3">
         {%- if site.author -%}
           {{ site.author | escape }}
         {%- endif -%}
@@ -13,18 +13,11 @@
     
   </div>
 
-  <div class="w-1/3">
+  <div class="w-1/2 p-3">
     
       {%- if site.email -%}
-        E-mail : <a class="" href="mailto:{{ site.email }}">{{ site.email }}</a>
-        {%- endif -%}
-
-  </div>
-
-
-  <div class="w-1/3">
-    
-        {%- include social.html -%}
+        <span>E-mail : <a class="" href="mailto:{{ site.email }}">{{ site.email }}</a></span>
+      {%- endif -%}
 
   </div>
 

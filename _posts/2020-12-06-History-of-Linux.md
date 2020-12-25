@@ -19,15 +19,10 @@ Between 1969 and 1979, UNIX went through a number of releases, known as editions
 
 
 1. First Edition, November 1971: By this time, UNIX was running on the PDP-11 and already had a FORTRAN compiler and versions of many programs still used today, including  *ar, cat, chmod, chown, cp, dc, ed, find, ln, ls, mail, mkdir, mv,rm, sh, su, and who.*
-
 2. Second Edition, June 1972: By this time, UNIX was installed on ten machines within AT&T.
-
 3. Third Edition, February 1973: This edition included a C compiler and the first implementation of pipes.
-
 4. Fourth Edition, November 1973: This was the first version to be almost totally written in C.
-
 5. Fifth Edition, June 1974: By this time, UNIX was installed on more than 50 systems.
-
 6. Sixth Edition, May 1975: This was the first edition to be widely used outside AT&T.
 
 
