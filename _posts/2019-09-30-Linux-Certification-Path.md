@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Common Linux Commands
+title: Linux Certification Path
 categories: Linux
 comments: true
 image: linux.png
