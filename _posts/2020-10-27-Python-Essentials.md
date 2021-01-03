@@ -12,7 +12,7 @@ Python is a widely-used, interpreted, object-oriented, and high-level programmin
 
 <!--continue-->
 
-<span class="toggle-01 underline cursor-pointer text-blue-700">Introduction </span>
+<span class="toggle-01 underline cursor-pointer text-blue-700">Module 1 : Introduction </span>
 
 <div markdown="1"  class="hidden-text-01">
 
@@ -123,12 +123,12 @@ IDLE is an acronym: Integrated Development and Learning Environment.
 
 
 
-<span class="toggle-02 underline cursor-pointer text-blue-700">Data types, variables, basic input-output operations, basic operators </span>
+<span class="toggle-02 underline cursor-pointer text-blue-700">Module 2 : Data types, variables, basic input-output operations, basic operators </span>
 
 <div markdown="1"  class="hidden-text-02">
 
 
-### Function
+# Function
 
 
 
@@ -177,6 +177,161 @@ The process includes following:
 3. third, Python leaves your code for a moment and jumps into the function you want to invoke; of course, it takes your argument(s) too and passes it/them to the function;
 4. fourth, the function executes its code, causes the desired effect (if any), evaluates the desired result(s) (if any) and finishes its task;
 5. finally, Python returns to your code (to the place just after the invocation) and resumes its execution.
+
+
+
+## Summary
+
+1. The print() function is a built-in function. It prints/outputs a specified message to the screen/console window.
+
+2. Built-in functions, contrary to user-defined functions, are always available and don't have to be imported. Python 3.7.1 comes with 69 built-in functions. You can find their full list provided in alphabetical order in the Python Standard Library.
+
+3. To call a function (function invocation), you need to use the function name followed by parentheses. You can pass arguments into a function by placing them inside the parentheses. You must separate arguments with a comma, e.g., print("Hello,", "world!"). An "empty" print() function outputs an empty line to the screen.
+
+4. Python strings are delimited with quotes, e.g., "I am a string", or 'I am a string, too'.
+
+5. Computer programs are collections of instructions. An instruction is a command to perform a specific task when executed, e.g., to print a certain message to the screen.
+
+6. In Python strings the backslash (\) is a special character which announces that the next character has a different meaning, e.g., \n (the newline character) starts a new output line.
+
+7. Positional arguments are the ones whose meaning is dictated by their position, e.g., the second argument is outputted after the first, the third is outputted after the second, etc.
+
+8. Keyword arguments are the ones whose meaning is not dictated by their location, but by a special word (keyword) used to identify them.
+
+9. The end and sep parameters can be used for formatting the output of the print() function. The sep parameter specifies the separator between the outputted arguments (e.g., print("H", "E", "L", "L", "O", sep="-"), whereas the end parameter specifies what to print at the end of the print statement.
+
+
+
+
+# Literals
+
+
+### Definiton
+
+A literal is data whose values are determined by the literal itself.
+
+For example : "369" is a numerical literal while "I am a literal" is a string literal
+
+
+
+The numbers handled by modern computers are of two types:
+
+1. Integer  : number devoid of fractional part
+
+2. Floating-point numbers (floats) :  able to contain the fractional part
+
+
+
+**Type : The characteristic of the numeric value which determines its kind, range, and application, is called the type.**
+
+
+
+
+### Integer
+
+*Python 3.6 has introduced underscores in numeric literals, allowing for placing single underscores between digits and after base specifiers for improved readability.*
+
+
+
+Example : 
+
+for positive integers plus(+) sign is permissible but not necessary : 11111111 or 11_111_111
+
+for negative integer just use minus : -11111111 or -11_111_111
+
+
+### Integer : Octal and hexadecimal numbers
+
+If an integer number is preceded by an 0O or 0o prefix (zero-o), it will be treated as an octal value. 
+
+Example : print(0o123)
+
+
+If an integer number is preceded by an 0X or 0x prefix (zero-x), it will be treated as an hexadecimal value. 
+
+Example : print(0x123)
+
+
+
+
+
+
+
+### Floats
+
+
+Floats are designed to represent and to store the numbers that (as a mathematician would say) have a non-empty decimal fraction.
+
+Example: 0.3 , 6.0  ,  these can also be written as .3  and 6.   and neither type or value is changed.
+
+
+For very large or small numbers, we also can use e. For example : 300000000 can be written as 3e8 or 3E8.
+
+
+*Note:
+1. the exponent (the value after the E) has to be an integer;
+2. the base (the value in front of the E) may be an integer.
+
+So the float has point(.) or the letter from exponent(e)
+
+
+
+#### Coding Floats
+
+
+To write the physical constant called Planck's constant which has the value of : 6.62607 x 10^-34, we need to write as : 6.62607E-34
+
+When you run this literal through Python: print(0.0000000000000000000001), the result is 1e-22.
+
+Python always chooses the more economical form of the number's presentation.
+
+
+
+
+### Strings
+
+Strings are used when you need to process text (like names of all kinds, addresses, novels, etc.), not numbers.
+
+String needs quotes. But to print quotes on string like, I am "String".    we can do :
+
+1. print("I am \"String\".")
+or
+2. print('I am "String".')
+
+
+A string can be empty - it may contain no characters at all. An empty string still remains a string.
+
+
+
+### Boolean values
+
+The name comes from George Boole (1815-1864), the author of the fundamental work, The Laws of Thought, which contains the definition of Boolean algebra - a part of algebra which makes use of only two distinct values: True and False, denoted as 1 and 0.
+
+
+Python is a binary reptile. These two Boolean values have strict denotations in Python: True and False, including case insensitivity.
+
+
+
+
+
+## Key Topics
+
+
+1. Literals are notations for representing some fixed values in code. Python has various types of literals - for example, a literal can be a number (numeric literals, e.g., 123), or a string (string literals, e.g., "I am a literal.").
+
+2. The binary system is a system of numbers that employs 2 as the base. Therefore, a binary number is made up of 0s and 1s only, e.g., 1010 is 10 in decimal.
+Octal and hexadecimal numeration systems, similarly, employ 8 and 16 as their bases respectively. The hexadecimal system uses the decimal numbers and six extra letters.
+
+3. Integers (or simply ints) are one of the numerical types supported by Python. They are numbers written without a fractional component, e.g., 256, or -1 (negative integers).
+
+4. Floating-point numbers (or simply floats) are another one of the numerical types supported by Python. They are numbers that contain (or are able to contain) a fractional component, e.g., 1.27.
+
+5. To encode an apostrophe or a quote inside a string you can either use the escape character, e.g., 'I\\'m happy.', or open and close the string using an opposite set of symbols to the ones you wish to encode, e.g., "I'm happy." to encode an apostrophe, and 'He said "Python", not "typhoon"' to encode a (double) quote.
+
+6. Boolean values are the two constant objects True and False used to represent truth values (in numeric contexts 1 is True, while 0 is False.
+
+**EXTRA**
+There is one more, special literal that is used in Python: the None literal. This literal is a so-called NoneType object, and it is used to represent the absence of a value.
 
 
 </div>
