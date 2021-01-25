@@ -5,22 +5,33 @@ categories: Programming
 comments: true
 image: c.png
 ---
-<h3><center><i>"The only way to learn any programming languages is by writing program in it."</i></center></h3>
+#### <center><i>"The only way to learn any programming languages is by writing program in it."</i></center>
 
 <!--continue-->
-C is a low-level language closer to the assembly language and powerful for doing heavy lifting jobs.This post derives codes and other works available on second edition of the book "The C Programming Language". Check out the codes available in <a href="https://github.com/avadhuta03/C-Basics">github</a>
+C is a low-level language closer to the assembly language and powerful for doing heavy lifting jobs.This post derives codes and other works available on second edition of the book "The C Programming Language". Check out the codes available in <a href="https://github.com/avadhuta03/C-Basics" target="_blank">github</a>
 
 
 
-<h3>Getting Started</h3>
-<p>Get the gcc compiler, write files with .c extension, compile them & run the compiled program to get output.</p>
+
+
+<span class="toggle-01 underline cursor-pointer text-blue-700">Chapter 1 : A Tutorial Introduction</span>
+
+<div markdown="1"  class="hidden-text-01">
+
+
+All programs included in this chapter can be found <a href="https://github.com/Avadhuta03/C-Basics/tree/master/chapter_01">here</a>
+
+
+#### 1.1 Getting Started
+Get the gcc compiler, write files with .c extension, compile them & run the compiled program to get output.
+
 <pre>
 #vi file_name.c                       //creates file with vi editor
 #gcc file_name -o compiled_filename   //compile .c file with gcc compiler
 #./compiled_filename		     //running the compiled file
 </pre>
 
-Hello World Program <a href="https://github.com/Avadhuta03/C-Basics/blob/master/chapter_01/1.1-hello.c">hello.c</a>
+Hello World Program <a href="https://github.com/Avadhuta03/C-Basics/blob/master/chapter_01/1.1-hello.c" target="_blank">hello.c</a>
 
 <pre><code>#include&lt;stdio.h>  //compiler gets information form standard input/output lib. 
 int main()		//define main function with no argument values  
@@ -29,48 +40,86 @@ int main()		//define main function with no argument values
 }
 </code></pre>
 
-<button>Chapter 1</button>
 
-<h3>Variables and Arithmetic Expressions</h3>  
-<span>Program displaying Fahrenheit-Celsius table</span>
-<a href="https://github.com/Avadhuta03/C-Basics/blob/master/chapter_01/1.2-tempTable_01.c" >Temperature Table 01</a>
-
-<span>More precise and clear version of above program can be : </span>
-<a href="https://github.com/Avadhuta03/C-Basics/blob/master/chapter_01/1.2-tempTable_02.c">Temperature Table 02</a>
-
-<span> Temperature conversion in reverse order  using for statement : </span>
-<a href="https://github.com/Avadhuta03/C-Basics/blob/master/chapter_01/1.3-tempTable_03.c">Temprature Table 03</a>
-
-<h3>Symbolic Constants</h3>
-<span>Using symbolic constants to deal with the magic numbers that appears on program : </span><a href="https://github.com/Avadhuta03/C-Basics/blob/master/chapter_01/1.4-symbolic_constant.c">Symbolic Constant</a>
+#### 1.2 Variables and Arithmetic Expressions  
 
 
-<h3>Character Input and Output</h3>
-<p>Text Stream is Sequence of characters divided into lines [0 or more characters followed by newline character</p>
-
-<span>Copying the input character : </span><a href="https://github.com/Avadhuta03/C-Basics/blob/master/chapter_01/1.5.1-copy_char_01.c" target="__blank" >Copy Char 01</a>
-
-<span>Copying the input character second version : </span><a href="https://github.com/Avadhuta03/C-Basics/blob/master/chapter_01/1.5.1-copy_char_02.c">Copy Char 02</a>
+#### 1.3 The For Statement
 
 
-<span>count the total input characters : </span><a href="https://github.com/Avadhuta03/C-Basics/blob/master/chapter_01/1.5.2-char_count.c">Character Count</a>
+####  1.4 Symbolic Constants
 
-<span>count the total input lines : </span><a href="https://github.com/Avadhuta03/C-Basics/blob/master/chapter_01/1.5.3-line_count.c">Line Count</a>
-
-<span>count the number of input words : </span><a href="https://github.com/Avadhuta03/C-Basics/blob/master/chapter_01/1.5.4-word_count.c"> Word Count</a>
-
-<span>Value of End Of File(EOF) : </span>
-<a href="https://github.com/Avadhuta03/C-Basics/blob/master/chapter_01/Ex-1-6-EOF_value.c"> EOF value</a>
-
-<h3>Array</h3>
-<a href="https://github.com/Avadhuta03/C-Basics/blob/master/chapter_01/1.6-array_01.c" target="__blank">Array to count digits and characters</a>
-
-<h3>Function</h3>
-<a href="https://github.com/Avadhuta03/C-Basics/blob/master/chapter_01/1.7-function_01.c" target="__blank">Function to calculate power of a number</a>
+#### 1.5 Character Input and Output
+Text Stream is Sequence of characters divided into lines [0 or more characters followed by newline character
 
 
-<h3>Arguments-Call By Value</h3>
-<p>The called function cannot directly alter avariable in the calling function; it can only alter its private, temporary copy
-<a href="https://github.com/Avadhuta03/C-Basics/blob/master/chapter_01/1.8-function_02.c" target="__blank">Function to calculate power of a number</a>
 
-</p>
+#### 1.6 Arrays
+
+
+#### 1.7 Functions
+
+#### 1.8 Arguments-Call by Value
+
+#### 1.9 Character Arrays
+
+
+#### 1.10 External Variables and Scope
+
+</div>
+
+
+
+
+
+
+<span class="toggle-02 underline cursor-pointer text-blue-700">Chapter 2 : Types, Operators, and Expressions</span>
+
+<div markdown="1"  class="hidden-text-02">
+
+
+
+</div>
+
+
+<span class="toggle-03 underline cursor-pointer text-blue-700">Chapter 3 : Control Flow</span>
+
+<div markdown="1"  class="hidden-text-03">
+
+</div>
+
+<span class="toggle-04 underline cursor-pointer text-blue-700">Chapter 4 : Functions and Program Structure</span>
+
+<div markdown="1"  class="hidden-text-04">
+
+</div>
+
+
+
+<span class="toggle-05 underline cursor-pointer text-blue-700">Chapter 5 : Pointers and Arrays</span>
+
+<div markdown="1"  class="hidden-text-05">
+
+</div>
+
+
+<span class="toggle-06 underline cursor-pointer text-blue-700">Chapter 6 : Structures</span>
+
+<div markdown="1"  class="hidden-text-06">
+
+</div>
+
+
+
+<span class="toggle-07 underline cursor-pointer text-blue-700">Chapter 7 : Input and Output</span>
+
+<div markdown="1"  class="hidden-text-07">
+
+</div>
+
+
+<span class="toggle-07 underline cursor-pointer text-blue-700">Chapter 8 : The UNIX System Interface</span>
+
+<div markdown="1"  class="hidden-text-07">
+
+</div>
