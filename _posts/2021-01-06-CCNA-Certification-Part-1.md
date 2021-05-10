@@ -11,9 +11,9 @@ This post series contains the contents covering the topics on the CCNA exam deri
 
 <!--continue-->
 
-<span class="toggle-01 underline cursor-pointer text-blue-700">Part I : Introduction to Networking</span>
+<div class="t-btn cursor-pointer text-blue-700 mb-3 inline-block">Module 1 : Introduction to Networking </div>
 
-<div markdown="1"  class="hidden-text-01">
+<div markdown="1"  class="hidden h-content pl-8 py-5 px-2 bg-orange-200 mb-3 overflow-y-scroll">
 
 ## Introduction to TCP/IP Networking
 

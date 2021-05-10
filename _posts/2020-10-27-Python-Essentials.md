@@ -12,9 +12,9 @@ Python is a widely-used, interpreted, object-oriented, and high-level programmin
 
 <!--continue-->
 
-<span class="toggle-01 underline cursor-pointer text-blue-700">Module 1 : Introduction </span>
+<div class="t-btn cursor-pointer text-blue-700 mb-3 inline-block">Module 1 : Introduction </div>
 
-<div markdown="1"  class="hidden-text-01">
+<div markdown="1"  class="hidden h-content pl-8 py-5 px-2 bg-orange-200 mb-3 overflow-y-scroll">
 
 #### Why Python?
 	
@@ -123,9 +123,9 @@ IDLE is an acronym: Integrated Development and Learning Environment.
 
 
 
-<span class="toggle-02 underline cursor-pointer text-blue-700">Module 2 : Data types, variables, basic input-output operations, basic operators </span>
+<div class="t-btn cursor-pointer text-blue-700 mb-3">Module 2 : Data types, variables, basic input-output operations, basic operators </div>
 
-<div markdown="1"  class="hidden-text-02">
+<div markdown="1"  class="hidden h-content pl-8 py-5 px-2 bg-orange-200 mb-3 overflow-y-scroll">
 
 
 # Function
@@ -338,25 +338,25 @@ There is one more, special literal that is used in Python: the None literal. Thi
 
 
 
-<span class="toggle-03 underline cursor-pointer text-blue-700">Module 3 :  </span>
+<span class="t-btn underline cursor-pointer text-blue-700">Module 3 :  </span>
 
-<div markdown="1"  class="hidden-text-03">
-
-
-</div>
-
-
-
-
-<span class="toggle-04 underline cursor-pointer text-blue-700">Module 4 :  </span>
-
-<div markdown="1"  class="hidden-text-04">
+<div markdown="1"  class="hidden h-content">
 
 
 </div>
 
 
-<span class="toggle-04 underline cursor-pointer text-blue-700">Module 4 :  </span>
+
+
+<span class="t-btn underline cursor-pointer text-blue-700">Module 4 :  </span>
+
+<div markdown="1"  class="hidden h-content">
+
+
+</div>
+
+
+<span class="toggle-04 underline cursor-pointer text-blue-700">Module 5 :  </span>
 
 <div markdown="1"  class="hidden-text-04">
 

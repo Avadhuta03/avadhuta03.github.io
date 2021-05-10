@@ -33,14 +33,10 @@ h2, h3, h4, h5, h6 {
 
 
 a {
-  color:#267CB9;
+  color: #267CB9;;
   text-decoration:none;
 }
 
-a:hover, a:focus {
-  color:#069;
-  font-weight: bold;
-}
 
 a small {
   font-size:11px;
@@ -114,3 +110,14 @@ table {
   }
 }
 
+.h-content{
+  height: 30rem;
+}
+
+
+.excerpt-heading{
+  color:#267CB9;
+}
+.snippet-body{
+  color:#232323;
+}

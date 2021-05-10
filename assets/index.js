@@ -4,34 +4,15 @@
 
 
 $(document).ready(function(){
-	var a = $('.hidden-text-01');
-
-	var b = $('.hidden-text-02');
-
-	var c = $('.hidden-text-03');
-
-	var d = $('.hidden-text-04');
-
-	a.hide();
-	b.hide();
-	c.hide();
-	d.hide();
-
-	$('.toggle-01').click(function(){
-		  a.slideToggle();
+	$('.t-btn').click(function(){
+		$(this).next().slideToggle(300);
 	});
 
-	$('.toggle-02').click(function(){
-		  b.slideToggle();
-	});
+	$('.l-btn').click(function(){
 
-	$('.toggle-03').click(function(){
-		  c.slideToggle();
-	});
+		$(this).next().slideToggle(300);
 
-	$('.toggle-04').click(function(){
-		  d.slideToggle();
-	});
+	})
 
 
 });
